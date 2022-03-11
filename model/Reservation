@@ -1,0 +1,5 @@
+String nomMenu ; 
+Date date;
+int numReservation ;
+String statut;
+int Penalites; 

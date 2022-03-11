@@ -1,11 +1,12 @@
 package model;
 
-public class Calendrier {
-    
+public class Calendrier{
+  
+  public Calendrier(){
 
+  }
 
-    public void( int numReservation, String Statut) { 
+  void miseAJour(int numR, String status){
 
-        
-    }
+  }
 }
