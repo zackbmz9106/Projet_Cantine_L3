@@ -14,17 +14,6 @@ public class Compte {
     this.numTel = numTel;
   }
 
-  void reserver(String nom_menu,Date date){
-    // TODO
-  }
-
-  void seDeconnecter(){
-    // TODO
-  }
-
-  void voirCalendrier(int idEnfant){
-    // TODO
-  }
 
   public int getID(){
     return this.id;
@@ -40,5 +29,46 @@ public class Compte {
 
   public int getNumTel(){
     return this.numTel;
+  }
+
+  public void setID(int id){
+    this.id = id;
+  }
+
+  public void setNom(String nom){
+    this.nom = nom;
+  }
+
+  public void setQuotientF(int quotientF){
+    this.quotientF = quotientF;
+  }
+
+  public void setNumTel(int numTel){
+    this.numTel = numTel;
+  }
+
+
+  void PrendreUneReservation(Date Date, String nomMenu, String prenom){
+    boolean reservation = true;
+    nomMenu = Menu.getNomMenu(); 
+    
+                                                                                                            
+
+  
+
+  }
+
+public void seDeconnecter() { 
+  System.exit(0);
+}
+
+
+  void reserver(String nom_menu,Date date){
+    // TODO
+  }
+
+  
+  void voirCalendrier(int idEnfant){
+    // TODO
   }
 }

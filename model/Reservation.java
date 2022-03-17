@@ -6,17 +6,21 @@ public class Reservation{
   private String nomMenu;
   private Date date;
   private int numReservation;
-  // TODO mettre status en enum
-  private String status;
+  // TODO mettre statut en enum
+  enum Statuts { Confirmee, Annulee }
+  private Statuts statut;
   private int penalites;
+  boolean reservation = false;
+  
 
-  public Reservation(String nomMenu, Date date, int numR, String status, int penalites){
+  public Reservation(String nomMenu, Date date, int numR, Statuts statut, int penalites){
     this.nomMenu = nomMenu;
     this.date = date;
     this.numReservation = numR;
-    this.status = status;
+    this.statut = statut;
     this.penalites = penalites;
   }
+
 
   public String getNomMenu(){
     return this.nomMenu;
@@ -30,24 +34,36 @@ public class Reservation{
     return this.numReservation;
   }
 
-  public String getStatus(){
-    return this.status;
+  public Statuts getStatus(){
+    return this.statut;
   }
 
   public int getPenalites(){
     return this.penalites;
   }
 
-  void annulerReservation(int nummRes){
-    // TODO
+
+  void annulerReservation(int numR){
+    boolean reservation = false;
+
+    
   }
 
-  void modifierReservation(int nummRes){
-    // TODO
+  void modifierReservation(int numR){
+    
   }
 
-  void changementStatut(String status, int numRes){
-    // TODO
-  }
+  void changementStatut( Statuts statut, int numR){
+
+    if(numR != 0 ){
+    Statuts etat = Statuts.Confirmee ;
+    };
+    
+    if ( reservation = false ){ 
+      Statuts etat = Statuts.Annulee; 
+    }
+      
+
+}
 
 }

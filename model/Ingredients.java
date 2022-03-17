@@ -14,12 +14,24 @@ public class Ingredients{
   public String getNom(){
     return this.nom;
   }
+  public void setNom(String nom){
+     this.nom = nom ;
+  }
 
   public String getType(){
     return this.type;
   }
 
+  public void settype(String type){
+     this.type = type ;
+  }
+
   public Date getDlc(){
     return this.dlc;
   }
+ public void setDLC(Date dlc){
+     this.dlc= dlc ;
+  }
+
+
 }

@@ -42,4 +42,30 @@ public class Enfant{
   public boolean getHandicap(){
     return this.handicap;
   }
+
+/////////////////////////////////////////// Setter /////////////////////////////////////////////////////////////////////////////
+ 
+ public void setIdEnfant(int idEnfant){
+     this.idEnfant = idEnfant;
+  }
+
+  public void setIdParent(int idParent){
+     this.idParent = idParent;
+  }
+
+  public void setNom(String nom){
+     this.nom = nom;
+  }
+
+  public void setPrenom(String prenom){
+     this.prenom = prenom;
+  }
+
+  public void setSexe(String sexe){
+    this.sexe = sexe;
+  }
+
+  public void setHandicap(boolean handicap){
+     this.handicap = handicap;
+  }
 }

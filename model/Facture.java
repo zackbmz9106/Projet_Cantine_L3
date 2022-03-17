@@ -12,6 +12,8 @@ public class Facture{
     this.dateF = dateF;
   }
 
+/////////////////////////////////////////// Getter /////////////////////////////////////////////////////////////////////////////
+
   public int getNum(){
     return this.num;
   }
@@ -24,7 +26,22 @@ public class Facture{
     return this.dateF;
   }
 
+/////////////////////////////////////////// Setter /////////////////////////////////////////////////////////////////////////////
+
+   public void setNum(int num){
+    this.num = num;
+  }
+
+  public void setMontant(int montant){
+     this.montant = montant;
+  }
+
+  public void setDateF(Date dateF){
+     this.dateF = dateF;
+  }
+
   public void consulterFacture(int num, Date dateF){
     // TODO
   }
+
 }
