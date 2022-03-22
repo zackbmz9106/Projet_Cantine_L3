@@ -1,5 +1,6 @@
 package model;
 import java.util.Date;
+import java.util.Random.*;
 
 public class Compte {
   private int id;
@@ -48,10 +49,23 @@ public class Compte {
   }
 
 
-  void PrendreUneReservation(Date Date, String nomMenu, String prenom){
-    boolean reservation = true;
-    nomMenu = Menu.getNomMenu(); 
+  public int PrendreUneReservation(String date, String nomMenu, String prenom){
+   int Min = 1;
+   int Max = 100;
+   boolean reservation = true;
+    //nomMenu = Menu.getNomMenu(); 
+    int numReservation = Min + (int)(Math.random() * ((Max - Min) + 1));
+    /*
+    vérifier que le paiement à été effectué pour générer le numéro de resevation
+     --> appel d'une méthode pour confirmer le paiement
+     if(paiementValide = true){
+       génerer un numReservation 
+     }
+    */
+    return numReservation;
     
+
+
                                                                                                             
 
   
@@ -71,4 +85,8 @@ public void seDeconnecter() {
   void voirCalendrier(int idEnfant){
     // TODO
   }
+
+
+  /*public void PrendreUneReservation(String string, String nomMenu, String prenom) {
+  }*/
 }
