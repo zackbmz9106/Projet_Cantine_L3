@@ -59,7 +59,7 @@ public class Compte {
     vérifier que le paiement à été effectué pour générer le numéro de resevation
      --> appel d'une méthode pour confirmer le paiement
      if(paiementValide = true){
-       génerer un numReservation 
+       génerer un numReservation
      }
     */
     return numReservation;

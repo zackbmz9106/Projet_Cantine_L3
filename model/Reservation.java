@@ -21,6 +21,9 @@ public class Reservation{
     this.penalites = penalites;
   }
 
+  public boolean getReservation(){
+    return this.reservation;
+  }
 
   public String getNomMenu(){
     return this.nomMenu;
