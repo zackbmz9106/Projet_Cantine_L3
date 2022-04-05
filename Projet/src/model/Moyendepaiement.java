@@ -74,10 +74,10 @@ public class Moyendepaiement{
 
 
   // parametre constructeur
-  public boolean payerParCarte(long numCarte, String dateExpiration, int cryptogramme){
-    numCarte = this.numCarte;
+  public boolean payerParCarte(){
+    /*numCarte = this.numCarte;
     dateExpiration = this.dateExpiration;
-    cryptogramme = this.cryptogramme;
+    cryptogramme = this.cryptogramme;*/
     
     if(Math.floor(Math.log10(numCarte) + 1) < 16){
       System.out.println("numéro de carte incorrecte");
@@ -92,13 +92,10 @@ public class Moyendepaiement{
     if(Math.floor(Math.log10(numCarte) + 1) == 16){
       System.out.println("numéro de carte correcte");
     }
-    //System.out.println("taille de la carte"+ Math.floor(Math.log10(numCarte)+1));
-
+    
     if(dateIsValid(dateExpiration)){
-      System.out.println("Date valide");
     }
     else{
-      System.out.println(dateExpiration+"n'est pas une date valide");
       return false;
     }
      /*if(){

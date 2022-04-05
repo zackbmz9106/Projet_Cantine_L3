@@ -2,6 +2,8 @@ package model;
 import java.util.Date;
 import java.util.Random.*;
 
+import model.Reservation.Statuts;
+
 public class Compte {
   private int id;
   private String nom;
@@ -49,12 +51,26 @@ public class Compte {
   }
 
 
-  public int PrendreUneReservation(String date, String nomMenu, String prenom){
+  public int PrendreUneReservation(String date, String nomMenu, String prenom, Moyendepaiement mp){
    int Min = 1;
-   int Max = 100;
-   boolean reservation = true;
-    //nomMenu = Menu.getNomMenu(); 
-    int numReservation = Min + (int)(Math.random() * ((Max - Min) + 1));
+   int Max = 1000;
+   int numReservation;
+   Statuts statut = null;
+      //nomMenu = Menu.getNomMenu();
+      if(mp.payerParCarte()){ // Si paiement valide
+      numReservation = Min + (int)(Math.random() * ((Max - Min) + 1));
+      //Reservation.setNumReservation(numReservation);
+      
+      Reservation reservation = new Reservation(nomMenu,date,numReservation);
+      statut = reservation.changementStatut(statut,numReservation);
+      reservation.setStatus(statut);// mise a jour du statut de la reservation 
+      System.out.println("Rerservation "+reservation.getStatus()+": votre numéro de réservation est le "+reservation.getnumReservation());
+      return numReservation;
+      } 
+    
+      System.out.println("Reservation non valide");
+    return 0;
+  }
     /*
     vérifier que le paiement à été effectué pour générer le numéro de resevation
      --> appel d'une méthode pour confirmer le paiement
@@ -62,15 +78,8 @@ public class Compte {
        génerer un numReservation
      }
     */
-    return numReservation;
-    
 
 
-                                                                                                            
-
-  
-
-  }
 
 public void seDeconnecter() { 
   System.exit(0);

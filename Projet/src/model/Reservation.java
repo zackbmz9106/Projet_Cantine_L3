@@ -4,16 +4,28 @@ import java.util.Date;
 
 public class Reservation{
   private String nomMenu;
-  private Date date;
+  private String date;
+  //private Date date;
   private int numReservation;
   // TODO mettre statut en enum
   enum Statuts { Confirmee, Annulee }
-  private Statuts statut;
+  private Statuts statut = null;
   private int penalites;
-  boolean reservation = false;
+  boolean reservation;
   
 
-  public Reservation(String nomMenu, Date date, int numR, Statuts statut, int penalites){
+  /*public Reservation(String nomMenu, String date){
+    this.nomMenu = nomMenu;
+    this.date = date;
+  }*/
+
+  public Reservation(String nomMenu, String date, int numR){
+    this.nomMenu = nomMenu;
+    this.date = date;
+    this.numReservation = numR;
+  }
+  
+  public Reservation(String nomMenu, String date, int numR, Statuts statut, int penalites){
     this.nomMenu = nomMenu;
     this.date = date;
     this.numReservation = numR;
@@ -29,16 +41,24 @@ public class Reservation{
     return this.nomMenu;
   }
 
-  public Date getDate(){
+  public String getDateReservation(){
     return this.date;
   }
 
-  public int getNumReservation(){
+  public int getnumReservation(){
     return this.numReservation;
   }
 
+  public void setnumReservation(int numReservation){
+    this.numReservation = numReservation;
+ }
+
   public Statuts getStatus(){
     return this.statut;
+  }
+
+  public void setStatus(Statuts statut){
+     this.statut = statut;
   }
 
   public int getPenalites(){
@@ -47,26 +67,29 @@ public class Reservation{
 
 
   void annulerReservation(int numR){
-    boolean reservation = false;
+     reservation = false;
 
-    
   }
 
   void modifierReservation(int numR){
     
   }
 
-  void changementStatut( Statuts statut, int numR){
+  public Statuts changementStatut(Statuts statut, int numR){
 
     if(numR != 0 ){
-    Statuts etat = Statuts.Confirmee ;
-    };
-    
-    if ( reservation = false ){ 
-      Statuts etat = Statuts.Annulee; 
+      statut = Statuts.Confirmee ;
+      reservation = true;
+      return statut;
     }
-      
-
+    
+    if (reservation == false ){ 
+      statut = Statuts.Annulee; 
+      return statut;
+    }
+    
+    System.out.println("Statut inchangee");
+    return statut;// retourne le statut si pas de changement
 }
 
 }
