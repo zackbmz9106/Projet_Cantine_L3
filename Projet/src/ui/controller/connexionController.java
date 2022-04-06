@@ -33,9 +33,6 @@ public class connexionController {
     @FXML
     public void seConnecter(ActionEvent event) throws IOException{
 
-
-
-    
         Parent accueilS = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/accueil.fxml"));
 
         Scene accueilScene = new Scene(accueilS);
@@ -43,7 +40,6 @@ public class connexionController {
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(accueilScene);
         window.show();
-        
     
     }
 
