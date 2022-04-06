@@ -96,7 +96,7 @@
             <Font name="System Bold" size="21.0" />
           </font>
         </Label>
-            <SplitPane dividerPositions="0.49924585218702866" layoutY="52.0" prefHeight="387.0" prefWidth="666.0">
+            <SplitPane dividerPositions="0.5" layoutY="52.0" prefHeight="387.0" prefWidth="666.0">
               <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                      <children>
@@ -116,11 +116,16 @@
                         </Button>
                         <ImageView fitHeight="106.0" fitWidth="315.0" layoutY="278.0" opacity="0.78" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../enfants-a-la-cantine.jpg" />
+                              <Image url="@../../../enfants-a-la-cantine.jpg" />
                            </image>
                            <effect>
                               <Reflection />
                            </effect>
+                        </ImageView>
+                        <ImageView fitHeight="94.0" fitWidth="186.0" layoutX="2.0" layoutY="304.0" opacity="0.72" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@controller/img/enfants-a-la-cantine.jpg" />
+                           </image>
                         </ImageView>
                      </children>
                   </AnchorPane>
@@ -159,7 +164,12 @@
             </SplitPane>
             <ImageView fitHeight="52.0" fitWidth="101.0" layoutX="455.0" opacity="0.56" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../restaurationscolaire-1200x630.jpg" />
+                  <Image url="@../../../restaurationscolaire-1200x630.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="52.0" fitWidth="139.0" layoutX="439.0" opacity="0.56" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@controller/img/restaurationscolaire-1200x630.jpg" />
                </image>
             </ImageView>
       </children>
