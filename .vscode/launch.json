@@ -6,22 +6,10 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch main",
-            "request": "launch",
-<<<<<<< HEAD
-            "mainClass": "main",
-            "projectName": "Projet_Cantine_L3-1_5f677e06",
-            "vmArgs": "--module-path \"C:/Users/adminHp/Downloads/openjfx-17.0.2_windows-x64_bin-sdk_/javafx-sdk/lib\" --add-modules javafx.controls,javafx.fxml"
-
-        },
-        {
-            "type": "java",
             "name": "Launch man",
             "request": "launch",
             "mainClass": "man",
-            "projectName": "Projet_Cantine_L3-1_5f677e06",
-            "vmArgs": "--module-path \"C:/Users/adminHp/Downloads/openjfx-17.0.2_windows-x64_bin-sdk_/javafx-sdk/lib\" --add-modules javafx.controls,javafx.fxml"
-
+            "projectName": "Projet_Cantine_L3-1_5f677e06"
         },
         {
             "type": "java",
@@ -30,10 +18,6 @@
             "mainClass": "model.man",
             "projectName": "Projet_Cantine_L3-1_5f677e06",
             "vmArgs": "--module-path \"C:/Users/adminHp/Downloads/openjfx-17.0.2_windows-x64_bin-sdk_/javafx-sdk/lib\" --add-modules javafx.controls,javafx.fxml"
-=======
-            "mainClass": "model.main",
-            "projectName": "Projet_Cantine_L3-2_440a2c88"
->>>>>>> 0c223391421427411bf81676efa5ec7aba6707f2
         },
         {
             "type": "java",
