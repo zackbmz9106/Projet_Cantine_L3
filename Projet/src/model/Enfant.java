@@ -47,6 +47,10 @@ public class Enfant{
   }
 
   public ArrayList<Reservation> getListReservation(){
+    ArrayList<Reservation> listR = this.listReservation;
+    for(int i=0; i< this.listReservation.size();i++){
+        System.out.println("Reservation de "+listR.get(i).getEnfant().getPrenom()+" numéro: "+listR.get(i).getnumReservation()+" Menu: "+listR.get(i).getNomMenu()+" Date: "+ listR.get(i).getDateReservation());
+    }
     return this.listReservation; // faire liste de numR pur afficher 
   }
 
