@@ -67,9 +67,9 @@ public class Compte {
       statut = reservation.changementStatut(statut,numReservation);
       reservation.setStatus(statut);// mise a jour du statut de la reservation 
       menu.affecter(enfant, menu, reservation);
-      System.out.println("Rerservation "+reservation.getStatus()+"du menu "+reservation.getNomMenu()+" pour "+reservation.getEnfant().getPrenom()+": votre numéro de réservation est le "+reservation.getnumReservation());
+      System.out.println("Rerservation "+reservation.getStatus()+" du menu "+reservation.getNomMenu()+" pour "+reservation.getEnfant().getPrenom()+": votre numéro de réservation est le "+reservation.getnumReservation());
       System.out.println("Le menu "+ menu.getNomMenu()+" a ete reserve par "+ menu.getListDesReservation());
-      System.out.println("Réservation de "+enfant.getPrenom()+" "+ enfant.getListReservation().get(0).getnumReservation());
+      System.out.println(enfant.getListReservation());
       return numReservation;
       } 
     
