@@ -1,5 +1,7 @@
 package model;
 
+import java.util.ArrayList;
+
 public class Enfant{
   private int idEnfant;
   private int idParent;
@@ -9,6 +11,7 @@ public class Enfant{
   // masculain, feminin, non-binaire
   private String sexe;
   private boolean handicap;
+  private ArrayList<Reservation> listReservation = new ArrayList<Reservation>();// liste des reservations de l'enfants
 
   public Enfant(int idEnfant, int idParent, String nom, String prenom, String sexe, boolean handicap){
     this.idEnfant = idEnfant;
@@ -43,9 +46,18 @@ public class Enfant{
     return this.handicap;
   }
 
+  public ArrayList<Reservation> getListReservation(){
+    return this.listReservation; // faire liste de numR pur afficher 
+  }
+
+  public void setListReservation(Reservation reservation){
+     this.listReservation.add(reservation);
+  }
+
 /////////////////////////////////////////// Setter /////////////////////////////////////////////////////////////////////////////
  
- public void setIdEnfant(int idEnfant){
+ 
+public void setIdEnfant(int idEnfant){
      this.idEnfant = idEnfant;
   }
 

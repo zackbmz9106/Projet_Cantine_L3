@@ -1,16 +1,19 @@
 package model;
 
+import java.util.ArrayList;
+
 public class Menu{
+  //possibilite de faire heritage pour chaque menu
   private String typeMenu;
   private int prix;
   private String nomMenu;
-  private int numR;
+  private  ArrayList<Integer> listDesReservation = new ArrayList<Integer>();
 
-  public Menu(String typeMenu, int prix, String nomMenu, int numR){
+  public Menu(String typeMenu, int prix, String nomMenu){ //ArrayList<Integer> listdesReservation){
     this.typeMenu = typeMenu;
     this.prix = prix;
     this.nomMenu = nomMenu;
-    this.numR = numR;
+    //this.listDesReservation = listDesReservation;
   }
 
   public String getTypeMenu(){
@@ -37,15 +40,18 @@ public class Menu{
     this.nomMenu = nomMenu;
   }
 
-  public int getNumR(){
-    return this.numR;
+  public ArrayList<Integer> getListDesReservation(){
+    return this.listDesReservation;
   }
   
-  public void setNumR(int numR){
-    this.numR = numR;
+  public void setListDesreservation(int numR){
+    this.listDesReservation.add(numR);
   }
 
-  void affecter(int idEnfant, String nomMenu, int numR){
-    // TODO
+  public void affecter(Enfant enfant, Menu menu, Reservation reservation){
+    enfant.setListReservation(reservation);// ajout de la reservation dans la liste des reservation de l'enfant 
+    //reservation.setNomMenu(nomMenu); // ajout du nom du menu a la reservation
+    reservation.setEnfant(enfant); // ajout de l'enfant a la reservation 
+    menu.setListDesreservation(reservation.getnumReservation()); //ajout du numero de reservation dans la liste des reservations pour le menu
   }
 }

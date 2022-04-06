@@ -12,8 +12,10 @@ public class main {
     //mp.payerParCarte();
     //System.out.println(mp.getDateExpiration());
 
-       
-    int numR = compte.PrendreUneReservation("01/10/2000", "normal", "samy",mp);
+    Enfant enfant = new Enfant(001, 10, "bgd", "zak", "M", false);
+    Menu menu = new Menu("viande",5,"menub");
+
+    int numR = compte.PrendreUneReservation("01/10/2000", menu, enfant, mp);
     //System.out.println("voici votre numero de reservation"+ " " +numR);
     //Reservation.setNumReservation(numR);
     

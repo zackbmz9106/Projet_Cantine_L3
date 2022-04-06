@@ -12,7 +12,7 @@ public class Reservation{
   private Statuts statut = null;
   private int penalites;
   boolean reservation;
-  
+  private Enfant enfant;// rajouter enfant comme attribut ----un enfant est rattache a une reservation ?
 
   /*public Reservation(String nomMenu, String date){
     this.nomMenu = nomMenu;
@@ -41,6 +41,10 @@ public class Reservation{
     return this.nomMenu;
   }
 
+  public void setNomMenu(String nomMenu){
+     this.nomMenu = nomMenu;
+  }
+
   public String getDateReservation(){
     return this.date;
   }
@@ -65,6 +69,13 @@ public class Reservation{
     return this.penalites;
   }
 
+  public Enfant getEnfant(){
+    return this.enfant;
+  }
+
+  public void setEnfant(Enfant enfant){
+     this.enfant = enfant;
+  }
 
   void annulerReservation(int numR){
      reservation = false;

@@ -1,4 +1,5 @@
 package model;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random.*;
 
@@ -9,6 +10,7 @@ public class Compte {
   private String nom;
   private int quotientF;
   private int numTel;
+  private ArrayList<Enfant> listEnfant []; // Liste des enfants rattacher a un compte 
 
   public Compte(int id,String nom, int quotientF,int numTel){
     this.id = id;
@@ -51,7 +53,7 @@ public class Compte {
   }
 
 
-  public int PrendreUneReservation(String date, String nomMenu, String prenom, Moyendepaiement mp){
+  public int PrendreUneReservation(String date, Menu menu, Enfant enfant, Moyendepaiement mp){
    int Min = 1;
    int Max = 1000;
    int numReservation;
@@ -61,10 +63,13 @@ public class Compte {
       numReservation = Min + (int)(Math.random() * ((Max - Min) + 1));
       //Reservation.setNumReservation(numReservation);
       
-      Reservation reservation = new Reservation(nomMenu,date,numReservation);
+      Reservation reservation = new Reservation(menu.getNomMenu(),date,numReservation);
       statut = reservation.changementStatut(statut,numReservation);
       reservation.setStatus(statut);// mise a jour du statut de la reservation 
-      System.out.println("Rerservation "+reservation.getStatus()+": votre numéro de réservation est le "+reservation.getnumReservation());
+      menu.affecter(enfant, menu, reservation);
+      System.out.println("Rerservation "+reservation.getStatus()+"du menu "+reservation.getNomMenu()+" pour "+reservation.getEnfant().getPrenom()+": votre numéro de réservation est le "+reservation.getnumReservation());
+      System.out.println("Le menu "+ menu.getNomMenu()+" a ete reserve par "+ menu.getListDesReservation());
+      System.out.println("Réservation de "+enfant.getPrenom()+" "+ enfant.getListReservation().get(0).getnumReservation());
       return numReservation;
       } 
     
@@ -81,16 +86,15 @@ public class Compte {
 
 
 
-public void seDeconnecter() { 
-  System.exit(0);
-}
+  public void seDeconnecter() { 
+    System.exit(0);
+  }
 
 
   void reserver(String nom_menu,Date date){
     // TODO
   }
-
-  
+ 
   void voirCalendrier(int idEnfant){
     // TODO
   }
