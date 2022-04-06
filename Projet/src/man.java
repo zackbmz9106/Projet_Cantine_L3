@@ -16,7 +16,7 @@ public class man extends Application {
     public void start(Stage primaryStage)  {
         // TODO Auto-generated method stub
         try{
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("main.fxml"));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/main.fxml"));
         
         primaryStage.setScene(new Scene(root)); 
         primaryStage.show();
@@ -42,6 +42,7 @@ public class man extends Application {
     Menu menu = new Menu("viande",5,"menub");
 
     int numR = compte.PrendreUneReservation("01/10/2000", menu, enfant, mp);
+    
     //System.out.println("voici votre numero de reservation"+ " " +numR);
     //Reservation.setNumReservation(numR);
     

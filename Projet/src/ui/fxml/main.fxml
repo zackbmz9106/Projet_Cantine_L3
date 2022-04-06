@@ -48,7 +48,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controller.connexionController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -109,14 +109,14 @@
                         <Label layoutX="35.0" layoutY="123.0" prefHeight="25.0" prefWidth="47.0" text="E-mail" />
                         <PasswordField layoutX="95.0" layoutY="183.0" prefHeight="36.0" prefWidth="174.0" />
                         <Label layoutX="15.0" layoutY="188.0" prefHeight="25.0" prefWidth="80.0" text="Mot de passe" />
-                        <Button layoutX="138.0" layoutY="233.0" mnemonicParsing="false" text="CONNEXION">
+                        <Button layoutX="144.0" layoutY="229.0" mnemonicParsing="false" onAction="#seConnecter" text="CONNEXION">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
                         <ImageView fitHeight="106.0" fitWidth="315.0" layoutY="278.0" opacity="0.78" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../enfants-a-la-cantine.jpg" />
+                              <Image url="@../../../../../enfants-a-la-cantine.jpg" />
                            </image>
                            <effect>
                               <Reflection />
@@ -124,7 +124,7 @@
                         </ImageView>
                         <ImageView fitHeight="94.0" fitWidth="186.0" layoutX="2.0" layoutY="304.0" opacity="0.72" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@controller/img/enfants-a-la-cantine.jpg" />
+                              <Image url="@../../../../../Projet_Cantine_L3-1/Projet/src/controller/img/enfants-a-la-cantine.jpg" />
                            </image>
                         </ImageView>
                      </children>
@@ -164,12 +164,12 @@
             </SplitPane>
             <ImageView fitHeight="52.0" fitWidth="101.0" layoutX="455.0" opacity="0.56" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../restaurationscolaire-1200x630.jpg" />
+                  <Image url="@../../../../../restaurationscolaire-1200x630.jpg" />
                </image>
             </ImageView>
             <ImageView fitHeight="52.0" fitWidth="139.0" layoutX="439.0" opacity="0.56" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@controller/img/restaurationscolaire-1200x630.jpg" />
+                  <Image url="@../../../../../Projet_Cantine_L3-1/Projet/src/controller/img/restaurationscolaire-1200x630.jpg" />
                </image>
             </ImageView>
       </children>
