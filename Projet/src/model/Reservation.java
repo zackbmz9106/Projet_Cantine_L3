@@ -1,17 +1,17 @@
 package model;
 
-import java.util.Date;
+//import java.util.Date;
 
 public class Reservation{
   private String nomMenu;
   private String date;
   //private Date date;
   private int numReservation;
-  // TODO mettre statut en enum
   enum Statuts { Confirmee, Annulee }
   private Statuts statut = null;
   private int penalites;
   boolean reservation;
+  private int prix;
   private Enfant enfant;// rajouter enfant comme attribut ----un enfant est rattache a une reservation ?
 
   /*public Reservation(String nomMenu, String date){
@@ -19,10 +19,11 @@ public class Reservation{
     this.date = date;
   }*/
 
-  public Reservation(String nomMenu, String date, int numR){
-    this.nomMenu = nomMenu;
+  public Reservation(Menu menu, String date){
+    this.nomMenu = menu.getNomMenu();
     this.date = date;
-    this.numReservation = numR;
+    this.numReservation = genNumR();
+    this.prix = menu.getPrix();
   }
   
   public Reservation(String nomMenu, String date, int numR, Statuts statut, int penalites){
@@ -77,6 +78,12 @@ public class Reservation{
      this.enfant = enfant;
   }
 
+  public int getPrixReservation(){
+    return this.prix;
+  }
+
+  
+  
   void annulerReservation(int numR){
      reservation = false;
 
@@ -86,6 +93,15 @@ public class Reservation{
     
   }
 
+  public int genNumR(){ // génére un numero de réservation
+    int Min = 1;
+    int Max = 1000;
+    int numR;
+    numR = Min + (int)(Math.random() * ((Max - Min) + 1));
+    return numR;
+  }
+  
+  
   public Statuts changementStatut(Statuts statut, int numR){
 
     if(numR != 0 ){

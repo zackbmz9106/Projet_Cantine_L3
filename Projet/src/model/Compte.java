@@ -8,9 +8,13 @@ import model.Reservation.Statuts;
 public class Compte {
   private int id;
   private String nom;
+  private String prenom;
+  private String adresse;
+  private String mail;
+  private String mdp;
   private int quotientF;
   private int numTel;
-  private ArrayList<Enfant> listEnfant []; // Liste des enfants rattacher a un compte 
+  private ArrayList<Enfant> listEnfant; // Liste des enfants rattacher a un compte 
 
   public Compte(int id,String nom, int quotientF,int numTel){
     this.id = id;
@@ -19,6 +23,15 @@ public class Compte {
     this.numTel = numTel;
   }
 
+  public Compte(String nom, String prenom ,int numTel, String adresse, String Email, String mdp){ // constructeur appele lors de l'inscription
+    this.nom = nom;
+    this.nom = prenom;
+    this.numTel = numTel;
+    this.adresse = adresse;
+    this.mail = Email;
+    this.mdp = mdp;
+    
+  }
 
   public int getID(){
     return this.id;
@@ -54,23 +67,30 @@ public class Compte {
 
 
   public int PrendreUneReservation(String date, Menu menu, Enfant enfant, Moyendepaiement mp){
-   int Min = 1;
-   int Max = 1000;
-   int numReservation;
+   int numFacture;
    Statuts statut = null;
       //nomMenu = Menu.getNomMenu();
       if(mp.payerParCarte()){ // Si paiement valide
-      numReservation = Min + (int)(Math.random() * ((Max - Min) + 1));
-      //Reservation.setNumReservation(numReservation);
       
-      Reservation reservation = new Reservation(menu.getNomMenu(),date,numReservation);
-      statut = reservation.changementStatut(statut,numReservation);
+      Reservation reservation = new Reservation(menu,date);
+      
+      Facture facture = new Facture(reservation);// creation de la facture 
+      //numFacture = facture.genNumFacture();// génére un numero de facture
+      //facture.setNum(numFacture);
+      //facture.setMontant(menu.getPrix());
+      //facture.setDateF(reservation.getDateReservation());
+      facture.consulterFacture();
+
+      statut = reservation.changementStatut(statut,reservation.getnumReservation());
       reservation.setStatus(statut);// mise a jour du statut de la reservation 
+      
       menu.affecter(enfant, menu, reservation);
+      
       System.out.println("Rerservation "+reservation.getStatus()+" du menu "+reservation.getNomMenu()+" pour "+reservation.getEnfant().getPrenom()+": votre numéro de réservation est le "+reservation.getnumReservation());
       System.out.println("Le menu "+ menu.getNomMenu()+" a ete reserve par "+ menu.getListDesReservation());
       System.out.println(enfant.getListReservation());
-      return numReservation;
+      
+      return reservation.getnumReservation();
       } 
     
       System.out.println("Reservation non valide");
@@ -84,7 +104,9 @@ public class Compte {
      }
     */
 
-
+  public void seConnecter() { 
+    // verifier dans la BDD si le compte existe 
+  }   
 
   public void seDeconnecter() { 
     System.exit(0);
@@ -100,6 +122,4 @@ public class Compte {
   }
 
 
-  /*public void PrendreUneReservation(String string, String nomMenu, String prenom) {
-  }*/
 }

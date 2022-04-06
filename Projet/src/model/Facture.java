@@ -4,12 +4,18 @@ import java.util.Date;
 public class Facture{
   private int num;
   private int montant;
-  private Date dateF;
+  private String dateF;
+  private Reservation reservation;
 
-  public Facture(int num, int montant, Date dateF){
-    this.num = num;
-    this.montant = montant;
-    this.dateF = dateF;
+  
+  public Facture(){
+  this.num = genNumFacture();
+  }
+  
+  public Facture(Reservation reservation){
+    this.num = genNumFacture();
+    this.montant = reservation.getPrixReservation();
+    this.dateF = reservation.getDateReservation();
   }
 
 /////////////////////////////////////////// Getter /////////////////////////////////////////////////////////////////////////////
@@ -22,7 +28,7 @@ public class Facture{
     return this.montant;
   }
 
-  public Date getDateF(){
+  public String getDateF(){
     return this.dateF;
   }
 
@@ -36,12 +42,24 @@ public class Facture{
      this.montant = montant;
   }
 
-  public void setDateF(Date dateF){
+  public void setDateF(String dateF){
      this.dateF = dateF;
   }
 
-  public void consulterFacture(int num, Date dateF){
-    // TODO
+  public int genNumFacture(){ // génére un numero de facture 
+  int Min = 1;
+  int Max = 1000;
+  int numF;
+  numF = Min + (int)(Math.random() * ((Max - Min) + 1));
+  return numF;
+  
+  }
+
+
+  public void consulterFacture(){
+    System.out.println("Numéro de facture: "+getNum());
+    System.out.println("Montant: "+getMontant()+" euros");
+    System.out.println("Date de la facture: "+getDateF());
   }
 
 }
