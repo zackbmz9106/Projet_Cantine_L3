@@ -8,7 +8,15 @@
         "c:\\Users\\adminHp\\Downloads\\openjfx-18_windows-x64_bin-sdk\\javafx-sdk-18\\lib\\javafx.media.jar",
         "c:\\Users\\adminHp\\Downloads\\openjfx-18_windows-x64_bin-sdk\\javafx-sdk-18\\lib\\javafx.swing.jar",
         "c:\\Users\\adminHp\\Downloads\\openjfx-18_windows-x64_bin-sdk\\javafx-sdk-18\\lib\\javafx.web.jar",
-        "c:\\Users\\adminHp\\Downloads\\openjfx-18_windows-x64_bin-sdk\\javafx-sdk-18\\lib\\javafx-swt.jar"
+        "c:\\Users\\adminHp\\Downloads\\openjfx-18_windows-x64_bin-sdk\\javafx-sdk-18\\lib\\javafx-swt.jar",
+        "c:\\Users\\zacha\\Documents\\code\\Java\\javafx-sdk-18\\lib\\javafx.base.jar",
+        "c:\\Users\\zacha\\Documents\\code\\Java\\javafx-sdk-18\\lib\\javafx.controls.jar",
+        "c:\\Users\\zacha\\Documents\\code\\Java\\javafx-sdk-18\\lib\\javafx.fxml.jar",
+        "c:\\Users\\zacha\\Documents\\code\\Java\\javafx-sdk-18\\lib\\javafx.graphics.jar",
+        "c:\\Users\\zacha\\Documents\\code\\Java\\javafx-sdk-18\\lib\\javafx.media.jar",
+        "c:\\Users\\zacha\\Documents\\code\\Java\\javafx-sdk-18\\lib\\javafx.swing.jar",
+        "c:\\Users\\zacha\\Documents\\code\\Java\\javafx-sdk-18\\lib\\javafx.web.jar",
+        "c:\\Users\\zacha\\Documents\\code\\Java\\javafx-sdk-18\\lib\\javafx-swt.jar"
     ],
     "java.project.sourcePaths": [
         "Projet/src",
