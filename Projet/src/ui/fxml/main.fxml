@@ -48,9 +48,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controller.connexionController">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controller.connexionController">
   <children>
-    <MenuBar VBox.vgrow="NEVER">
+    <MenuBar style="-fx-background-color: #EEEDFF;" VBox.vgrow="NEVER">
       <menus>
         <Menu mnemonicParsing="false" text="File">
           <items>
@@ -89,16 +89,16 @@
         </Menu>
       </menus>
     </MenuBar>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" style="-fx-background-color: #B6CDE8;" VBox.vgrow="ALWAYS">
       <children>
-        <Label alignment="CENTER" layoutX="113.0" layoutY="10.0" prefHeight="21.0" prefWidth="315.0" style="&#10;" text="BIENVENUE DANS CANTINEG7" textAlignment="CENTER" textFill="#175a65">
+        <Label alignment="CENTER" layoutX="54.0" layoutY="10.0" prefHeight="31.0" prefWidth="374.0" style="&#10;" text="BIENVENUE DANS CANTINEG7" textAlignment="CENTER" textFill="#556c96">
           <font>
-            <Font name="System Bold" size="21.0" />
+            <Font name="Arial Black" size="21.0" />
           </font>
         </Label>
             <SplitPane dividerPositions="0.5" layoutY="52.0" prefHeight="387.0" prefWidth="666.0">
               <items>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #B6CDE8;">
                      <children>
                         <Label alignment="CENTER" layoutX="79.0" layoutY="73.0" style="&#10;" text="Veuillez vous connectez ! " textAlignment="CENTER" textFill="#070101" wrapText="false">
                            <font>
@@ -109,7 +109,7 @@
                         <Label layoutX="35.0" layoutY="123.0" prefHeight="25.0" prefWidth="47.0" text="E-mail" />
                         <PasswordField layoutX="95.0" layoutY="183.0" prefHeight="36.0" prefWidth="174.0" />
                         <Label layoutX="15.0" layoutY="188.0" prefHeight="25.0" prefWidth="80.0" text="Mot de passe" />
-                        <Button layoutX="144.0" layoutY="229.0" mnemonicParsing="false" onAction="#seConnecter" text="CONNEXION">
+                        <Button layoutX="144.0" layoutY="229.0" mnemonicParsing="false" onAction="#seConnecter" style="-fx-background-color: #EEEDFF;" text="CONNEXION">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
@@ -124,12 +124,12 @@
                         </ImageView>
                         <ImageView fitHeight="94.0" fitWidth="186.0" layoutX="2.0" layoutY="304.0" opacity="0.72" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../Projet_Cantine_L3-1/Projet/src/controller/img/enfants-a-la-cantine.jpg" />
+                              <Image url="@../../../../../Projet_Cantine_L3-2/Projet/src/controller/img/enfants-a-la-cantine.jpg" />
                            </image>
                         </ImageView>
                      </children>
                   </AnchorPane>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #B6CDE8;">
                      <children>
                         <Label alignment="CENTER" layoutX="61.0" layoutY="9.0" style="&#10;" text="Pas encore de compte ? " textAlignment="CENTER" textFill="#070101" wrapText="false">
                            <font>
@@ -153,7 +153,7 @@
                         <Label layoutX="30.0" layoutY="249.0" prefHeight="25.0" prefWidth="47.0" text="E-mail" />
                         <Label layoutX="4.0" layoutY="293.0" prefHeight="21.0" prefWidth="85.0" text="Mot de passe" />
                         <TextField layoutX="79.0" layoutY="291.0" prefHeight="25.0" prefWidth="161.0" />
-                        <Button layoutX="114.0" layoutY="327.0" mnemonicParsing="false" text="INSCRIPTION">
+                        <Button layoutX="114.0" layoutY="327.0" mnemonicParsing="false" style="-fx-background-color: #EEEDFF;" text="INSCRIPTION">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
@@ -169,7 +169,7 @@
             </ImageView>
             <ImageView fitHeight="52.0" fitWidth="139.0" layoutX="439.0" opacity="0.56" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Projet_Cantine_L3-1/Projet/src/controller/img/restaurationscolaire-1200x630.jpg" />
+                  <Image url="@../../../../../Projet_Cantine_L3-2/Projet/src/controller/img/restaurationscolaire-1200x630.jpg" />
                </image>
             </ImageView>
       </children>

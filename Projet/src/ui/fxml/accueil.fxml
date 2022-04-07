@@ -33,19 +33,22 @@
 -->
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.SeparatorMenuItem?>
-<?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <VBox prefHeight="485.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controller.accueilController">
+  
+  
   <children>
-    <MenuBar prefHeight="27.0" prefWidth="712.0" VBox.vgrow="NEVER">
+    <MenuBar prefHeight="27.0" prefWidth="712.0" style="-fx-background-color: #EEEDFF;" VBox.vgrow="NEVER">
       <menus>
             <Menu mnemonicParsing="false" text="Reservation">
               <items>
@@ -89,92 +92,40 @@
             </Menu>
       </menus>
     </MenuBar>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="393.0" prefWidth="712.0" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="393.0" prefWidth="712.0" style="-fx-background-color: #B6CDE8;" VBox.vgrow="ALWAYS">
          <children>
-            <SplitPane dividerPositions="0.2707774798927614" orientation="VERTICAL" prefHeight="458.0" prefWidth="750.0">
-              <items>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="154.0" prefWidth="710.0">
-                     <children>
-                        <SplitPane dividerPositions="0.28418230563002683" layoutX="-1.0" layoutY="1.0" prefHeight="120.0" prefWidth="748.0">
-                          <items>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                                 <children>
-                                    <Text fontSmoothingType="LCD" layoutX="64.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REPAS">
-                                       <font>
-                                          <Font name="Agency FB" size="28.0" />
-                                       </font>
-                                    </Text>
-                                 </children>
-                              </AnchorPane>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="109.0" prefWidth="502.0">
-                                 <children>
-                                    <Button layoutX="5.0" layoutY="6.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="139.0" text="Reservations de repas" />
-                                    <Button layoutX="172.0" layoutY="43.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="165.0" text="Synthese des reservations" />
-                                    <Button layoutX="364.0" layoutY="79.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="139.0" text="Menus" />
-                                 </children>
-                              </AnchorPane>
-                          </items>
-                        </SplitPane>
-                     </children>
-                  </AnchorPane>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="304.0" prefWidth="710.0">
-                     <children>
-                        <SplitPane dividerPositions="0.5" layoutX="1.0" orientation="VERTICAL" prefHeight="330.0" prefWidth="748.0">
-                          <items>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="97.0" prefWidth="560.0">
-                                 <children>
-                                    <SplitPane dividerPositions="0.3319209039548023" layoutX="-1.0" layoutY="-4.0" prefHeight="167.0" prefWidth="748.0">
-                                      <items>
-                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="129.0" prefWidth="358.0">
-                                             <children>
-                                                <Text fontSmoothingType="LCD" layoutX="73.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GESTION">
-                                                   <font>
-                                                      <Font name="Agency FB" size="28.0" />
-                                                   </font>
-                                                </Text>
-                                             </children>
-                                          </AnchorPane>
-                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="144.0" prefWidth="364.0">
-                                             <children>
-                                                <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="139.0" text="Espace Famille" />
-                                                <Button layoutX="127.0" layoutY="61.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="217.0" text="Gestion des reservations" />
-                                                <Button layoutX="269.0" layoutY="112.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="217.0" text="Historique facture" />
-                                             </children>
-                                          </AnchorPane>
-                                      </items>
-                                    </SplitPane>
-                                 </children>
-                              </AnchorPane>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="145.0" prefWidth="564.0">
-                                 <children>
-                                    <SplitPane dividerPositions="0.3967828418230563" layoutX="-1.0" layoutY="-1.0" prefHeight="161.0" prefWidth="748.0">
-                                      <items>
-                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                                             <children>
-                                                <Text fontSmoothingType="LCD" layoutX="24.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SIGNALER UN CHANGEMENT" wrappingWidth="288.5966796875">
-                                                   <font>
-                                                      <Font name="Agency FB" size="28.0" />
-                                                   </font>
-                                                </Text>
-                                             </children>
-                                          </AnchorPane>
-                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="162.0" prefWidth="371.0">
-                                             <children>
-                                                <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="139.0" text="Numero de telephone" />
-                                                <Button layoutX="144.0" layoutY="60.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="Adrese electronique" />
-                                                <Button layoutX="281.0" layoutY="106.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="131.0" text="Adresse postale" />
-                                             </children>
-                                          </AnchorPane>
-                                      </items>
-                                    </SplitPane>
-                                 </children>
-                              </AnchorPane>
-                          </items>
-                        </SplitPane>
-                     </children>
-                  </AnchorPane>
-              </items>
-            </SplitPane>
+            
+            <Button fx:id="clickActionTarget" layoutX="41.0" layoutY="235.0" mnemonicParsing="false" onMouseClicked="#reserver" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Reservations de repas" />
+            <Button layoutX="41.0" layoutY="297.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Synthese des reservations" />
+            <Button layoutX="41.0" layoutY="352.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Menus" />
+            <Text fill="#556c96" fontSmoothingType="LCD" layoutX="316.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial Black" size="25.0" />
+               </font>
+            </Text>
+            <Button layoutX="286.0" layoutY="235.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Espace Famille" />
+            <Button layoutX="286.0" layoutY="297.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Gestion des reservations" />
+            <Button layoutX="285.0" layoutY="352.0" mnemonicParsing="false" onMouseClicked="#voirFacture" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Historique facture" />
+            <Text fill="#556c96" fontSmoothingType="LCD" layoutX="501.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Signaler un changement" textAlignment="CENTER" wrappingWidth="288.5966796875">
+               <font>
+                  <Font name="Arial Black" size="25.0" />
+               </font>
+            </Text>
+            <Button layoutX="562.0" layoutY="352.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Adrese electronique" />
+            <Button layoutX="562.0" layoutY="297.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Numero de telephone" />
+            <Button layoutX="562.0" layoutY="235.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Adresse postale" />
+            <Separator layoutX="243.0" layoutY="101.0" orientation="VERTICAL" prefHeight="366.0" prefWidth="7.0" style="-fx-background-color: #B6CDE8;" />
+            <Separator layoutX="497.0" layoutY="96.0" orientation="VERTICAL" prefHeight="375.0" prefWidth="7.0" style="-fx-background-color: #B6CDE8;" />
+            <Text fill="#556c96" fontSmoothingType="LCD" layoutX="68.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Repas" textAlignment="CENTER" wrappingWidth="111.2894287109375">
+               <font>
+                  <Font name="Arial Black" size="25.0" />
+               </font>
+            </Text>
+            <Label layoutX="333.0" layoutY="23.0" text="Accueil" textFill="#556c96">
+               <font>
+                  <Font name="Arial Black" size="30.0" />
+               </font>
+            </Label>
          </children>
     </AnchorPane>
   </children>
