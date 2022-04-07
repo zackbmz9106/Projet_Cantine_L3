@@ -1,19 +1,19 @@
 
 //import java.util.Date;
 //import java.text.SimpleDateFormat;
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
+//import javafx.application.Application;
+//import javafx.fxml.FXMLLoader;
+//import javafx.scene.Parent;
+//import javafx.scene.Scene;
+//import javafx.stage.Stage;
 import model.Compte;
 import model.Enfant;
 import model.Menu;
 import model.Moyendepaiement;
 
-public class man extends Application {
+public class man{ //extends Application {
     @Override
-    public void start(Stage primaryStage)  {
+    /*public void start(Stage primaryStage)  {
         // TODO Auto-generated method stub
         try{
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/main.fxml"));
@@ -24,13 +24,10 @@ public class man extends Application {
             e.printStackTrace();
         }
 
-    }
+    }*/
 
-    public static void main(String[] args) throws Exception {
-
-        System.out.println("Hello, World!");
-        launch(args);
-       
+    public static void main(String [] args){
+              
     Compte compte = new Compte(1,"samy",545,060);
 
        
@@ -49,8 +46,8 @@ public class man extends Application {
 
               
     }
+}
 
    
-}
 
 

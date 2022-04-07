@@ -107,11 +107,13 @@ public class Reservation{
     if(numR != 0 ){
       statut = Statuts.Confirmee ;
       reservation = true;
+      this.statut = statut;
       return statut;
     }
     
     if (reservation == false ){ 
       statut = Statuts.Annulee; 
+      this.statut = statut;
       return statut;
     }
     
