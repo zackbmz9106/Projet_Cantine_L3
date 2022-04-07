@@ -124,7 +124,7 @@
                         </ImageView>
                         <ImageView fitHeight="94.0" fitWidth="186.0" layoutX="2.0" layoutY="304.0" opacity="0.72" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../Projet_Cantine_L3-1/Projet/src/controller/img/enfants-a-la-cantine.jpg" />
+                              <Image url="@../../../../../Projet_Cantine_L3-2/Projet/src/controller/img/enfants-a-la-cantine.jpg" />
                            </image>
                         </ImageView>
                      </children>
@@ -169,7 +169,7 @@
             </ImageView>
             <ImageView fitHeight="52.0" fitWidth="139.0" layoutX="439.0" opacity="0.56" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Projet_Cantine_L3-1/Projet/src/controller/img/restaurationscolaire-1200x630.jpg" />
+                  <Image url="@../../../../../Projet_Cantine_L3-2/Projet/src/controller/img/restaurationscolaire-1200x630.jpg" />
                </image>
             </ImageView>
       </children>
