@@ -11,7 +11,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.scene.Node;
 
-public class factureController {
+public class FactureController {
 
     @FXML
     private ResourceBundle resources;

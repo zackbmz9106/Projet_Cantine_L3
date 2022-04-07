@@ -9,11 +9,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
-public class reservationController {
+public class reservationRepasController {
 
     @FXML
     private ResourceBundle resources;
@@ -22,30 +21,23 @@ public class reservationController {
     private URL location;
 
     @FXML
-    private Label Label_Nbr_Reservation;
+    void BackReservation(MouseEvent event) throws IOException{
 
-    @FXML
-    void GoReservationRepas(MouseEvent event)  throws IOException{
+        Parent reservation = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/page_Reservation.fxml"));
 
-        Parent accueilS = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_reservation_repas.fxml"));
-
-        Scene accueilScene = new Scene(accueilS);
+        Scene accueilScene = new Scene(reservation);
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(accueilScene);
         window.show();
     
     }
+
+
     
 
     @FXML
-    void retourMenu(MouseEvent event) {
-
-    }
-
-    @FXML
     void initialize() {
-        assert Label_Nbr_Reservation != null : "fx:id=\"Label_Nbr_Reservation\" was not injected: check your FXML file 'page_Reservation.fxml'.";
 
     }
 

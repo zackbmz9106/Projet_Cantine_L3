@@ -46,7 +46,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="355.0" prefWidth="545.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controller.reservationController">
+<VBox prefHeight="355.0" prefWidth="545.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controller.reservationController">
   <children>
     <MenuBar style="-fx-background-color: #EEEDFF;" VBox.vgrow="NEVER">
       <menus>
@@ -102,7 +102,7 @@
             <ButtonBar layoutX="165.0" layoutY="234.0" prefHeight="40.0" prefWidth="200.0" />
             <ToolBar layoutX="142.0" layoutY="194.0" prefHeight="40.0" prefWidth="262.0" style="-fx-background-color: #B6CDE8;">
               <items>
-                <Button mnemonicParsing="false" style="-fx-background-color: #EEEDFF;" text="Réserverr" />
+                <Button mnemonicParsing="false" onMouseClicked="#GoReservationRepas" style="-fx-background-color: #EEEDFF;" text="Réserver" />
                   <Button mnemonicParsing="false" style="-fx-background-color: #EEEDFF;" text="Modifier" />
                   <Button mnemonicParsing="false" style="-fx-background-color: #EEEDFF;" text="Annuler" />
                   <Button mnemonicParsing="false" onMouseClicked="#retourMenu" style="-fx-background-color: #EEEDFF;" text="Retour" />
