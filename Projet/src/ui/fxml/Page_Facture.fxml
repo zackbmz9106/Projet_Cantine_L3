@@ -43,7 +43,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="363.0" prefWidth="475.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controller.FactureController">
+<VBox prefHeight="363.0" prefWidth="475.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controller.factureController">
   <children>
     <MenuBar style="-fx-background-color: #EEEDFF;" VBox.vgrow="NEVER">
       <menus>
@@ -93,7 +93,7 @@
             </Label>
             <ComboBox layoutX="163.0" layoutY="124.0" prefWidth="150.0" promptText="Factures" style="-fx-background-color: #EEEDFF;" />
             <Button layoutX="212.0" layoutY="274.0" mnemonicParsing="false" style="-fx-background-color: #EEEDFF;" text="Valider" />
-            <Button layoutX="14.0" layoutY="18.0" mnemonicParsing="false" onAction="#Retour" style="-fx-background-color: #EEEDFF;" text="Retour" />
+            <Button layoutX="14.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#retourMenuF" style="-fx-background-color: #EEEDFF;" text="Retour" />
          </children>
     </AnchorPane>
   </children>

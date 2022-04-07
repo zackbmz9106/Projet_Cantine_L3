@@ -49,12 +49,26 @@ public class accueilController {
 
         
 
-        Parent Facture = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/page_Facture.fxml"));
+        Parent Facture = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_Facture.fxml"));
 
         Scene FactureScene = new Scene(Facture);
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(FactureScene);
+        window.show();
+    }
+
+    @FXML
+    void goMenu(MouseEvent event) throws IOException {
+
+        
+
+        Parent goMenu = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_menus.fxml"));
+
+        Scene Menu = new Scene(goMenu);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(Menu);
         window.show();
     }
 

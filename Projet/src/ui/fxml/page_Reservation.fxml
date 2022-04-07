@@ -105,7 +105,7 @@
                 <Button mnemonicParsing="false" style="-fx-background-color: #EEEDFF;" text="Réserverr" />
                   <Button mnemonicParsing="false" style="-fx-background-color: #EEEDFF;" text="Modifier" />
                   <Button mnemonicParsing="false" style="-fx-background-color: #EEEDFF;" text="Annuler" />
-                  <Button mnemonicParsing="false" style="-fx-background-color: #EEEDFF;" text="Retour" />
+                  <Button mnemonicParsing="false" onMouseClicked="#retourMenu" style="-fx-background-color: #EEEDFF;" text="Retour" />
               </items>
                <effect>
                   <Glow level="0.0" />

@@ -97,7 +97,7 @@
             
             <Button fx:id="clickActionTarget" layoutX="41.0" layoutY="235.0" mnemonicParsing="false" onMouseClicked="#reserver" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Reservations de repas" />
             <Button layoutX="41.0" layoutY="297.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Synthese des reservations" />
-            <Button layoutX="41.0" layoutY="352.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Menus" />
+            <Button layoutX="41.0" layoutY="352.0" mnemonicParsing="false" onMouseClicked="#goMenu" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Menus" />
             <Text fill="#556c96" fontSmoothingType="LCD" layoutX="316.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion" textAlignment="CENTER">
                <font>
                   <Font name="Arial Black" size="25.0" />

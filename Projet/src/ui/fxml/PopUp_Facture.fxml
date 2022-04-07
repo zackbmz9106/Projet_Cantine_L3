@@ -38,7 +38,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="314.0" prefWidth="380.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PopUp_Facture">
+<VBox prefHeight="314.0" prefWidth="380.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controller.popUpController">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="214.0" prefWidth="362.0" style="-fx-background-color: #B6CDE8;" VBox.vgrow="ALWAYS">
          <children>
@@ -55,7 +55,7 @@
             <Label fx:id="Label_Date" layoutX="78.0" layoutY="147.0" prefHeight="18.0" prefWidth="285.0" text="Label" />
             <Label fx:id="Label_Montant" layoutX="78.0" layoutY="176.0" prefHeight="18.0" prefWidth="285.0" text="Label" />
             <Label fx:id="Label_Nom" layoutX="78.0" layoutY="86.0" prefHeight="18.0" prefWidth="285.0" text="Label" />
-            <Button layoutX="170.0" layoutY="247.0" mnemonicParsing="false" style="-fx-background-color: #EEEDFF;" text="OK" />
+            <Button layoutX="170.0" layoutY="247.0" mnemonicParsing="false" onMouseClicked="#backFacture" style="-fx-background-color: #EEEDFF;" text="OK" />
          </children>
     </AnchorPane>
   </children>
