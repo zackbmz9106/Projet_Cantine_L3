@@ -9,9 +9,16 @@
             "name": "Launch man",
             "request": "launch",
             "mainClass": "man",
+            "projectName": "Projet_Cantine_L3-3_440a2c89",
+            "vmArgs": "--module-path \"C:/Users/Benidir Samy/Documents/javafx-sdk-18/lib\" --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch man",
+            "request": "launch",
+            "mainClass": "man",
             "projectName": "Projet_Cantine_L3-4_5f677e09",
-            "vmArgs": "--module-path \"C:/Users/adminHp/Downloads/openjfx-17.0.2_windows-x64_bin-sdk_/javafx-sdk/lib\" --add-modules javafx.controls,javafx.fxml"
-
+            "vmArgs": "--module-path \"C:/Users/Benidir Samy/Documents/javafx-sdk-18/lib\" --add-modules javafx.controls,javafx.fxml"
         },
         {
             "type": "java",
@@ -19,8 +26,7 @@
             "request": "launch",
             "mainClass": "model.main",
             "projectName": "Projet_Cantine_L3_21488f1e",
-            "vmArgs": "--module-path \"C:/Users/adminHp/Downloads/openjfx-17.0.2_windows-x64_bin-sdk_/javafx-sdk/lib\" --add-modules javafx.controls,javafx.fxml"
-
+            "vmArgs": "--module-path \"C:/Users/Benidir Samy/Documents/javafx-sdk-18/lib\" --add-modules javafx.controls,javafx.fxml"
         },
         {
             "type": "java",
@@ -28,7 +34,7 @@
             "request": "launch",
             "mainClass": "man",
             "projectName": "Projet_Cantine_L3_21488f1e",
-            "vmArgs": "--module-path \"C:/Users/adminHp/Downloads/openjfx-17.0.2_windows-x64_bin-sdk_/javafx-sdk/lib\" --add-modules javafx.controls,javafx.fxml"
+            "vmArgs": "--module-path \"C:/Users/Benidir Samy/Documents/javafx-sdk-18/lib\" --add-modules javafx.controls,javafx.fxml"
         },
         {
             "type": "java",
@@ -36,7 +42,7 @@
             "request": "launch",
             "mainClass": "man",
             "projectName": "Projet_Cantine_L3-3_5f677e08",
-            "vmArgs": "--module-path \"C:/Users/adminHp/Downloads/openjfx-17.0.2_windows-x64_bin-sdk_/javafx-sdk/lib\" --add-modules javafx.controls,javafx.fxml"
+            "vmArgs": "--module-path \"C:/Users/Benidir Samy/Documents/javafx-sdk-18/lib\" --add-modules javafx.controls,javafx.fxml"
         },
         {
             "type": "java",
@@ -44,7 +50,7 @@
             "request": "launch",
             "mainClass": "man",
             "projectName": "Projet_Cantine_L3-1_df3a0b2f",
-            "vmArgs": "--module-path \"C:/Users/adminHp/Downloads/openjfx-17.0.2_windows-x64_bin-sdk_/javafx-sdk/lib\" --add-modules javafx.controls,javafx.fxml"
+            "vmArgs": "--module-path \"C:/Users/Benidir Samy/Documents/javafx-sdk-18/lib\" --add-modules javafx.controls,javafx.fxml"
         },
         {
             "type": "java",
@@ -52,7 +58,7 @@
             "request": "launch",
             "mainClass": "ui.man",
             "projectName": "Projet_Cantine_L3-2_5f677e07",
-            "vmArgs": "--module-path \"C:/Users/adminHp/Downloads/openjfx-17.0.2_windows-x64_bin-sdk_/javafx-sdk/lib\" --add-modules javafx.controls,javafx.fxml"
+            "vmArgs": "--module-path \"C:/Users/Benidir Samy/Documents/javafx-sdk-18/lib\" --add-modules javafx.controls,javafx.fxml"
         },
         {
             "type": "java",
@@ -60,7 +66,7 @@
             "request": "launch",
             "mainClass": "man",
             "projectName": "Projet_Cantine_L3-2_5f677e07",
-            "vmArgs": "--module-path \"C:/Users/adminHp/Downloads/openjfx-17.0.2_windows-x64_bin-sdk_/javafx-sdk/lib\" --add-modules javafx.controls,javafx.fxml"
+            "vmArgs": "--module-path \"C:/Users/Benidir Samy/Documents/javafx-sdk-18/lib\" --add-modules javafx.controls,javafx.fxml"
         },
         {
             "type": "java",
@@ -68,7 +74,7 @@
             "request": "launch",
             "mainClass": "man",
             "projectName": "Projet_Cantine_L3-1_5f677e06",
-            "vmArgs": "--module-path \"C:/Users/adminHp/Downloads/openjfx-17.0.2_windows-x64_bin-sdk_/javafx-sdk/lib\" --add-modules javafx.controls,javafx.fxml"
+            "vmArgs": "--module-path \"C:/Users/Benidir Samy/Documents/javafx-sdk-18/lib\" --add-modules javafx.controls,javafx.fxml"
         },
         {
             "type": "java",
@@ -76,14 +82,14 @@
             "request": "launch",
             "mainClass": "model.man",
             "projectName": "Projet_Cantine_L3-1_5f677e06",
-            "vmArgs": "--module-path \"C:/Users/adminHp/Downloads/openjfx-17.0.2_windows-x64_bin-sdk_/javafx-sdk/lib\" --add-modules javafx.controls,javafx.fxml"
+            "vmArgs": "--module-path \"C:/Users/Benidir Samy/Documents/javafx-sdk-18/lib\" --add-modules javafx.controls,javafx.fxml"
         },
         {
             "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}",
-            "vmArgs": "--module-path \"C:/Users/adminHp/Downloads/openjfx-17.0.2_windows-x64_bin-sdk_/javafx-sdk/lib\" --add-modules javafx.controls,javafx.fxml"
+            "vmArgs": "--module-path \"C:/Users/Benidir Samy/Documents/javafx-sdk-18/lib\" --add-modules javafx.controls,javafx.fxml"
         },
         {
             "type": "java",
@@ -91,7 +97,7 @@
             "request": "launch",
             "mainClass": "App",
             "projectName": "Projet_Cantine_L3-1_5f677e06",
-            "vmArgs": "--module-path \"C:/Users/adminHp/Downloads/openjfx-17.0.2_windows-x64_bin-sdk_/javafx-sdk/lib\" --add-modules javafx.controls,javafx.fxml"
+            "vmArgs": "--module-path \"C:/Users/Benidir Samy/Documents/javafx-sdk-18/lib\" --add-modules javafx.controls,javafx.fxml"
         },
         {
             "type": "java",
@@ -99,7 +105,7 @@
             "request": "launch",
             "mainClass": "database.DBconnect",
             "projectName": "Projet_Cantine_L3-1_5f677e06",
-            "vmArgs": "--module-path \"C:/Users/adminHp/Downloads/openjfx-17.0.2_windows-x64_bin-sdk_/javafx-sdk/lib\" --add-modules javafx.controls,javafx.fxml"
+            "vmArgs": "--module-path \"C:/Users/Benidir Samy/Documents/javafx-sdk-18/lib\" --add-modules javafx.controls,javafx.fxml"
         },
         {
             "type": "java",
@@ -107,7 +113,7 @@
             "request": "launch",
             "mainClass": "model.DisplayCalendar",
             "projectName": "Projet_Cantine_L3-1_5f677e06",
-            "vmArgs": "--module-path \"C:/Users/adminHp/Downloads/openjfx-17.0.2_windows-x64_bin-sdk_/javafx-sdk/lib\" --add-modules javafx.controls,javafx.fxml"
+            "vmArgs": "--module-path \"C:/Users/Benidir Samy/Documents/javafx-sdk-18/lib\" --add-modules javafx.controls,javafx.fxml"
         },
         {
             "type": "java",
@@ -115,7 +121,7 @@
             "request": "launch",
             "mainClass": "model.main",
             "projectName": "Projet_Cantine_L3-1_5f677e06",
-            "vmArgs": "--module-path \"C:/Users/adminHp/Downloads/openjfx-17.0.2_windows-x64_bin-sdk_/javafx-sdk/lib\" --add-modules javafx.controls,javafx.fxml"
+            "vmArgs": "--module-path \"C:/Users/Benidir Samy/Documents/javafx-sdk-18/lib\" --add-modules javafx.controls,javafx.fxml"
         }
     ]
 }
