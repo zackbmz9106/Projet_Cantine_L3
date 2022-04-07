@@ -39,9 +39,18 @@ public class reservationController {
     
 
     @FXML
-    void retourMenu(MouseEvent event) {
+    void retourMenu(MouseEvent event) throws IOException {
 
-    }
+            System.out.println("Retour accueil");
+            Parent menu = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Accueil.fxml"));
+
+            Scene retour = new Scene(menu);
+
+            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+            window.setScene(retour);
+            window.show();
+
+        }
 
     @FXML
     void initialize() {
