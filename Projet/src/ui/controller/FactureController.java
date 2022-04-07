@@ -5,7 +5,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
-public class Page_Facture_Controller {
+public class FactureController {
 
     @FXML
     private ResourceBundle resources;

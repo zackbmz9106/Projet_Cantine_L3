@@ -44,7 +44,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="485.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controller.accueilController">
+<VBox prefHeight="485.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controller.accueilController">
+  
+  
   <children>
     <MenuBar prefHeight="27.0" prefWidth="712.0" style="-fx-background-color: #EEEDFF;" VBox.vgrow="NEVER">
       <menus>
@@ -92,7 +94,8 @@
     </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="393.0" prefWidth="712.0" style="-fx-background-color: #B6CDE8;" VBox.vgrow="ALWAYS">
          <children>
-            <Button layoutX="41.0" layoutY="235.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Reservations de repas" />
+            
+            <Button fx:id="clickActionTarget" layoutX="41.0" layoutY="235.0" mnemonicParsing="false" onMouseClicked="#reserver" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Reservations de repas" />
             <Button layoutX="41.0" layoutY="297.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Synthese des reservations" />
             <Button layoutX="41.0" layoutY="352.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Menus" />
             <Text fill="#556c96" fontSmoothingType="LCD" layoutX="316.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion" textAlignment="CENTER">
@@ -102,7 +105,7 @@
             </Text>
             <Button layoutX="286.0" layoutY="235.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Espace Famille" />
             <Button layoutX="286.0" layoutY="297.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Gestion des reservations" />
-            <Button layoutX="285.0" layoutY="352.0" mnemonicParsing="false" onAction="#Facture" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Historique facture" />
+            <Button layoutX="285.0" layoutY="352.0" mnemonicParsing="false" onMouseClicked="#voirFacture" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Historique facture" />
             <Text fill="#556c96" fontSmoothingType="LCD" layoutX="501.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Signaler un changement" textAlignment="CENTER" wrappingWidth="288.5966796875">
                <font>
                   <Font name="Arial Black" size="25.0" />
