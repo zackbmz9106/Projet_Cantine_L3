@@ -27,7 +27,7 @@ public class main {
         int numR = compte.PrendreUneReservation("01/10/2000", menu, enfant, mp);
                     //compte.PrendreUneReservation("03/10/2020", menu2, enfant1, mp);
         //menu.afficheIngredientsMenu();
-        menu2.afficheIngredientsMenu();
+       // menu2.afficheIngredientsMenu();
         
     
                   
