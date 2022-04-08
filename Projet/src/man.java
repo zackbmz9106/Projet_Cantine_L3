@@ -26,7 +26,6 @@ public class man extends Application {
     }
 
     
-
     public static void main(String [] args) throws Exception{
 
         System.out.println("Lancement de l'applicaiton...");
