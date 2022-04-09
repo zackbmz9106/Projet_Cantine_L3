@@ -24,9 +24,6 @@ public class menuController {
     @FXML
     void backAccueil(MouseEvent event)throws IOException {
         
-        
-
-        
         System.out.println("Retour Accueil");
         Parent menu = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/accueil.fxml"));
         
