@@ -34,8 +34,8 @@ public class man extends Application {
         launch(args);    
     
     Menu menuInit = new Menu();
-    menuInit.menuInit();
-    
+    menuInit.menuInit();    
+
     Compte compte = new Compte(1,"samy",545,060);
     
        
@@ -51,7 +51,7 @@ public class man extends Application {
     //System.out.println("voici votre numero de reservation"+ " " +numR);
     //Reservation.setNumReservation(numR);
     
-    enfant.getListReservation();
+    //enfant.getListReservation();
               
     }
 

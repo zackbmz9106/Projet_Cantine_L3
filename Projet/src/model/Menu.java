@@ -11,6 +11,7 @@ public class Menu{
   private ArrayList<Ingredients> entreeList = new ArrayList<>();// liste des ingrédient qui compose l'entree
   private ArrayList<Ingredients> platList = new ArrayList<>();// liste des ingrédients qui compose le plat
   private ArrayList<Ingredients> dessertList = new ArrayList<>();// liste des ingrédients qui compose le dessert
+  private String date;
 
 
 
@@ -79,14 +80,18 @@ public class Menu{
 
 
   //afficher la liste des ingredients d'un menu pour debug sinon renvoie la liste des ingredients de l'entree
-  public ArrayList<Ingredients> afficheIngredientsMenu(){
-    /*for(int i=0;i<=entreeList.size();i++){
-      System.out.println("Entree : "+entreeList.get(i).getNomIngredient());
+  public ArrayList<String> afficheIngredientsList(ArrayList<Ingredients> maliste){
+    ArrayList <String> list = new ArrayList<>();
+    for(int i=0;i<maliste.size();i++){
+      String ingre = maliste.get(i).getNomIngredient();
+      list.add(ingre);
     }
-    System.out.println("Plat : "+platList);
-    System.out.println("Dessert : "+dessertList);*/
-    System.out.println("Entree : "+entreeList.get(0).getNomIngredient());
-    return entreeList;
+    
+    /*System.out.println("Plat : "+platList);
+    System.out.println("Dessert : "+dessertList);
+    System.out.println("Entree : "+entreeList.get(0).getNomIngredient());*/
+    //System.out.println(list);
+    return list;
   }
 
   // Initialise plusieurs Menu et retourne une liste de tous les menus instancier
@@ -113,7 +118,7 @@ public class Menu{
     ArrayList<Ingredients> entreeList = new ArrayList<>();
     entreeList.add(salade);
     entreeList.add(tomate);
-    
+   
     ArrayList<Ingredients> platListViande = new ArrayList<>();
     platListViande.add(steak);
     platListViande.add(poulet);
@@ -133,17 +138,27 @@ public class Menu{
       Menu  menu1 = new Menu("Viande", "Menu viande", entreeList, platListViande, dessertList);
       ListedesMenu.add(menu1);
       System.out.println(" "+menu1.getNomMenu()+" initialise");
-      System.out.println("   "+platListViande);
+      //System.out.println("   "+platListViande);
+      System.out.println(menu1);
       Menu menu2 = new Menu("Poisson", "Menu poisson", entreeList, platListPoisson, dessertList);
       ListedesMenu.add(menu2);
       System.out.println(" "+menu2.getNomMenu()+" initialise");
-      System.out.println("   "+platListPoisson);
+      //System.out.println("   "+platListPoisson);
+      System.out.println(menu2);
       Menu menu3 = new Menu("Végetarien", "Menu végetarien", entreeList, platListVegetarien, dessertList);
       ListedesMenu.add(menu3);
       System.out.println(" "+menu3.getNomMenu()+" initialise");
-      System.out.println("   "+platListVegetarien);
+      //System.out.println("   "+platListVegetarien);
+      System.out.println(menu3);
+    
+    
     return ListedesMenu;
   }
+
+  public String toString(){
+    String n = System.getProperty("line.separator");
+    return "Nom du menu: "+nomMenu+n+"  Type: "+typeMenu+n+"    Prix: "+prix+n+"      Composition de l'entree: "+afficheIngredientsList(entreeList)+n+"       Composition du plat: "+afficheIngredientsList(platList)+n+"         Composition du dessert: "+afficheIngredientsList(dessertList);
+  } 
 
 
 
