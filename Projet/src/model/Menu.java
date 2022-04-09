@@ -100,6 +100,7 @@ public class Menu{
     
     Ingredients salade = new Ingredients("salade", "legume");
     Ingredients tomate = new Ingredients("tomate", "legume");
+    Ingredients celeri = new Ingredients("celeri", "legume");
     
     //Viande
     Ingredients steak = new Ingredients("steak", "viande");
@@ -118,6 +119,7 @@ public class Menu{
     ArrayList<Ingredients> entreeList = new ArrayList<>();
     entreeList.add(salade);
     entreeList.add(tomate);
+    entreeList.add(celeri);
    
     ArrayList<Ingredients> platListViande = new ArrayList<>();
     platListViande.add(steak);
@@ -150,6 +152,7 @@ public class Menu{
       System.out.println(" "+menu3.getNomMenu()+" initialise");
       //System.out.println("   "+platListVegetarien);
       System.out.println(menu3);
+      System.out.println(menu3.afficheEntree());
     
     
     return ListedesMenu;
@@ -159,7 +162,29 @@ public class Menu{
     String n = System.getProperty("line.separator");
     return "Nom du menu: "+nomMenu+n+"  Type: "+typeMenu+n+"    Prix: "+prix+n+"      Composition de l'entree: "+afficheIngredientsList(entreeList)+n+"       Composition du plat: "+afficheIngredientsList(platList)+n+"         Composition du dessert: "+afficheIngredientsList(dessertList);
   } 
+  //affiche la liste des ingédients de l'entrée dans une chaine de caractère 
+  public String afficheEntree(){
+    //String afficheListe ="";
+    String finalstr="";  
+    String str="";
+    ArrayList<String> list = afficheIngredientsList(this.entreeList);
+        for(int i =0;i<list.size();i++){
+            System.out.println("gg");
+            str = list.get(i);//+", ";
+          for(int j=0;j<list.size()-1;j++){
+            if(j==i-1){
+              break;
+            }
+            System.out.println("to");
+            String str1=", ";
+            str+=str1;
+            break;
 
+          }
+          finalstr+=str;
+        }
 
+    return finalstr;
+  }
 
 }
