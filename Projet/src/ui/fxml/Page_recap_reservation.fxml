@@ -33,47 +33,63 @@
 -->
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="498.0" prefWidth="790.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controller.reservationRepasController">
+<VBox prefHeight="368.0" prefWidth="384.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controller.recapRerservationController">
   <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: #B6CDE8;" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="400.0" prefWidth="554.0" style="-fx-background-color: #B6CDE8;" VBox.vgrow="ALWAYS">
          <children>
-            <Label layoutX="207.0" layoutY="40.0" text="Page de réservation des repas" textFill="#556c96">
+            <Label alignment="TOP_CENTER" layoutY="29.0" prefHeight="38.0" prefWidth="450.0" text="Récapitulatif de la réservation" textFill="#556c96">
                <font>
                   <Font name="Arial Black" size="24.0" />
                </font>
             </Label>
-            <ChoiceBox layoutX="26.0" layoutY="223.0" prefWidth="150.0" />
-            <Separator layoutX="235.0" layoutY="210.0" orientation="VERTICAL" prefHeight="213.0" prefWidth="6.0" />
-            <Separator layoutX="532.0" layoutY="210.0" orientation="VERTICAL" prefHeight="214.0" prefWidth="6.0" />
-            <DatePicker layoutX="307.0" layoutY="223.0" promptText="Choix de la date" />
-            <ChoiceBox fx:id="ChoixMenus" layoutX="586.0" layoutY="223.0" prefWidth="150.0" />
-            <Label layoutX="55.0" layoutY="177.0" text="Choix enfant :" textFill="#556c96">
+            <Label layoutX="47.0" layoutY="96.0" text="Enfant :">
                <font>
-                  <Font name="Arial Black" size="12.0" />
+                  <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="605.0" layoutY="177.0" text="Choix du menus :" textFill="#556c96">
+            <Label layoutX="47.0" layoutY="147.0" text="Date :">
                <font>
-                  <Font name="Arial Black" size="12.0" />
+                  <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="337.0" layoutY="177.0" text="Choix de la date :" textFill="#556c96">
+            <Label layoutX="45.0" layoutY="202.0" text="Menus :">
                <font>
-                  <Font name="Arial Black" size="12.0" />
+                  <Font size="18.0" />
                </font>
             </Label>
-            <Button layoutX="372.0" layoutY="439.0" mnemonicParsing="false" onMouseClicked="#GoInfoPaiement" text="Payer" />
-            <Button layoutX="573.0" layoutY="380.0" mnemonicParsing="false" text="Consulter le menu séléctionné" />
-            <Button layoutX="29.0" layoutY="28.0" mnemonicParsing="false" onMouseClicked="#BackReservation" text="Retour" />
-            <Label fx:id="lblMenus" alignment="TOP_CENTER" layoutX="539.0" layoutY="317.0" prefHeight="18.0" prefWidth="249.0" text="Label" />
+            <Label layoutX="45.0" layoutY="255.0" text="Prix :">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="47.0" layoutY="221.0" />
+            <Label fx:id="lblEnfantRecap" layoutX="127.0" layoutY="100.0" prefHeight="18.0" prefWidth="323.0" text="Label">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDateRecap" layoutX="127.0" layoutY="151.0" prefHeight="18.0" prefWidth="323.0" text="Label">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblMenusRecap" layoutX="127.0" layoutY="206.0" prefHeight="18.0" prefWidth="323.0" text="Label">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblPrixRecap" layoutX="127.0" layoutY="259.0" prefHeight="18.0" prefWidth="323.0" text="Label" textFill="#b91212">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnPaiementRecap" layoutX="202.0" layoutY="312.0" mnemonicParsing="false" onMouseClicked="#Paiement" style="-fx-background-color: #EEEDFF;" text="Payer" />
+            <Button layoutX="19.0" layoutY="312.0" mnemonicParsing="false" onMouseClicked="#BackInfoPaiement" style="-fx-background-color: #EEEDFF;" text="Retour" />
          </children>
     </AnchorPane>
   </children>
