@@ -70,7 +70,7 @@
                   <Font name="Arial Black" size="12.0" />
                </font>
             </Label>
-            <Button layoutX="372.0" layoutY="439.0" mnemonicParsing="false" text="Payer" />
+            <Button layoutX="372.0" layoutY="439.0" mnemonicParsing="false" onMouseClicked="#GoInfoPaiement" text="Payer" />
             <Button layoutX="573.0" layoutY="380.0" mnemonicParsing="false" text="Consulter le menu séléctionné" />
             <Button layoutX="29.0" layoutY="28.0" mnemonicParsing="false" onMouseClicked="#BackReservation" text="Retour" />
             <Label fx:id="lblMenus" alignment="TOP_CENTER" layoutX="539.0" layoutY="317.0" prefHeight="18.0" prefWidth="249.0" text="Label" />

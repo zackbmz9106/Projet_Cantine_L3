@@ -38,7 +38,6 @@ public class reservationRepasController implements Initializable {
 		ChoixMenus.setOnAction(this::getMenus);
 
 	}
-
 	
 	public void getMenus(ActionEvent event) {
 
@@ -47,7 +46,6 @@ public class reservationRepasController implements Initializable {
 
 	}
 
-   
     @FXML
     void BackReservation(MouseEvent event) throws IOException{
 
@@ -60,6 +58,21 @@ public class reservationRepasController implements Initializable {
         window.show();
     
     }
+
+    @FXML
+    void GoInfoPaiement(MouseEvent event) throws IOException{
+
+        Parent reserv = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_Info_Paiement.fxml"));
+
+        Scene paiement = new Scene(reserv);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(paiement);
+        window.show();
+    
+    }
+
+
     @FXML
     void initialize() {
         assert ChoixMenus != null : "fx:id=\"ChoixMenus\" was not injected: check your FXML file 'Page_reservation_repas.fxml'.";
