@@ -46,6 +46,9 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controller.connexionController">
@@ -158,6 +161,27 @@
                            </font>
                         </Button>
                         <PasswordField id="Tfmdp" fx:id="Tfmdp" layoutX="78.0" layoutY="291.0" prefHeight="25.0" prefWidth="161.0" />
+                        <Label fx:id="LBLerreurnum" layoutX="79.0" layoutY="193.0" prefHeight="17.0" prefWidth="161.0">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.9868420958518982" green="0.32894736528396606" blue="0.32894736528396606" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.9868420958518982" green="0.32894736528396606" blue="0.32894736528396606" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
                      </children>
                   </AnchorPane>
               </items>

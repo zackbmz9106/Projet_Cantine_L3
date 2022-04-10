@@ -91,4 +91,10 @@ public void setIdEnfant(int idEnfant){
   public void setHandicap(boolean handicap){
      this.handicap = handicap;
   }
+
+  protected void finalize(){// appel lorsqu'un objet est supprime
+    System.out.println("Objet enfant "+this.nom+" "+ this.prenom);
+  }
+
+
 }
