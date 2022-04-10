@@ -71,10 +71,6 @@ public class Compte {
         Reservation reservation = new Reservation(menu,date);
       
         Facture facture = new Facture(reservation);// creation de la facture 
-        //numFacture = facture.genNumFacture();// génére un numero de facture
-        //facture.setNum(numFacture);
-        //facture.setMontant(menu.getPrix());
-        //facture.setDateF(reservation.getDateReservation());
         facture.consulterFacture();
 
         reservation.changementStatut(reservation.getStatus(),reservation.getnumReservation());// mise a jour du statut de la reservation 
@@ -118,13 +114,17 @@ public class Compte {
       prixCalculer = 3;
       return prixCalculer;
     }
-    System.out.println("la cantine sera cher pour toi petit riche");
+    System.out.println("Calcul du prix");
     return prixCalculer;
   }
  
   void voirCalendrier(int idEnfant){
     // TODO
   }
+
+  /*public verifCompte(){
+
+  }*/
 
   public String toString(){
     String n = System.getProperty("line.separator");
