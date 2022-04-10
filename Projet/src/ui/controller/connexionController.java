@@ -46,7 +46,7 @@ public class connexionController {
 
     @FXML
     void inscription(MouseEvent event) throws IOException {
-        Parent accueilS = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/accueil.fxml"));
+        Parent accueilS = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_Information.fxml"));
 
         Scene accueilScene = new Scene(accueilS);
         
@@ -54,8 +54,8 @@ public class connexionController {
         System.out.println(Tfnom.getText());
         System.out.println(Tfadresse.getText());
 
-        Compte compte = new Compte(Tfnom.getText(),Tfprenom.getText(),Integer.parseInt(Tfnum.getText()),Tfadresse.getText(),Tfmail.getText(),Tfmdp.getText());
-        System.out.println(compte);
+        //Compte compte = new Compte(Tfnom.getText(),Tfprenom.getText(),Integer.parseInt(Tfnum.getText()),Tfadresse.getText(),Tfmail.getText(),Tfmdp.getText());
+        //System.out.println(compte);
         
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(accueilScene);
