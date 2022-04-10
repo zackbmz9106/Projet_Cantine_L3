@@ -22,6 +22,13 @@ public class Enfant{
     this.handicap = handicap;
   }
 
+  public Enfant(String nom, String prenom, String sexe){
+    this.nom = nom;
+    this.prenom = prenom;
+    this.sexe = sexe;
+    
+  }
+
   public int getIdEnfant(){
     return this.idEnfant;
   }
