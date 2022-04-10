@@ -11,17 +11,17 @@ public class Compte {
   private String mail;
   private String mdp;
   private int quotientF;
-  private int numTel;
+  private Long numTel;
   private ArrayList<Enfant> listEnfant; // Liste des enfants rattacher a un compte 
 
-  public Compte(int id,String nom, int quotientF,int numTel){
+  public Compte(int id,String nom, int quotientF,Long numTel){
     this.id = id;
     this.nom = nom;
     this.quotientF = quotientF;
     this.numTel = numTel;
   }
 
-  public Compte(String nom, String prenom ,int numTel, String adresse, String Email, String mdp){ // constructeur appele lors de l'inscription
+  public Compte(String nom, String prenom ,Long numTel, String adresse, String Email, String mdp){ // constructeur appele lors de l'inscription
     this.nom = nom;
     this.prenom = prenom;
     this.numTel = numTel;
@@ -43,7 +43,7 @@ public class Compte {
     return this.quotientF;
   }
 
-  public int getNumTel(){
+  public Long getNumTel(){
     return this.numTel;
   }
 
@@ -59,7 +59,7 @@ public class Compte {
     this.quotientF = quotientF;
   }
 
-  public void setNumTel(int numTel){
+  public void setNumTel(Long numTel){
     this.numTel = numTel;
   }
 

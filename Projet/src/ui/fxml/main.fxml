@@ -148,7 +148,7 @@
                         <Label layoutX="38.0" layoutY="75.0" prefHeight="25.0" prefWidth="47.0" text="Nom" />
                         <Label layoutX="30.0" layoutY="125.0" prefHeight="25.0" prefWidth="80.0" text="Prenom" />
                         <TextField id="Tfprenom" fx:id="Tfprenom" layoutX="79.0" layoutY="125.0" prefHeight="25.0" prefWidth="161.0" />
-                        <TextField id="Tfnum" fx:id="Tfnum" layoutX="79.0" layoutY="169.0" prefHeight="25.0" prefWidth="161.0" />
+                        <TextField id="Tfnum" fx:id="Tfnum" layoutX="79.0" layoutY="169.0" prefHeight="25.0" prefWidth="161.0" text="+33" />
                         <Label layoutX="30.0" layoutY="169.0" prefHeight="25.0" prefWidth="47.0" text="Numero " />
                         <Label layoutX="30.0" layoutY="208.0" prefHeight="25.0" prefWidth="80.0" text="Adresse" />
                         <TextField id="Tfadresse" fx:id="Tfadresse" layoutX="79.0" layoutY="209.0" prefHeight="25.0" prefWidth="161.0" />

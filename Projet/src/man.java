@@ -36,7 +36,7 @@ public class man extends Application {
     Menu menuInit = new Menu();
     menuInit.menuInit();    
 
-    Compte compte = new Compte(1,"samy",545,060);
+    Compte compte = new Compte(1,"samy",545,060L);
     
        
     Moyendepaiement mp = new Moyendepaiement("nom", "prenom", "adresseDeFacturation", 1455436789781756L,"15/06/2025",135);

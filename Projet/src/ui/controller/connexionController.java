@@ -50,14 +50,14 @@ public class connexionController {
     @FXML
     void inscription(MouseEvent event) throws IOException {
 
-        if(Math.floor(Math.log10(Long.parseLong(Tfnum.getText())) + 1) != 10){
+        if(Math.floor(Math.log10(Long.parseLong(Tfnum.getText())) + 1) != 11){
             LBLerreurnum.setText("Numéro de téléphone incorrecte");
           
         }else{
             Parent accueilS = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/accueil.fxml"));
             Scene accueilScene = new Scene(accueilS);
             
-            Compte compte = new Compte(Tfnom.getText(),Tfprenom.getText(),Integer.parseInt(Tfnum.getText()),Tfadresse.getText(),Tfmail.getText(),Tfmdp.getText());
+            Compte compte = new Compte(Tfnom.getText(),Tfprenom.getText(),Long.parseLong(Tfnum.getText()),Tfadresse.getText(),Tfmail.getText(),Tfmdp.getText());
             System.out.println(compte);
             
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
