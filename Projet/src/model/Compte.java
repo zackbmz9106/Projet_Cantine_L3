@@ -23,7 +23,7 @@ public class Compte {
 
   public Compte(String nom, String prenom ,int numTel, String adresse, String Email, String mdp){ // constructeur appele lors de l'inscription
     this.nom = nom;
-    this.nom = prenom;
+    this.prenom = prenom;
     this.numTel = numTel;
     this.adresse = adresse;
     this.mail = Email;
@@ -124,6 +124,11 @@ public class Compte {
  
   void voirCalendrier(int idEnfant){
     // TODO
+  }
+
+  public String toString(){
+    String n = System.getProperty("line.separator");
+    return "Nom: "+nom+n+"  Prénom: "+prenom+n+"    NumTel: "+numTel+n+"      Adresse: "+adresse+n+"        Mail: "+mail+n+"          Mdp: "+mdp;
   }
 
 

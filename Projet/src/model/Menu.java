@@ -119,7 +119,7 @@ public class Menu{
     ArrayList<Ingredients> entreeList = new ArrayList<>();
     entreeList.add(salade);
     entreeList.add(tomate);
-    entreeList.add(celeri);
+    //entreeList.add(celeri);
    
     ArrayList<Ingredients> platListViande = new ArrayList<>();
     platListViande.add(steak);
@@ -172,13 +172,13 @@ public class Menu{
             System.out.println("gg");
             str = list.get(i);//+", ";
           for(int j=0;j<list.size()-1;j++){
-            if(j==i-1){
+            /*if(j==i-1){
               break;
-            }
+            }*/
             System.out.println("to");
             String str1=", ";
             str+=str1;
-            break;
+            //break;
 
           }
           finalstr+=str;

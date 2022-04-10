@@ -11,7 +11,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import model.Compte;
 
 public class connexionController {
 
@@ -24,10 +27,39 @@ public class connexionController {
 
     @FXML
     private URL location;
+    
+    @FXML
+    private TextField Tfnom;
+    @FXML
+    private TextField Tfprenom;
+    @FXML
+    private TextField Tfnum;
+    @FXML
+    private TextField Tfadresse;
+    @FXML
+    private TextField Tfmail;
+    @FXML
+    private TextField Tfmdp;
+
+    String nom;
+
 
     @FXML
-    void Inscrire(ActionEvent event) {
+    void inscription(MouseEvent event) throws IOException {
+        Parent accueilS = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/accueil.fxml"));
 
+        Scene accueilScene = new Scene(accueilS);
+        
+    
+        System.out.println(Tfnom.getText());
+        System.out.println(Tfadresse.getText());
+
+        Compte compte = new Compte(Tfnom.getText(),Tfprenom.getText(),Integer.parseInt(Tfnum.getText()),Tfadresse.getText(),Tfmail.getText(),Tfmdp.getText());
+        System.out.println(compte);
+        
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(accueilScene);
+        window.show();
     }
 
     @FXML
