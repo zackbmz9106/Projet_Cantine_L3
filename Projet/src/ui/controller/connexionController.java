@@ -54,7 +54,7 @@ public class connexionController {
             LBLerreurnum.setText("Numéro de téléphone incorrecte");
           
         }else{
-            Parent accueilS = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/accueil.fxml"));
+            Parent accueilS = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_information.fxml"));
             Scene accueilScene = new Scene(accueilS);
             
             Compte compte = new Compte(Tfnom.getText(),Tfprenom.getText(),Long.parseLong(Tfnum.getText()),Tfadresse.getText(),Tfmail.getText(),Tfmdp.getText());
