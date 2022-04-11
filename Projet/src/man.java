@@ -6,16 +6,23 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import model.Compte;
 import model.Enfant;
 import model.Menu;
 import model.Moyendepaiement;
+import ui.controller.accueilController;
+import ui.controller.connexionController;
+import ui.controller.informationEnfantController;
 
 public class man extends Application {
+   
+
     @Override
     public void start(Stage primaryStage)  {
         // TODO Auto-generated method stub
+        
         try{
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/main.fxml"));
         
@@ -33,26 +40,23 @@ public class man extends Application {
 
         launch(args);    
     
-    Menu menuInit = new Menu();
-    menuInit.menuInit();    
-
-    Compte compte = new Compte(1,"samy",545,060L);
+        Menu menuInit = new Menu();
+        menuInit.menuInit();
+        
+        //connexionController connexionController = new connexionController();
+        
+        //connexionController.initialize();
+        //informationEnfantController iec = new informationEnfantController(connexionController,connexionController.getNewCompte());
+        //iec.AjouterEnfant(iec.getbtnInscription());
+       
+        //iec.AjouterEnfant(MouseEvent);
+    
     
        
-    Moyendepaiement mp = new Moyendepaiement("nom", "prenom", "adresseDeFacturation", 1455436789781756L,"15/06/2025",135);
-    //mp.payerParCarte();
-    //System.out.println(mp.getDateExpiration());
-
-    Enfant enfant = new Enfant(001, 10, "bgd", "zak", "M", false);
-    //Menu menu = new Menu("viande",5,"Menu Viande");
-
-    //int numR = compte.PrendreUneReservation("01/10/2000", menu, enfant, mp);
     
-    //System.out.println("voici votre numero de reservation"+ " " +numR);
-    //Reservation.setNumReservation(numR);
+
     
-    //enfant.getListReservation();
-              
+    
     }
 
 

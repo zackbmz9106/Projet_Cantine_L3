@@ -10,8 +10,7 @@
             "request": "launch",
             "mainClass": "man",
             "projectName": "Projet_Cantine_L3-3_440a2c89",
-            "vmArgs": "--module-path \"C:/Users/zacha/Documents/code/Java/javafx-sdk-18/lib\" --add-modules javafx.controls,javafx.fxml",
-            
+            "vmArgs": "--module-path \"C:/Users/Benidir Samy/Documents/javafx-sdk-18/lib\" --add-modules javafx.controls,javafx.fxml"            
         },
         {
             "type": "java",
@@ -19,7 +18,8 @@
             "request": "launch",
             "mainClass": "man",
             "projectName": "Projet_Cantine_L3-3_440a2c89",
-            "vmArgs": "--module-path \"C:/Users/Benidir Samy/Documents/javafx-sdk-18/lib\" --add-modules javafx.controls,javafx.fxml"            
+            "vmArgs": "--module-path \"C:/Users/zacha/Documents/code/Java/javafx-sdk-18/lib\" --add-modules javafx.controls,javafx.fxml",
+            
         },
         {
             "type": "java",
