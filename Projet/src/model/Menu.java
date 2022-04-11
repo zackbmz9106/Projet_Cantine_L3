@@ -12,6 +12,7 @@ public class Menu{
   private ArrayList<Ingredients> platList = new ArrayList<>();// liste des ingrédients qui compose le plat
   private ArrayList<Ingredients> dessertList = new ArrayList<>();// liste des ingrédients qui compose le dessert
   private String date;
+  private String jours;
 
 
 
@@ -25,8 +26,15 @@ public class Menu{
     this.entreeList = entree; //add(entree);
     this.platList = plat; //add(plat);
     this.dessertList = dessert; //add(dessert);
-    
-  
+  }
+
+   public Menu(String jours, ArrayList<Ingredients> entree, ArrayList<Ingredients> plat, ArrayList<Ingredients> dessert){ //ArrayList<Integer> listdesReservation){
+    this.jours = jours;
+    //this.typeMenu = typeMenu;
+    //this.nomMenu = nomMenu;
+    this.entreeList = entree; //add(entree);
+    this.platList = plat; //add(plat);
+    this.dessertList = dessert; //add(dessert);
   }
 
   public Menu(String typeMenu, int prix, String nomMenu){ 

@@ -14,6 +14,7 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -28,6 +29,9 @@ public class informationEnfantController implements Initializable {
 
     @FXML
     private URL location;
+
+    @FXML
+    private ToggleGroup gsexe;
 
     @FXML
     private TableView<Enfant> tableInfo;
@@ -52,6 +56,9 @@ public class informationEnfantController implements Initializable {
 
     @FXML
     private TextField tfPrenomInfo;
+
+    @FXML
+    private TextField tfQuotient;
 
     @FXML
     private String sexe;
@@ -136,7 +143,7 @@ public class informationEnfantController implements Initializable {
         assert tableInfo != null : "fx:id=\"tableInfo\" was not injected: check your FXML file 'Page_Information.fxml'.";
         assert tfNomInfo != null : "fx:id=\"tfNomInfo\" was not injected: check your FXML file 'Page_Information.fxml'.";
         assert tfPrenomInfo != null : "fx:id=\"tfPrenomInfo\" was not injected: check your FXML file 'Page_Information.fxml'.";
-
+        assert tfQuotient != null : "fx:id=\"tfQuotient\" was not injected: check your FXML file 'Page_Information.fxml'.";
     }
 
    

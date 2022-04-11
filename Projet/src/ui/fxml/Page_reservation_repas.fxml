@@ -37,6 +37,8 @@
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -50,30 +52,37 @@
                   <Font name="Arial Black" size="24.0" />
                </font>
             </Label>
-            <ChoiceBox layoutX="26.0" layoutY="223.0" prefWidth="150.0" />
-            <Separator layoutX="235.0" layoutY="210.0" orientation="VERTICAL" prefHeight="213.0" prefWidth="6.0" />
-            <Separator layoutX="532.0" layoutY="210.0" orientation="VERTICAL" prefHeight="214.0" prefWidth="6.0" />
-            <DatePicker layoutX="307.0" layoutY="223.0" promptText="Choix de la date" />
-            <ChoiceBox fx:id="ChoixMenus" layoutX="586.0" layoutY="223.0" prefWidth="150.0" />
-            <Label layoutX="55.0" layoutY="177.0" text="Choix enfant :" textFill="#556c96">
+            <ChoiceBox fx:id="ChoixEnfant" layoutX="26.0" layoutY="165.0" prefWidth="150.0" />
+            <Separator layoutX="235.0" layoutY="169.0" orientation="VERTICAL" prefHeight="277.0" prefWidth="6.0" />
+            <Separator layoutX="532.0" layoutY="169.0" orientation="VERTICAL" prefHeight="278.0" prefWidth="6.0" />
+            <DatePicker fx:id="dpDate" layoutX="303.0" layoutY="165.0" promptText="Choix de la date" />
+            <ChoiceBox fx:id="ChoixMenus" layoutX="586.0" layoutY="165.0" prefWidth="150.0" />
+            <Label layoutX="55.0" layoutY="119.0" text="Choix enfant :" textFill="#556c96">
                <font>
                   <Font name="Arial Black" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="605.0" layoutY="177.0" text="Choix du menus :" textFill="#556c96">
+            <Label layoutX="605.0" layoutY="119.0" text="Choix du menus :" textFill="#556c96">
                <font>
                   <Font name="Arial Black" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="337.0" layoutY="177.0" text="Choix de la date :" textFill="#556c96">
+            <Label layoutX="330.0" layoutY="119.0" text="Choix de la date :" textFill="#556c96">
                <font>
                   <Font name="Arial Black" size="12.0" />
                </font>
             </Label>
-            <Button layoutX="372.0" layoutY="439.0" mnemonicParsing="false" onMouseClicked="#GoInfoPaiement" text="Payer" />
-            <Button layoutX="573.0" layoutY="380.0" mnemonicParsing="false" text="Consulter le menu séléctionné" />
-            <Button layoutX="29.0" layoutY="28.0" mnemonicParsing="false" onMouseClicked="#BackReservation" text="Retour" />
-            <Label fx:id="lblMenus" alignment="TOP_CENTER" layoutX="539.0" layoutY="317.0" prefHeight="18.0" prefWidth="249.0" text="Label" />
+            <Button layoutX="324.0" layoutY="457.0" mnemonicParsing="false" onMouseClicked="#GoInfoPaiement" prefHeight="26.0" prefWidth="128.0" text="Payer" />
+            <Button layoutX="573.0" layoutY="322.0" mnemonicParsing="false" style="-fx-background-color: #EEEDFF;" text="Consulter le menu séléctionné" />
+            <Button layoutX="29.0" layoutY="28.0" mnemonicParsing="false" onMouseClicked="#BackReservation" style="-fx-background-color: #EEEDFF;" text="Retour" />
+            <Label fx:id="lblMenus" alignment="TOP_CENTER" layoutX="539.0" layoutY="270.0" prefHeight="18.0" prefWidth="249.0" />
+            <TableView fx:id="tableDate" layoutX="265.0" layoutY="208.0" prefHeight="164.0" prefWidth="250.0">
+              <columns>
+                <TableColumn fx:id="dateColonne" prefWidth="249.60001220703126" text="Date ajouté" />
+              </columns>
+            </TableView>
+            <Button fx:id="addDate" layoutX="263.0" layoutY="387.0" mnemonicParsing="false" onMouseClicked="#ajoutDate" style="-fx-background-color: #EEEDFF;" text="Ajouter une date" />
+            <Button fx:id="removeDate" layoutX="391.0" layoutY="387.0" mnemonicParsing="false" onMouseClicked="#supprDate" style="-fx-background-color: #EEEDFF;" text="Supprimer une date" />
          </children>
     </AnchorPane>
   </children>

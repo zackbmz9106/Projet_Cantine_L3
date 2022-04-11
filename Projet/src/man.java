@@ -15,7 +15,6 @@ import model.Moyendepaiement;
 public class man extends Application {
     @Override
     public void start(Stage primaryStage)  {
-        // TODO Auto-generated method stub
         try{
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/main.fxml"));
         
