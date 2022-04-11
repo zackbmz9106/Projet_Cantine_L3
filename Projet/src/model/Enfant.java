@@ -92,6 +92,12 @@ public void setIdEnfant(int idEnfant){
      this.handicap = handicap;
   }
 
+  public String toString(){
+    String n = System.getProperty("line.separator");
+    return n+"Nom: "+nom+n+"  Prénom: "+prenom+n+"    Sexe: "+sexe;
+  }
+
+
   protected void finalize(){// appel lorsqu'un objet est supprime
     System.out.println("Objet enfant "+this.nom+" "+ this.prenom);
   }

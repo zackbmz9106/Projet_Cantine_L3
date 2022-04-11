@@ -1,7 +1,7 @@
 package model;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.Random.*;
+//import java.util.Date;
+//import java.util.Random.*;
 
 public class Compte {
   private int id;
@@ -12,7 +12,7 @@ public class Compte {
   private String mdp;
   private int quotientF;
   private Long numTel;
-  private ArrayList<Enfant> listEnfant; // Liste des enfants rattacher a un compte 
+  private ArrayList<Enfant> listEnfant = new ArrayList<>(); // Liste des enfants rattacher a un compte 
 
   public Compte(int id,String nom, int quotientF,Long numTel){
     this.id = id;
@@ -21,7 +21,7 @@ public class Compte {
     this.numTel = numTel;
   }
 
-  public Compte(String nom, String prenom ,Long numTel, String adresse, String Email, String mdp){ // constructeur appele lors de l'inscription
+  /*public Compte(String nom, String prenom ,Long numTel, String adresse, String Email, String mdp){ // constructeur appele lors de l'inscription
     this.nom = nom;
     this.prenom = prenom;
     this.numTel = numTel;
@@ -29,7 +29,19 @@ public class Compte {
     this.mail = Email;
     this.mdp = mdp;
     
-  }
+  }*/
+
+  public Compte(String nom, String prenom ,Long numTel, String adresse, String Email, String mdp){ // constructeur appele lors de l'inscription
+  this.nom = nom;
+  this.prenom = prenom;
+  this.numTel = numTel;
+  this.adresse = adresse;
+  this.mail = Email;
+  this.mdp = mdp;
+  //this.listEnfant;
+  
+}
+
 
   public int getID(){
     return this.id;
@@ -61,6 +73,18 @@ public class Compte {
 
   public void setNumTel(Long numTel){
     this.numTel = numTel;
+  }
+
+  public ArrayList<Enfant> getEnfantCompte(){
+    return listEnfant;
+  }
+
+  public void setEnfantCompte(Enfant enfant){
+    this.listEnfant.add(enfant);
+  }
+
+  public void suppEnfantCompte(Enfant enfant){
+    this.listEnfant.remove(enfant);
   }
 
 
@@ -125,10 +149,22 @@ public class Compte {
   /*public verifCompte(){
 
   }*/
+  public ArrayList<Enfant> afficheList(ArrayList<Enfant> enfantList){
+    String nom="";
+    String prenom="";
+    String sexe="";
+    /*for(Enfant e :enfantList){
+       //nom = e.getNom();
+       //prenom = e.getPrenom();
+       //sexe = e.getSexe();
+    }*/
+  return enfantList;//nom+" "+prenom+" "+sexe;
+  }
+
 
   public String toString(){
     String n = System.getProperty("line.separator");
-    return "Nom: "+nom+n+"  Prénom: "+prenom+n+"    NumTel: "+numTel+n+"      Adresse: "+adresse+n+"        Mail: "+mail+n+"          Mdp: "+mdp;
+    return "Nom: "+nom+n+"  Prénom: "+prenom+n+"    NumTel: "+numTel+n+"      Adresse: "+adresse+n+"        Mail: "+mail+n+"          Mdp: "+mdp+n+"            Enfants: "+listEnfant;
   }
 
 
