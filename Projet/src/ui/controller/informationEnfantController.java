@@ -154,7 +154,7 @@ public class informationEnfantController implements Initializable {
         Parent go = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/accueil.fxml"));
 
         Scene Menu = new Scene(go);
-
+        newCompte.setQuotientF(Integer.parseInt(tfQuotient.getText()));
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(Menu);
         window.show();

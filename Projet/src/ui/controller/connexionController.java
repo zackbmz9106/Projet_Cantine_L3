@@ -29,9 +29,7 @@ import model.Enfant;
 
 public class connexionController {
 
-        private Stage stage; 
-        private Scene scene ; 
-        private Parent root;
+       
         
 
 

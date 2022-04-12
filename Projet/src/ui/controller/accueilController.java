@@ -121,6 +121,21 @@ public class accueilController {
     }
 
     @FXML
+    void GoPageInfoEnfant(MouseEvent event) throws IOException {
+
+        //tfQuotient.setEditable(false);
+
+        Parent synth = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_Information.fxml"));
+
+        Scene synthScene = new Scene(synth);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(synthScene);
+        window.show();
+
+    }
+
+    @FXML
     void deconnexion(MouseEvent event) throws IOException {
 
 

@@ -69,7 +69,7 @@ public class reservationRepasController implements Initializable {
     private static ArrayList<Menu> MenuSelectList = new ArrayList<>(); // Liste des Menus sélectionner
 
     @FXML
-    private Compte compte = informationEnfantController.getCompte(); // Recuperer le compte cree 
+    private static Compte compte = informationEnfantController.getCompte(); // Recuperer le compte cree 
     
     @FXML
     private ArrayList<Menu> menuList = accueilController.getMenuList(); // recupere la liste des menus initilise 
@@ -170,7 +170,7 @@ public class reservationRepasController implements Initializable {
         //menu.setDateMenu(date);// ajout de la date au menu
         menu.setDateMenu(date);// ajout de la date au menu
         
-        MenuSelectList.add(ChoixMenus.getValue()); // ajout du menu dans la liste des menus selectionne
+        MenuSelectList.add(menu); // ajout du menu dans la liste des menus selectionne
         System.out.println(MenuSelectList);
         
         ObservableList<Menu> menutab = tableMenu.getItems();
@@ -205,14 +205,25 @@ public class reservationRepasController implements Initializable {
 
     }
 
+    public static Enfant getEnfantSelect(){
+        return enfantSelect;
+    }
+
     public static void setEnfantSelect(Enfant enfant){
         enfantSelect = enfant;
+    }
+
+    public static ArrayList<Menu> getMenuSelect(){
+        return MenuSelectList;
     }
 
     public static void setMenuSelect(ArrayList<Menu> menu){
         MenuSelectList = menu;
     }
 
+    public static Compte getCompte(){
+        return compte;
+    }
 
     @FXML
     void initialize() {

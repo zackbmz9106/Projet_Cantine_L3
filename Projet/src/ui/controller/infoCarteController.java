@@ -2,6 +2,7 @@ package ui.controller;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,8 +15,12 @@ import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.scene.Parent;
-
+import model.Compte;
+import model.Enfant;
+import model.Menu;
 import model.Moyendepaiement;
+
+
 
 
 public class infoCarteController {
@@ -57,6 +62,11 @@ public class infoCarteController {
     private TextField tfPrenomPaiement;
 
     @FXML
+    private Enfant enfantSelect = reservationRepasController.getEnfantSelect(); // recuperation de l'enfant de la reservation 
+    private ArrayList<Menu> MenuSelect = reservationRepasController.getMenuSelect(); // recuperation de la liste des menus selectionne
+    private Compte compte = reservationRepasController.getCompte(); // recuperation du compte 
+
+    @FXML
     
     void BackReservationRepas(MouseEvent event) throws IOException{
 
@@ -74,21 +84,49 @@ public class infoCarteController {
     @FXML
     void VerifInfoCarte(MouseEvent event) throws IOException{
 
-        if((Math.floor(Math.log10(Long.parseLong(tfCryptPaiement.getText())) + 1) != 3 )&&( Math.floor(Math.log10(Long.parseLong(tfNumCartePaiement.getText())) + 1) != 16 ) ){
-          
+        /*if((Math.floor(Math.log10(Long.parseLong(tfCryptPaiement.getText())) + 1) != 3 )&&( Math.floor(Math.log10(Long.parseLong(tfNumCartePaiement.getText())) + 1) != 16 ) ){ 
         }
-        
-        else {
+        else {*/
+            Moyendepaiement mp = new Moyendepaiement(compte.getNom(),compte.getPrenom(),compte.getAdresse(),Long.parseLong(tfNumCartePaiement.getText()),tfDateExpPaiement.getText(), Integer.parseInt(tfCryptPaiement.getText()));
+            
+            if(mp.payerParCarte() == 0){ // si paiement valide
+
+            for(Menu menu : MenuSelect){
+                menu.setPrix(compte.calculPrix()); // Determine le prix du menu en fonction du quotient de la famille
+                compte.PrendreUneReservation(menu.getDateMenu(), menu, enfantSelect, mp); 
+            }
             Parent carte = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_recap_reservation.fxml"));
             Scene recap = new Scene(carte);
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
             window.setScene(recap);
-            window.show();
-        }
+            window.show(); 
+    
+
+            }
+            
+            else{
+                if(mp.payerParCarte()==1){
+                    lblErreurCarte.setText("Numéro de carte incorrecte");
+                }else{
+                    lblErreurCarte.setText("");
+                }
+                if(mp.payerParCarte()==2){
+                    lblErreurDateExp.setText("Date non valide ");
+                }
+                if(mp.payerParCarte()==3){
+                    lblErreurCrypt.setText("Cryptogramme incorrecte");
+                }
+
+            }
+    
+    
+    
+    }
+        
 
 
     
-    }
+    //}
 
 
 
