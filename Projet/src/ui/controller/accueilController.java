@@ -27,6 +27,9 @@ public class accueilController {
         System.out.println("You clicked me!");
     }
 
+    
+int a;
+
     @FXML
     public void reserver(MouseEvent event) throws IOException {
         
