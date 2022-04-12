@@ -110,7 +110,7 @@ public class accueilController {
 
         //tfQuotient.setEditable(false);
 
-        Parent synth = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_Information.fxml"));
+        Parent synth = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_ModifEnfantInfo.fxml"));
 
         Scene synthScene = new Scene(synth);
 

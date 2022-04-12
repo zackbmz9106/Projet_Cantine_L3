@@ -148,18 +148,6 @@ public class informationEnfantController implements Initializable {
     }
 
     @FXML
-    void BackMain(MouseEvent event) throws IOException {
-
-        Parent back = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/main.fxml"));
-
-        Scene Menu = new Scene(back);
-
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(Menu);
-        window.show();
-    }
-
-    @FXML
     void GoAccueil(MouseEvent event) throws IOException {
 
 
