@@ -25,17 +25,26 @@
         "c:\\Users\\Benidir Samy\\Documents\\javafx-sdk-18\\lib\\javafx.swing.jar",
         "c:\\Users\\Benidir Samy\\Documents\\javafx-sdk-18\\lib\\javafx.web.jar",
         "c:\\Users\\Benidir Samy\\Documents\\javafx-sdk-18\\lib\\javafx-swt.jar",
-        "c:\\Users\\shayi\\Documents\\javafx-sdk-18\\lib\\javafx.base.jar",
-        "c:\\Users\\shayi\\Documents\\javafx-sdk-18\\lib\\javafx.controls.jar",
-        "c:\\Users\\shayi\\Documents\\javafx-sdk-18\\lib\\javafx.fxml.jar",
-        "c:\\Users\\shayi\\Documents\\javafx-sdk-18\\lib\\javafx.graphics.jar",
-        "c:\\Users\\shayi\\Documents\\javafx-sdk-18\\lib\\javafx.media.jar",
-        "c:\\Users\\shayi\\Documents\\javafx-sdk-18\\lib\\javafx.swing.jar",
-        "c:\\Users\\shayi\\Documents\\javafx-sdk-18\\lib\\javafx.web.jar",
-        "c:\\Users\\shayi\\Documents\\javafx-sdk-18\\lib\\javafx-swt.jar"
+        "c:\\Program Files (x86)\\MySQL\\Connector J 8.0\\mysql-connector-java-8.0.28.jar"
     ],
     "java.project.sourcePaths": [
         "Projet/src",
         "ui"
+    ],
+    "sqltools.connections": [
+
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "connexion",
+            "database": "bddCantine",
+            "username": "sqluser",
+            "password": "password"
+        }
     ]
 }

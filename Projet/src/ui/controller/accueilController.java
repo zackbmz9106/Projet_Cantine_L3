@@ -20,6 +20,7 @@ public class accueilController {
     private Stage stage; 
     private Scene reserve ; 
     private Parent reservation;
+    
     @FXML
     private ResourceBundle resources;
 
