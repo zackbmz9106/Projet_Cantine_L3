@@ -9,6 +9,7 @@
             "name": "Launch man",
             "request": "launch",
             "mainClass": "man",
+<<<<<<< HEAD
             "projectName": "Projet_Cantine_L3-7_eaba0b16",
             "vmArgs": "--module-path \"C:/Users/adminHp/Downloads/openjfx-17.0.2_windows-x64_bin-sdk_/javafx-sdk/lib\" --add-modules javafx.controls,javafx.fxml"
 
@@ -28,6 +29,10 @@
             "mainClass": "man",
             "projectName": "Projet_Cantine_L3-3_df3a0b31",
             "vmArgs": "--module-path \"C:/Users/zacha/Documents/code/Java/javafx-sdk-18/lib\" --add-modules javafx.controls,javafx.fxml"
+=======
+            "projectName": "Projet_Cantine_L3-3_440a2c89",
+            "vmArgs": "--module-path \"C:/Users/Benidir Samy/Documents/javafx-sdk-18/lib\" --add-modules javafx.controls,javafx.fxml"
+>>>>>>> e070af5727fc4e504704904a5cfbad570c2d5763
         },
         {
             "type": "java",

@@ -13,6 +13,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import model.Enfant;
+import model.Reservation;
 
 public class recapRerservationController {
 
@@ -38,6 +40,14 @@ public class recapRerservationController {
     private Label lblPrixRecap;
 
     @FXML
+    private Label lblnumR;
+
+    @FXML
+    private Enfant enfant = infoCarteController.getEnfant();
+    private Reservation reservation = infoCarteController.getReservation();
+
+    
+    @FXML
     void BackInfoPaiement(MouseEvent event) throws IOException{
 
         Parent recap = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_Info_Paiement.fxml"));
@@ -57,6 +67,14 @@ public class recapRerservationController {
 
     @FXML
     void initialize() {
+        
+        lblEnfantRecap.setText(enfant.getNom()+" "+enfant.getPrenom());
+        lblDateRecap.setText(reservation.getDateReservation().getDateString());
+        lblMenusRecap.setText(reservation.getNomMenus().toString());
+        lblPrixRecap.setText((""+reservation.getPrixReservation())+" Euros");
+        lblnumR.setText(reservation.getnumReservation()+"");
+        
+        
         assert btnPaiementRecap != null : "fx:id=\"btnPaiementRecap\" was not injected: check your FXML file 'Page_recap_reservation.fxml'.";
         assert lblDateRecap != null : "fx:id=\"lblDateRecap\" was not injected: check your FXML file 'Page_recap_reservation.fxml'.";
         assert lblEnfantRecap != null : "fx:id=\"lblEnfantRecap\" was not injected: check your FXML file 'Page_recap_reservation.fxml'.";
