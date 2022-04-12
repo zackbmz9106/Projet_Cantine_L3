@@ -51,8 +51,16 @@ public class Compte {
     return this.nom;
   }
 
+  public String getPrenom(){
+    return this.prenom;
+  }
+
   public int getQuotientF(){
     return this.quotientF;
+  }
+  
+  public String getAdresse(){
+    return this.adresse;
   }
 
   public Long getNumTel(){
@@ -88,9 +96,9 @@ public class Compte {
   }
 
 
-  public int PrendreUneReservation(String date, Menu menu, Enfant enfant, Moyendepaiement mp){
+  public int PrendreUneReservation(Date date, Menu menu, Enfant enfant, Moyendepaiement mp){
    
-      if(mp.payerParCarte()){ // Si paiement valide
+      //if(mp.payerParCarte()){} // Si paiement valide
       
         Reservation reservation = new Reservation(menu,date);
       
@@ -107,10 +115,10 @@ public class Compte {
         System.out.println(enfant.getListReservation());
       
         return reservation.getnumReservation();
-      } 
+      
     
-    System.out.println("Reservation non valide");
-    return 0;
+    //System.out.println("Reservation non valide");
+    //return 0;
   }
     
 

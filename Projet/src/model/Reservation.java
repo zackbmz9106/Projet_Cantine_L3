@@ -4,8 +4,8 @@ package model;
 
 public class Reservation{
   private String nomMenu;
-  private String date;
-  //private Date date;
+  private String datea;
+  private Date date;
   private int numReservation;
   enum Statuts { Confirmee, Annulee }
   private Statuts statut = null;
@@ -19,14 +19,14 @@ public class Reservation{
     this.date = date;
   }*/
 
-  public Reservation(Menu menu, String date){
+  public Reservation(Menu menu, Date date){
     this.nomMenu = menu.getNomMenu();
     this.date = date;
     this.numReservation = genNumR();
     this.prix = menu.getPrix();
   }
   
-  public Reservation(String nomMenu, String date, int numR, Statuts statut, int penalites){
+  public Reservation(String nomMenu, Date date, int numR, Statuts statut, int penalites){
     this.nomMenu = nomMenu;
     this.date = date;
     this.numReservation = numR;
@@ -46,7 +46,7 @@ public class Reservation{
      this.nomMenu = nomMenu;
   }
 
-  public String getDateReservation(){
+  public Date getDateReservation(){
     return this.date;
   }
 
