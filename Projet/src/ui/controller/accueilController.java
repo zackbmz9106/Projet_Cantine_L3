@@ -81,6 +81,11 @@ public class accueilController {
     }
 
     @FXML
+    void GoParametre(MouseEvent event) {
+
+    }
+
+    @FXML
     public void initialize() {
         //Menu menuinit = new Menu();
         accueilController.setMenuList(menuInit.menuInit());

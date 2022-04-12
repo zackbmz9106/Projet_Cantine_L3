@@ -34,98 +34,41 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="485.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controller.accueilController">
+<VBox prefHeight="431.0" prefWidth="651.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controller.accueilController">
   
   
   <children>
-    <MenuBar prefHeight="27.0" prefWidth="712.0" style="-fx-background-color: #EEEDFF;" VBox.vgrow="NEVER">
-      <menus>
-            <Menu mnemonicParsing="false" text="Reservation">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Reserver" />
-                  <MenuItem mnemonicParsing="false" text="Consulter" />
-                  <MenuItem mnemonicParsing="false" text="Annuler" />
-              </items>
-            </Menu>
-        <Menu mnemonicParsing="false" text="Espace">
-          <items>
-            <MenuItem mnemonicParsing="false" text="Enfants" />
-            <MenuItem mnemonicParsing="false" text="Suivi " />
-            <Menu mnemonicParsing="false" text="Gerer">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="Enfants" />
-                        <MenuItem mnemonicParsing="false" text="Repas" />
-                     </items></Menu>
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Quit" />
-          </items>
-        </Menu>
-        <Menu mnemonicParsing="false" text="Compte">
-          <items>
-            <MenuItem mnemonicParsing="false" text="Consulter" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Historique facture" />
-            <MenuItem mnemonicParsing="false" text="Modifier une information" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Se déconnecter" />
-          </items>
-        </Menu>
-        <Menu mnemonicParsing="false" text="Enfant">
-          <items>
-            <MenuItem mnemonicParsing="false" text="Suivi des repas" />
-          </items>
-        </Menu>
-            <Menu mnemonicParsing="false" text="Help">
-              <items>
-                <MenuItem mnemonicParsing="false" text="à propos..." />
-              </items>
-            </Menu>
-      </menus>
-    </MenuBar>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="393.0" prefWidth="712.0" style="-fx-background-color: #B6CDE8;" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="449.0" prefWidth="666.0" style="-fx-background-color: #B6CDE8;" VBox.vgrow="ALWAYS">
          <children>
             
-            <Button fx:id="clickActionTarget" layoutX="41.0" layoutY="235.0" mnemonicParsing="false" onMouseClicked="#reserver" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Reservations de repas" />
-            <Button layoutX="41.0" layoutY="297.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Synthese des reservations" />
-            <Button layoutX="41.0" layoutY="352.0" mnemonicParsing="false" onMouseClicked="#goMenu" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Menus" />
-            <Text fill="#556c96" fontSmoothingType="LCD" layoutX="316.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion" textAlignment="CENTER">
+            <Button fx:id="clickActionTarget" layoutX="58.0" layoutY="235.0" mnemonicParsing="false" onMouseClicked="#reserver" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Reservations de repas" />
+            <Button layoutX="58.0" layoutY="297.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Synthese des reservations" />
+            <Button layoutX="58.0" layoutY="352.0" mnemonicParsing="false" onMouseClicked="#goMenu" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Menus" />
+            <Text fill="#556c96" fontSmoothingType="LCD" layoutX="434.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion" textAlignment="CENTER">
                <font>
                   <Font name="Arial Black" size="25.0" />
                </font>
             </Text>
-            <Button layoutX="286.0" layoutY="235.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Espace Famille" />
-            <Button layoutX="286.0" layoutY="297.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Gestion des reservations" />
-            <Button layoutX="285.0" layoutY="352.0" mnemonicParsing="false" onMouseClicked="#voirFacture" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Historique facture" />
-            <Text fill="#556c96" fontSmoothingType="LCD" layoutX="501.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Signaler un changement" textAlignment="CENTER" wrappingWidth="288.5966796875">
+            <Button layoutX="403.0" layoutY="235.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Espace Famille" />
+            <Button layoutX="403.0" layoutY="297.0" mnemonicParsing="false" onMouseClicked="#voirFacture" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Historique facture" />
+            <Separator layoutX="322.0" layoutY="100.0" orientation="VERTICAL" prefHeight="315.0" prefWidth="0.0" style="-fx-background-color: #B6CDE8;" />
+            <Text fill="#556c96" fontSmoothingType="LCD" layoutX="86.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Repas" textAlignment="CENTER" wrappingWidth="111.2894287109375">
                <font>
                   <Font name="Arial Black" size="25.0" />
                </font>
             </Text>
-            <Button layoutX="562.0" layoutY="352.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Adrese electronique" />
-            <Button layoutX="562.0" layoutY="297.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Numero de telephone" />
-            <Button layoutX="562.0" layoutY="235.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Adresse postale" />
-            <Separator layoutX="243.0" layoutY="101.0" orientation="VERTICAL" prefHeight="366.0" prefWidth="7.0" style="-fx-background-color: #B6CDE8;" />
-            <Separator layoutX="497.0" layoutY="96.0" orientation="VERTICAL" prefHeight="375.0" prefWidth="7.0" style="-fx-background-color: #B6CDE8;" />
-            <Text fill="#556c96" fontSmoothingType="LCD" layoutX="68.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Repas" textAlignment="CENTER" wrappingWidth="111.2894287109375">
-               <font>
-                  <Font name="Arial Black" size="25.0" />
-               </font>
-            </Text>
-            <Label layoutX="333.0" layoutY="23.0" text="Accueil" textFill="#556c96">
+            <Label layoutX="264.0" layoutY="22.0" text="Accueil" textFill="#556c96">
                <font>
                   <Font name="Arial Black" size="30.0" />
                </font>
             </Label>
+            <Button layoutX="400.0" layoutY="353.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Paramètre" />
          </children>
     </AnchorPane>
   </children>

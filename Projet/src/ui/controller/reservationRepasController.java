@@ -57,6 +57,10 @@ public class reservationRepasController implements Initializable {
     @FXML
     private DatePicker dpDate;
 
+    
+    @FXML
+    private TableColumn<?, String> menusColonne;
+
     @FXML
     private Compte compte = informationEnfantController.getCompte(); // Recuperer le compte cree 
     
@@ -145,6 +149,19 @@ public class reservationRepasController implements Initializable {
         int selectedID = tableDate.getSelectionModel().getSelectedIndex();
         tableDate.getItems().remove(selectedID);
         
+    }
+
+    @FXML
+    void GoMenus(MouseEvent event)throws IOException {
+
+        Parent reservation = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_menus.fxml"));
+
+        Scene menu = new Scene(reservation);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(menu);
+        window.show();
+
     }
 
 
