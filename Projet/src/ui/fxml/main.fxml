@@ -144,7 +144,7 @@
                   </AnchorPane>
               </items>
             </SplitPane>
-            <ImageView fitHeight="52.0" fitWidth="101.0" layoutX="455.0" opacity="0.56" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="TfmdpCo" fitHeight="52.0" fitWidth="101.0" layoutX="455.0" opacity="0.56" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../restaurationscolaire-1200x630.jpg" />
                </image>
