@@ -49,20 +49,17 @@ public class reservationRepasController implements Initializable {
     private Button removeDate;
 
     @FXML
-    private TableView<Date> tableDate;
+    private TableView<Menu> tableMenu;
 
     @FXML
-    private TableColumn<Date, String> dateColonne;
-
+    private TableColumn<Menu, Date> dateColonne;
+    @FXML
+    private TableColumn<Menu, String> menusColonne;
     @FXML
     private Button addDate;
 
     @FXML
     private DatePicker dpDate;
-
-    
-    @FXML
-    private TableColumn<?, String> menusColonne;
 
     @FXML
     private static Enfant enfantSelect;
@@ -80,13 +77,18 @@ public class reservationRepasController implements Initializable {
     
     @FXML
     private ChoiceBox <Menu> ChoixMenus;
-    //private String[] menus = {"Menus viande","Menus poisson", "Menus végétarien"}; 
     private ArrayList<Menu> menus = menuList;
+
+    ObservableList<Menu> menutab;
 
     @Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-        dateColonne.setCellValueFactory(new PropertyValueFactory<Date, String>("date"));
-
+        dateColonne.setCellValueFactory(new PropertyValueFactory<Menu, Date>("dateMenu"));
+        menusColonne.setCellValueFactory(new PropertyValueFactory<Menu, String>("nomMenu"));
+        
+        //System.out.println(tableMenu.getItems());
+        //ObservableList<Menu> menutab = MenuSelectList;
+        //tableMenu.setItems(MenuSelectList);
 
         ChoixMenus.setValue(menus.get(0));
 		ChoixMenus.getItems().addAll(menus);
@@ -151,21 +153,28 @@ public class reservationRepasController implements Initializable {
     @FXML
     void ajoutDate(MouseEvent event) {
         
-        String string ="";
-        Date date = new Date(dpDate.getValue(), string);
+        //String string ="";
+        Date date = new Date(dpDate.getValue());
         //String myFormattedDate = date.getDateL().format(DateTimeFormatter.ofPattern("dd-MMM-yyyy"));
         
-        String myFormattedDate = date.getDateL().format(DateTimeFormatter.ofPattern("dd-MM-uuuu", Locale.FRANCE).withResolverStyle(ResolverStyle.STRICT));
-        date.setDateString(myFormattedDate);        
+        //String myFormattedDate = date.getDateL().format(DateTimeFormatter.ofPattern("dd-MM-uuuu", Locale.FRANCE).withResolverStyle(ResolverStyle.STRICT));
+        //date.setDateString(myFormattedDate);        
         
-        ObservableList<Date> dates = tableDate.getItems();
-        dates.add(date);
+        /*ObservableList<Date> dates = tableDate.getItems();
+        dates.add(date);*/
+        
         Menu menu = ChoixMenus.getValue();
-        menu.setDateMenu(date);
-        MenuSelectList.add(ChoixMenus.getValue());
+        //menu.setDateMenu(date);// ajout de la date au menu
+        menu.setDateMenu(date);// ajout de la date au menu
+        
+        MenuSelectList.add(ChoixMenus.getValue()); // ajout du menu dans la liste des menus selectionne
+        System.out.println(MenuSelectList);
+        
+        ObservableList<Menu> menutab = tableMenu.getItems();
+        menutab.add(menu);
+        tableMenu.setItems(menutab);
 
         System.out.println(menu.getNomMenu()+menu.getTypeMenu()+menu.getDateMenu());
-        //System.out.println(myFormattedDate);
         System.out.println(enfantSelect);
         
     }
@@ -173,9 +182,11 @@ public class reservationRepasController implements Initializable {
     @FXML
     void supprDate(MouseEvent event) {
         
-        int selectedID = tableDate.getSelectionModel().getSelectedIndex();
-        tableDate.getItems().remove(selectedID);
-        
+        int selectedID = tableMenu.getSelectionModel().getSelectedIndex();
+        tableMenu.getItems().remove(selectedID);
+        MenuSelectList.remove(ChoixMenus.getValue());
+        System.out.println(ChoixMenus.getValue().getNomMenu()+ChoixMenus.getValue().getTypeMenu()+ChoixMenus.getValue().getDateMenu());
+        System.out.println(MenuSelectList);
     }
 
     @FXML
