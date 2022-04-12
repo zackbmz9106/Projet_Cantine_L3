@@ -2,6 +2,9 @@ package ui.controller;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.format.DateTimeFormatter;
+import java.time.format.ResolverStyle;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 import javafx.collections.ObservableList;
@@ -21,7 +24,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import model.DisplayCalendar;
+import model.Date;
+
 
 public class reservationRepasController implements Initializable {
 
@@ -38,21 +42,21 @@ public class reservationRepasController implements Initializable {
     private Button removeDate;
 
     @FXML
-    private TableView<String> tableDate;
+    private TableView<Date> tableDate;
 
     @FXML
-    private TableColumn<DisplayCalendar, String> dateColonne;
+    private TableColumn<Date, String> dateColonne;
 
     @FXML
     private Button addDate;
 
     @FXML
     private DatePicker dpDate;
-/*
+
     @FXML
     private ChoiceBox <String> ChoixEnfant;
-    private String[] enfants = {"test1", "test2", "test3"};
-*/
+    //private String[] enfants = {"test1", "test2", "test3"};
+
     @FXML
     private ChoiceBox <String> ChoixMenus;
     private String[] menus = {"Menus viande","Menus poisson", "Menus végétarien"}; 
@@ -60,7 +64,7 @@ public class reservationRepasController implements Initializable {
 
     @Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-        //dateColonne.setCellValueFactory(new PropertyValueFactory<DisplayCalendar, String>("date"));
+        dateColonne.setCellValueFactory(new PropertyValueFactory<Date, String>("date"));
 
         ChoixMenus.setValue("Sélectionner le menus");
 		ChoixMenus.getItems().addAll(menus);
@@ -109,19 +113,26 @@ public class reservationRepasController implements Initializable {
 
     @FXML
     void ajoutDate(MouseEvent event) {
-        /*
-        DisplayCalendar date = new DisplayCalendar(dpDate.getValue());
-        ObservableList<DisplayCalendar> dates = tableDate.getItems();
+        
+        String string ="";
+        Date date = new Date(dpDate.getValue(), string);
+        //String myFormattedDate = date.getDateL().format(DateTimeFormatter.ofPattern("dd-MMM-yyyy"));
+        String myFormattedDate = date.getDateL().format(DateTimeFormatter.ofPattern("dd-MM-uuuu", Locale.FRANCE).withResolverStyle(ResolverStyle.STRICT));
+        date.setDateString(myFormattedDate);
+        
+        ObservableList<Date> dates = tableDate.getItems();
         dates.add(date);
-        */
+        //System.out.println(date.getDate());
+        System.out.println(myFormattedDate);
+        
     }
 
     @FXML
     void supprDate(MouseEvent event) {
-        /*
+        
         int selectedID = tableDate.getSelectionModel().getSelectedIndex();
         tableDate.getItems().remove(selectedID);
-        */
+        
     }
 
 
