@@ -43,34 +43,35 @@ public class connexionController {
     private URL location;
     
     @FXML
-    private TextField Tfnom;
+     private TextField Tfnom;
     @FXML
-    private TextField Tfprenom;
+     private TextField Tfprenom;
     @FXML
-    private TextField Tfnum;
+     private TextField Tfnum;
     @FXML
-    private TextField Tfadresse;
+     private TextField Tfadresse;
     @FXML
-    private TextField Tfmail;
+     private TextField Tfmail;
     @FXML
-    private TextField Tfmdp;
+     private TextField Tfmdp;
     @FXML
-    private Label LBLerreurnum;
-    @FXML
-    private static Compte newCompte;
+     private Label LBLerreurnum;
 
     String nom;
     int num;
+    private Button btnInscription;
+
     static String url = "jdbe:mysql://localhost:3306/macantine";
     static String user = "root";
     static String password = "projetjaval3";
     static String sql1 = "SELECT * FROM compte where email= ? ";
     static int parameterIndex;
     static String email;
+    private static Compte newCompte;
 
 
     @FXML
-     void inscription(MouseEvent event) throws IOException, SQLException {
+     void inscription(MouseEvent event) throws IOException, SQLException, ClassNotFoundException {
         Connection connexion = null ; 
         PreparedStatement psInsert = null; 
         PreparedStatement psCheckExcistance = null;
@@ -97,6 +98,7 @@ public class connexionController {
         
 
     try { 
+        Class.forName("com.mysql.jdbc.driver");
         connexion = DriverManager.getConnection(url, user, password);
          String sql2 = "INSERT INTO compte.macantine VALUES ( "+Tfnom.getText()+","+Tfprenom.getText()+ ","+ Tfnum.getText()+","+ Tfadresse.getText()+","+ Tfmail.getText()+","+ Tfmdp.getText()+")";
 
@@ -111,6 +113,7 @@ public class connexionController {
             alert.show(); 
         }
         else { 
+            System.out.println("compte ajouté");
             psInsert = connexion.prepareStatement(sql2);
         }
     }
@@ -124,7 +127,7 @@ public class connexionController {
             e.printStackTrace();
         }
     }
-}
+} 
      }
 
 
