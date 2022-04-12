@@ -162,6 +162,16 @@ public class Compte {
   }
 
 
+  public ArrayList<String> enfantListString(){
+        //String[] list;
+        ArrayList<String> list = new ArrayList<>();
+        for(Enfant enfant : getEnfantCompte()){
+            list.add(enfant.toString());
+              //list[]
+        }
+    return list;
+    }
+
   public String toString(){
     String n = System.getProperty("line.separator");
     return "Nom: "+nom+n+"  Prénom: "+prenom+n+"    NumTel: "+numTel+n+"      Adresse: "+adresse+n+"        Mail: "+mail+n+"          Mdp: "+mdp+n+"            Enfants: "+listEnfant;

@@ -74,7 +74,7 @@ public class informationEnfantController implements Initializable {
     @FXML
     private Button btnAjouter;
 
-    private Compte newCompte;
+    private static Compte newCompte;
     
     //@FXML
     //private connexionController cc;
@@ -87,9 +87,9 @@ public class informationEnfantController implements Initializable {
         this.newCompte = compte;
     }*/
 
-    public informationEnfantController(Compte compte) {
+    /*public informationEnfantController(Compte compte) {
         this.newCompte = compte;
-    }
+    }*/
 
     
     
@@ -127,7 +127,8 @@ public class informationEnfantController implements Initializable {
         tableInfo.setItems(enfants);
         tfNomInfo.setText("");
         tfPrenomInfo.setText("");
-        newCompte = connexionController.getNewCompte();
+        //newCompte = connexionController.getNewCompte();
+        informationEnfantController.setCompte(connexionController.getNewCompte());
         newCompte.setEnfantCompte(enfant);
         System.out.println(newCompte);
         //System.out.println(newCompte.getEnfantCompte());
@@ -172,8 +173,12 @@ public class informationEnfantController implements Initializable {
         window.show();
     }
 
-    public void setCompte(Compte compte){
-        this.newCompte = compte;
+    public static void setCompte(Compte compte){
+        newCompte = compte;
+    }
+
+    public static Compte getCompte(){
+        return newCompte;
     }
 
     public Button getbtnAjouter(){

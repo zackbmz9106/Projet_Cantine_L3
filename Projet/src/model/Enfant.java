@@ -94,7 +94,7 @@ public void setIdEnfant(int idEnfant){
 
   public String toString(){
     String n = System.getProperty("line.separator");
-    return n+"Nom: "+nom+n+"  Prénom: "+prenom+n+"    Sexe: "+sexe;
+    return nom+" "+prenom+" "+sexe;
   }
 
 
