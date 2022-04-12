@@ -24,7 +24,15 @@
         "c:\\Users\\Benidir Samy\\Documents\\javafx-sdk-18\\lib\\javafx.media.jar",
         "c:\\Users\\Benidir Samy\\Documents\\javafx-sdk-18\\lib\\javafx.swing.jar",
         "c:\\Users\\Benidir Samy\\Documents\\javafx-sdk-18\\lib\\javafx.web.jar",
-        "c:\\Users\\Benidir Samy\\Documents\\javafx-sdk-18\\lib\\javafx-swt.jar"
+        "c:\\Users\\Benidir Samy\\Documents\\javafx-sdk-18\\lib\\javafx-swt.jar",
+        "c:\\Users\\shayi\\Documents\\javafx-sdk-18\\lib\\javafx.base.jar",
+        "c:\\Users\\shayi\\Documents\\javafx-sdk-18\\lib\\javafx.controls.jar",
+        "c:\\Users\\shayi\\Documents\\javafx-sdk-18\\lib\\javafx.fxml.jar",
+        "c:\\Users\\shayi\\Documents\\javafx-sdk-18\\lib\\javafx.graphics.jar",
+        "c:\\Users\\shayi\\Documents\\javafx-sdk-18\\lib\\javafx.media.jar",
+        "c:\\Users\\shayi\\Documents\\javafx-sdk-18\\lib\\javafx.swing.jar",
+        "c:\\Users\\shayi\\Documents\\javafx-sdk-18\\lib\\javafx.web.jar",
+        "c:\\Users\\shayi\\Documents\\javafx-sdk-18\\lib\\javafx-swt.jar"
     ],
     "java.project.sourcePaths": [
         "Projet/src",

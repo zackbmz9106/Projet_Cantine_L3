@@ -15,6 +15,8 @@ import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 
+import model.Moyendepaiement;
+
 
 public class infoCarteController {
 
@@ -55,6 +57,7 @@ public class infoCarteController {
     private TextField tfPrenomPaiement;
 
     @FXML
+    
     void BackReservationRepas(MouseEvent event) throws IOException{
 
         Parent carte = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_reservation_repas.fxml"));
@@ -67,16 +70,23 @@ public class infoCarteController {
     
     }
 
+    
     @FXML
     void VerifInfoCarte(MouseEvent event) throws IOException{
 
-        Parent carte = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_recap_reservation.fxml"));
+        if((Math.floor(Math.log10(Long.parseLong(tfCryptPaiement.getText())) + 1) != 3 )&&( Math.floor(Math.log10(Long.parseLong(tfNumCartePaiement.getText())) + 1) != 16 ) ){
+          
+        }
+        
+        else {
+            Parent carte = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_recap_reservation.fxml"));
+            Scene recap = new Scene(carte);
+            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+            window.setScene(recap);
+            window.show();
+        }
 
-        Scene recap = new Scene(carte);
 
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(recap);
-        window.show();
     
     }
 
