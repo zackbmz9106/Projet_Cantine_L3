@@ -12,6 +12,7 @@ public class Menu{
   private ArrayList<Ingredients> platList = new ArrayList<>();// liste des ingrédients qui compose le plat
   private ArrayList<Ingredients> dessertList = new ArrayList<>();// liste des ingrédients qui compose le dessert
   private String date;
+  private String jours;
 
 
 
@@ -25,8 +26,15 @@ public class Menu{
     this.entreeList = entree; //add(entree);
     this.platList = plat; //add(plat);
     this.dessertList = dessert; //add(dessert);
-    
-  
+  }
+
+   public Menu(String jours, ArrayList<Ingredients> entree, ArrayList<Ingredients> plat, ArrayList<Ingredients> dessert){ //ArrayList<Integer> listdesReservation){
+    this.jours = jours;
+    //this.typeMenu = typeMenu;
+    //this.nomMenu = nomMenu;
+    this.entreeList = entree; //add(entree);
+    this.platList = plat; //add(plat);
+    this.dessertList = dessert; //add(dessert);
   }
 
   public Menu(String typeMenu, int prix, String nomMenu){ 
@@ -86,11 +94,6 @@ public class Menu{
       String ingre = maliste.get(i).getNomIngredient();
       list.add(ingre);
     }
-    
-    /*System.out.println("Plat : "+platList);
-    System.out.println("Dessert : "+dessertList);
-    System.out.println("Entree : "+entreeList.get(0).getNomIngredient());*/
-    //System.out.println(list);
     return list;
   }
 
@@ -160,7 +163,7 @@ public class Menu{
 
   public String toString(){
     String n = System.getProperty("line.separator");
-    return "Nom du menu: "+nomMenu+n+"  Type: "+typeMenu+n+"    Prix: "+prix+n+"      Composition de l'entree: "+afficheIngredientsList(entreeList)+n+"       Composition du plat: "+afficheIngredientsList(platList)+n+"         Composition du dessert: "+afficheIngredientsList(dessertList);
+    return "Nom du menu: "+nomMenu+n+"  Type: "+typeMenu+n+"    Prix: "+prix+n+"      Composition de l'entree: "+entreeList+n+"       Composition du plat: "+platList+n+"         Composition du dessert: "+dessertList;
   } 
   //affiche la liste des ingédients de l'entrée dans une chaine de caractère 
   public String afficheEntree(){

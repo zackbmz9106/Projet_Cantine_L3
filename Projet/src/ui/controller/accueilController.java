@@ -28,6 +28,7 @@ public class accueilController {
         System.out.println("You clicked me!");
     }
 
+
     @FXML
     public void reserver(MouseEvent event) throws IOException {
         
@@ -46,7 +47,6 @@ public class accueilController {
     @FXML
     void voirFacture(MouseEvent event) throws IOException {
 
-        
 
         Parent Facture = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_Facture.fxml"));
 
@@ -72,7 +72,7 @@ public class accueilController {
     }
 
     @FXML
-    void initialize() {
+    public void initialize() {
 
     }
 

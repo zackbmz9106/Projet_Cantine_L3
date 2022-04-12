@@ -25,13 +25,16 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import model.Compte;
+import model.Enfant;
 
 public class connexionController {
 
         private Stage stage; 
         private Scene scene ; 
         private Parent root;
-    
+        
+
+
     @FXML
     private ResourceBundle resources;
 
@@ -79,10 +82,12 @@ public class connexionController {
         }else{} */
             Parent accueilS = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_information.fxml"));
             Scene accueilScene = new Scene(accueilS);
-            
             Compte compte = new Compte(Tfnom.getText(),Tfprenom.getText(),Long.parseLong(Tfnum.getText()),Tfadresse.getText(),Tfmail.getText(),Tfmdp.getText());
-            System.out.println(compte);
-            
+            //System.out.println(compte);
+            //connexion = new connexionController();
+            connexionController.setNewCompte(compte);
+        
+            //informationEnfantController iec  = new informationEnfantController(compte);
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
             window.setScene(accueilScene);
             window.show();
@@ -138,7 +143,26 @@ public class connexionController {
     }
 
     @FXML
-    void initialize() {
+    public void initialize() {
 
     }
+
+    @FXML
+    public static Compte getNewCompte(){// retourne le compte qui vient d'etre cree
+        return newCompte;
+    }
+
+    @FXML
+    public static void setNewCompte(Compte Compte){
+        newCompte = Compte ;
+    }
+
+   /* public connexionController getconnexionController(){
+        return connexion;
+    }*/
+
+    public Button getbtnInscription() {
+		return btnInscription;
+	}
+    
 }

@@ -41,9 +41,16 @@ public class Ingredients{
   public String getDlcIngredient(){
     return this.dlc;
   }
- public void setDLCIngredient(String dlc){
-     this.dlc= dlc ;
+ 
+  public void setDLCIngredient(String dlc){
+     this.dlc= dlc;
   }
+
+  public String toString(){
+    String n = System.getProperty("line.separator");
+    return "Nom: "+nom+"  Type: "+type;
+  }
+  
 
 
 }

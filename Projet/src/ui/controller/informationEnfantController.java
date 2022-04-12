@@ -5,21 +5,27 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
+//import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.fxml.Initializable;
-import model.Enfant;
 import javafx.scene.Node;
+import model.Enfant;
+import model.Compte;
+
+
+
 
 public class informationEnfantController implements Initializable {
 
@@ -28,6 +34,9 @@ public class informationEnfantController implements Initializable {
 
     @FXML
     private URL location;
+
+    @FXML
+    private ToggleGroup gsexe;
 
     @FXML
     private TableView<Enfant> tableInfo;
@@ -54,8 +63,37 @@ public class informationEnfantController implements Initializable {
     private TextField tfPrenomInfo;
 
     @FXML
+    private TextField tfQuotient;
+
+    @FXML
     private String sexe;
 
+    @FXML
+    private Enfant enfantajt;
+    
+    @FXML
+    private Button btnAjouter;
+
+    private static Compte newCompte;
+    
+    //@FXML
+    //private connexionController cc;
+    
+    public informationEnfantController() {
+    }
+
+    /*public informationEnfantController(connexionController cc, Compte compte) {
+        this.cc = cc;
+        this.newCompte = compte;
+    }*/
+
+    /*public informationEnfantController(Compte compte) {
+        this.newCompte = compte;
+    }*/
+
+    
+    
+    
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         nomColonne.setCellValueFactory(new PropertyValueFactory<Enfant, String>("nom"));
@@ -65,41 +103,50 @@ public class informationEnfantController implements Initializable {
     }
 
     
-    public String getSexe() {
-  
+    public String getSexe(){
         if(rbGarconInfo.isSelected()) {
             rbFilleInfo.setSelected(false); 
-            //sexe = rbGarconInfo.getText();
             return rbGarconInfo.getText();
-
         
-        }
-
-        else if(rbFilleInfo.isSelected()) {
+        }else if(rbFilleInfo.isSelected()) {
             rbGarconInfo.setSelected(false);
-            //sexe = rbFilleInfo.getText();
             return rbFilleInfo.getText();
         }
+        return null; 
+    }
 
-        return null;
-        
-       }
-
+    /*connexionController cc = new connexionController();
+    Compte newCompte = cc.getNewCompte();*/
 
     @FXML
-    void AjouterEnfant(MouseEvent event) {
+    public void AjouterEnfant(MouseEvent event) {
         Enfant enfant = new Enfant(tfNomInfo.getText(),(tfPrenomInfo.getText()), getSexe());
+        enfantajt = enfant;
         ObservableList<Enfant> enfants = tableInfo.getItems();
         enfants.add(enfant);
         tableInfo.setItems(enfants);
         tfNomInfo.setText("");
         tfPrenomInfo.setText("");
+        //newCompte = connexionController.getNewCompte();
+        informationEnfantController.setCompte(connexionController.getNewCompte());
+        newCompte.setEnfantCompte(enfant);
+        System.out.println(newCompte);
+        //System.out.println(newCompte.getEnfantCompte());
+
+        //System.out.println(enfant);
+        //System.out.println(enfants);
     }
 
     @FXML
-    void RetirerEnfant(MouseEvent event) {
+    public void RetirerEnfant(MouseEvent event) {
         int selectedID = tableInfo.getSelectionModel().getSelectedIndex();
         tableInfo.getItems().remove(selectedID);
+        newCompte.suppEnfantCompte(enfantajt);
+        System.out.println(newCompte);
+        //System.out.println(enfantajt);
+        //enfantajt = null;
+        
+       
     }
 
     @FXML
@@ -126,6 +173,18 @@ public class informationEnfantController implements Initializable {
         window.show();
     }
 
+    public static void setCompte(Compte compte){
+        newCompte = compte;
+    }
+
+    public static Compte getCompte(){
+        return newCompte;
+    }
+
+    public Button getbtnAjouter(){
+        return btnAjouter;
+    }
+    
     @FXML
     void initialize() {
         assert nomColonne != null : "fx:id=\"nomColonne\" was not injected: check your FXML file 'Page_Information.fxml'.";
@@ -136,8 +195,9 @@ public class informationEnfantController implements Initializable {
         assert tableInfo != null : "fx:id=\"tableInfo\" was not injected: check your FXML file 'Page_Information.fxml'.";
         assert tfNomInfo != null : "fx:id=\"tfNomInfo\" was not injected: check your FXML file 'Page_Information.fxml'.";
         assert tfPrenomInfo != null : "fx:id=\"tfPrenomInfo\" was not injected: check your FXML file 'Page_Information.fxml'.";
-
+        assert tfQuotient != null : "fx:id=\"tfQuotient\" was not injected: check your FXML file 'Page_Information.fxml'.";
     }
+
 
    
 
