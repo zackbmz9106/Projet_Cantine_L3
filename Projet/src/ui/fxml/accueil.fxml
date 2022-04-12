@@ -68,7 +68,7 @@
                   <Font name="Arial Black" size="30.0" />
                </font>
             </Label>
-            <Button layoutX="400.0" layoutY="353.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Paramètre" />
+            <Button layoutX="400.0" layoutY="353.0" mnemonicParsing="false" onMouseClicked="#GoParametre" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Paramètre" />
          </children>
     </AnchorPane>
   </children>
