@@ -89,6 +89,17 @@ public class modifInfoEnfantController implements Initializable {
     }
 
     @FXML
+    void Back(MouseEvent event) throws IOException {
+        Parent retour = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/accueil.fxml"));
+
+        Scene Menu = new Scene(retour);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(Menu);
+        window.show();
+    }
+
+    @FXML
     void AjouterEnfant(MouseEvent event) {
       Enfant enfant = new Enfant(tfNomModifInfo.getText(),(tfPrenomModifInfo.getText()), getSexe());
         enfantajt = enfant;

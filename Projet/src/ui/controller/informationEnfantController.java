@@ -121,8 +121,11 @@ public class informationEnfantController implements Initializable {
         Enfant enfant = new Enfant(tfNomInfo.getText(),(tfPrenomInfo.getText()), getSexe());
         enfantajt = enfant;
         ObservableList<Enfant> enfants = tableInfo.getItems();
+
         enfants.add(enfant);
+
         tableInfo.setItems(enfants);
+        alertbox.afficher("Titre de la fenetre", " Votre enfant " + tfPrenomInfo.getText() +" a été ajouté !");
         tfNomInfo.setText("");
         tfPrenomInfo.setText("");
         //newCompte = connexionController.getNewCompte();

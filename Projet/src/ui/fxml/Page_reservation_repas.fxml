@@ -53,37 +53,38 @@
                </font>
             </Label>
             <ChoiceBox fx:id="ChoixEnfant" layoutX="26.0" layoutY="165.0" prefWidth="150.0" />
-            <Separator layoutX="207.0" layoutY="169.0" orientation="VERTICAL" prefHeight="277.0" prefWidth="6.0" />
-            <Separator layoutX="472.0" layoutY="168.0" orientation="VERTICAL" prefHeight="278.0" prefWidth="6.0" />
-            <DatePicker fx:id="dpDate" layoutX="552.0" layoutY="165.0" promptText="Choix de la date" />
-            <ChoiceBox fx:id="ChoixMenus" layoutX="275.0" layoutY="165.0" prefWidth="150.0" />
-            <Label layoutX="55.0" layoutY="119.0" text="Choix enfant :" textFill="#556c96">
+            <Separator layoutX="194.0" layoutY="169.0" orientation="VERTICAL" prefHeight="277.0" prefWidth="6.0" />
+            <Separator layoutX="414.0" layoutY="168.0" orientation="VERTICAL" prefHeight="278.0" prefWidth="6.0" />
+            <DatePicker fx:id="dpDate" layoutX="518.0" layoutY="165.0" promptText="Choix de la date" />
+            <ChoiceBox fx:id="ChoixMenus" layoutX="236.0" layoutY="165.0" prefWidth="150.0" />
+            <Label layoutX="65.0" layoutY="119.0" text="Choix enfant :" textFill="#556c96">
                <font>
                   <Font name="Arial Black" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="294.0" layoutY="119.0" text="Choix du menus :" textFill="#556c96">
+            <Label layoutX="255.0" layoutY="119.0" text="Choix du menus :" textFill="#556c96">
                <font>
                   <Font name="Arial Black" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="582.0" layoutY="119.0" text="Choix de la date :" textFill="#556c96">
+            <Label layoutX="548.0" layoutY="119.0" text="Choix de la date :" textFill="#556c96">
                <font>
                   <Font name="Arial Black" size="12.0" />
                </font>
             </Label>
-            <Button layoutX="331.0" layoutY="457.0" mnemonicParsing="false" onMouseClicked="#GoInfoPaiement" prefHeight="26.0" prefWidth="128.0" style="-fx-background-color: #EEEDFF;" text="Payer" />
-            <Button layoutX="289.0" layoutY="336.0" mnemonicParsing="false" onMouseClicked="#GoMenus" style="-fx-background-color: #EEEDFF;" text="Menu de la semaine" />
+            <Button layoutX="17.0" layoutY="457.0" mnemonicParsing="false" onMouseClicked="#GoInfoPaiement" prefHeight="26.0" prefWidth="128.0" style="-fx-background-color: #EEEDFF;" text="Payer" />
+            <Button layoutX="239.0" layoutY="327.0" mnemonicParsing="false" onMouseClicked="#GoMenus" style="-fx-background-color: #EEEDFF;" text="Menu de la semaine" />
             <Button layoutX="29.0" layoutY="28.0" mnemonicParsing="false" onMouseClicked="#BackReservation" style="-fx-background-color: #EEEDFF;" text="Retour" />
-            <Label fx:id="lblMenus" alignment="TOP_CENTER" layoutX="226.0" layoutY="249.0" prefHeight="18.0" prefWidth="249.0" />
-            <TableView fx:id="tableMenu" layoutX="504.0" layoutY="213.0" prefHeight="188.0" prefWidth="271.0">
+            <Label fx:id="lblMenus" alignment="TOP_CENTER" layoutX="226.0" layoutY="249.0" prefHeight="18.0" prefWidth="150.0" />
+            <TableView fx:id="tableMenu" layoutX="432.0" layoutY="200.0" prefHeight="200.0" prefWidth="348.0">
               <columns>
-                <TableColumn fx:id="dateColonne" prefWidth="125.5999755859375" text="Date ajouté" />
-                  <TableColumn fx:id="menusColonne" prefWidth="144.7999755859375" text="Menus" />
+                <TableColumn fx:id="dateColonne" prefWidth="118.4000244140625" text="Date ajouté" />
+                  <TableColumn fx:id="enfantColonne" prefWidth="117.60003662109375" text="Enfant" />
+                  <TableColumn fx:id="menusColonne" prefWidth="113.5999755859375" text="Menus" />
               </columns>
             </TableView>
-            <Button fx:id="addDate" layoutX="517.0" layoutY="413.0" mnemonicParsing="false" onMouseClicked="#ajoutDate" style="-fx-background-color: #EEEDFF;" text="Ajouter une date" />
-            <Button fx:id="removeDate" layoutX="636.0" layoutY="413.0" mnemonicParsing="false" onMouseClicked="#supprDate" style="-fx-background-color: #EEEDFF;" text="Supprimer une date" />
+            <Button fx:id="addDate" layoutX="487.0" layoutY="413.0" mnemonicParsing="false" onMouseClicked="#ajoutDate" style="-fx-background-color: #EEEDFF;" text="Ajouter une date" />
+            <Button fx:id="removeDate" layoutX="617.0" layoutY="413.0" mnemonicParsing="false" onMouseClicked="#supprDate" style="-fx-background-color: #EEEDFF;" text="Supprimer une date" />
             <Label fx:id="lblEnfantSelect" layoutX="8.0" layoutY="200.0" prefHeight="17.0" prefWidth="223.0" />
          </children>
     </AnchorPane>

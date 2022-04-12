@@ -73,7 +73,7 @@
             <Button fx:id="btnAjouter" layoutX="92.0" layoutY="344.0" mnemonicParsing="false" onMouseClicked="#AjouterEnfant" style="-fx-background-color: #EEEDFF;" text="Ajouter" />
             <Button layoutX="415.0" layoutY="344.0" mnemonicParsing="false" onMouseClicked="#RetirerEnfant" style="-fx-background-color: #EEEDFF;" text="Retirer" />
             <Button layoutX="572.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#GoAccueil" style="-fx-background-color: #EEEDFF;" text="Valider" />
-            <Button layoutX="17.0" layoutY="12.0" mnemonicParsing="false" style="-fx-background-color: #EEEDFF;" text="Retour" />
+            <Button layoutX="17.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#Back" style="-fx-background-color: #EEEDFF;" text="Retour" />
          </children>
       </AnchorPane>
   </children>
