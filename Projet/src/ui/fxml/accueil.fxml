@@ -48,14 +48,14 @@
          <children>
             
             <Button fx:id="clickActionTarget" layoutX="58.0" layoutY="235.0" mnemonicParsing="false" onMouseClicked="#reserver" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Reservations de repas" />
-            <Button layoutX="58.0" layoutY="297.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Synthese des reservations" />
+            <Button layoutX="58.0" layoutY="297.0" mnemonicParsing="false" onMouseClicked="#GoSynthese" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Synthese des reservations" />
             <Button layoutX="58.0" layoutY="352.0" mnemonicParsing="false" onMouseClicked="#goMenu" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Menus" />
             <Text fill="#556c96" fontSmoothingType="LCD" layoutX="434.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion" textAlignment="CENTER">
                <font>
                   <Font name="Arial Black" size="25.0" />
                </font>
             </Text>
-            <Button layoutX="403.0" layoutY="235.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Espace Famille" />
+            <Button layoutX="403.0" layoutY="235.0" mnemonicParsing="false" onMouseClicked="#GoPageInfoEnfant" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Espace Famille" />
             <Button layoutX="403.0" layoutY="297.0" mnemonicParsing="false" onMouseClicked="#voirFacture" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Historique facture" />
             <Separator layoutX="322.0" layoutY="100.0" orientation="VERTICAL" prefHeight="315.0" prefWidth="0.0" style="-fx-background-color: #B6CDE8;" />
             <Text fill="#556c96" fontSmoothingType="LCD" layoutX="86.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Repas" textAlignment="CENTER" wrappingWidth="111.2894287109375">
@@ -69,6 +69,7 @@
                </font>
             </Label>
             <Button layoutX="400.0" layoutY="353.0" mnemonicParsing="false" onMouseClicked="#GoParametre" prefHeight="26.0" prefWidth="166.0" style="-fx-background-color: #EEEDFF;" text="Paramètre" />
+            <Button layoutX="528.0" layoutY="31.0" mnemonicParsing="false" onMouseClicked="#deconnexion" style="-fx-background-color: #EEEDFF;" text="Se déconnecter" />
          </children>
     </AnchorPane>
   </children>
