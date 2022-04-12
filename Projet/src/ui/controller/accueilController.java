@@ -81,7 +81,14 @@ public class accueilController {
     }
 
     @FXML
-    void GoParametre(MouseEvent event) {
+    void GoParametre(MouseEvent event) throws IOException {
+        Parent parametre = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_parametre.fxml"));
+
+        Scene Para = new Scene(parametre);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(Para);
+        window.show();
 
     }
 
