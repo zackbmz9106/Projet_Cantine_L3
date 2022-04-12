@@ -11,7 +11,7 @@ public class Menu{
   private ArrayList<Ingredients> entreeList = new ArrayList<>();// liste des ingrédient qui compose l'entree
   private ArrayList<Ingredients> platList = new ArrayList<>();// liste des ingrédients qui compose le plat
   private ArrayList<Ingredients> dessertList = new ArrayList<>();// liste des ingrédients qui compose le dessert
-  private String date;
+  private Date date;
   private String jours;
 
 
@@ -75,6 +75,15 @@ public class Menu{
     this.listDesReservation.add(numR);
   }
 
+  public Date getDateMenu(){
+    return date;
+  }
+
+  public void setDateMenu(Date date){
+     this.date = date;
+  }
+
+
   public void affecter(Enfant enfant, Menu menu, Reservation reservation){ 
     enfant.setListReservation(reservation);// ajout de la reservation dans la liste des reservation de l'enfant 
     //reservation.setNomMenu(nomMenu); // ajout du nom du menu a la reservation
@@ -98,9 +107,11 @@ public class Menu{
   }
 
   // Initialise plusieurs Menu et retourne une liste de tous les menus instancier
-  public ArrayList<String> menuInit(){
+  public ArrayList<Menu> menuInit(){
     ArrayList<Menu> ListedesMenu = new ArrayList<>();
     ArrayList<String> ListeString = new ArrayList<>();
+    
+    //entree
     Ingredients salade = new Ingredients("salade", "legume");
     Ingredients tomate = new Ingredients("tomate", "legume");
     Ingredients celeri = new Ingredients("celeri", "legume");
@@ -161,12 +172,12 @@ public class Menu{
           //list[]
     }
     
-    return ListeString;
+    return ListedesMenu;
   }
 
   public String toString(){
     String n = System.getProperty("line.separator");
-    return "Nom du menu: "+nomMenu+n+"  Type: "+typeMenu+n+"    Prix: "+prix+n+"      Composition de l'entree: "+entreeList+n+"       Composition du plat: "+platList+n+"         Composition du dessert: "+dessertList;
+    return nomMenu;/*+n+"  Type: "+typeMenu+n+"    Prix: "+prix+n+"      Composition de l'entree: "+entreeList+n+"       Composition du plat: "+platList+n+"         Composition du dessert: "+dessertList;*/
   } 
   //affiche la liste des ingédients de l'entrée dans une chaine de caractère 
   public String afficheEntree(){

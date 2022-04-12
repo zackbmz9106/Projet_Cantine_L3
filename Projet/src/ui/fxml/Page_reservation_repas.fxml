@@ -83,6 +83,7 @@
             </TableView>
             <Button fx:id="addDate" layoutX="263.0" layoutY="387.0" mnemonicParsing="false" onMouseClicked="#ajoutDate" style="-fx-background-color: #EEEDFF;" text="Ajouter une date" />
             <Button fx:id="removeDate" layoutX="391.0" layoutY="387.0" mnemonicParsing="false" onMouseClicked="#supprDate" style="-fx-background-color: #EEEDFF;" text="Supprimer une date" />
+            <Label fx:id="lblEnfantSelect" layoutX="8.0" layoutY="200.0" prefHeight="17.0" prefWidth="223.0" />
          </children>
     </AnchorPane>
   </children>

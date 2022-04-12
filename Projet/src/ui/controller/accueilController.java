@@ -34,7 +34,7 @@ public class accueilController {
     public Menu menuInit = new Menu();
 
     @FXML
-    private static ArrayList<String> menuList;
+    private static ArrayList<Menu> menuList;
    
 
 
@@ -42,7 +42,7 @@ public class accueilController {
     public void reserver(MouseEvent event) throws IOException {
         
         
-        System.out.println("ESS");
+        System.out.println("Reservation");
         Parent reservation = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/page_Reservation.fxml"));
         
         Scene reserve = new Scene(reservation);
@@ -87,11 +87,11 @@ public class accueilController {
         //menuInit.menuInit();
     }
 
-    public static ArrayList<String> getMenuList(){
+    public static ArrayList<Menu> getMenuList(){
         return menuList;
     }
 
-    public static void setMenuList(ArrayList<String> menuL){
+    public static void setMenuList(ArrayList<Menu> menuL){
          menuList = menuL;
     }
 

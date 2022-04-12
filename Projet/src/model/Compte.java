@@ -76,7 +76,7 @@ public class Compte {
   }
 
   public ArrayList<Enfant> getEnfantCompte(){
-    return listEnfant;
+    return this.listEnfant;
   }
 
   public void setEnfantCompte(Enfant enfant){
@@ -163,11 +163,11 @@ public class Compte {
 
 
   public ArrayList<String> enfantListString(){
-        //String[] list;
+        
         ArrayList<String> list = new ArrayList<>();
         for(Enfant enfant : getEnfantCompte()){
             list.add(enfant.toString());
-              //list[]
+              
         }
     return list;
     }

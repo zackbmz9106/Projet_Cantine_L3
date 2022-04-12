@@ -43,6 +43,9 @@ public class reservationRepasController implements Initializable {
     private Label lblMenus;
 
     @FXML
+    private Label lblEnfantSelect;
+    
+    @FXML
     private Button removeDate;
 
     @FXML
@@ -58,42 +61,60 @@ public class reservationRepasController implements Initializable {
     private DatePicker dpDate;
 
     @FXML
+    private static Enfant enfantSelect;
+    private static ArrayList<Menu> MenuSelectList = new ArrayList<>(); // Liste des Menus sélectionner
+
+    @FXML
     private Compte compte = informationEnfantController.getCompte(); // Recuperer le compte cree 
     
     @FXML
-    private ArrayList<String> menuList = accueilController.getMenuList(); // recupere la liste des menus initilise 
+    private ArrayList<Menu> menuList = accueilController.getMenuList(); // recupere la liste des menus initilise 
 
     @FXML
-    private ChoiceBox <String> ChoixEnfant;
-    //private String[] enfants;
-    private ArrayList<String> enfants = compte.enfantListString(); // Récuperer les enfants du compte inscrit
+    private ChoiceBox <Enfant> ChoixEnfant;
+    private ArrayList<Enfant> enfants = compte.getEnfantCompte(); // Récuperer les enfants du compte inscrit
     
     @FXML
-    private ChoiceBox <String> ChoixMenus;
+    private ChoiceBox <Menu> ChoixMenus;
     //private String[] menus = {"Menus viande","Menus poisson", "Menus végétarien"}; 
-    private ArrayList<String> menus = menuList;
+    private ArrayList<Menu> menus = menuList;
 
     @Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
         dateColonne.setCellValueFactory(new PropertyValueFactory<Date, String>("date"));
 
 
-        ChoixMenus.setValue("Sélectionner le menus");
+        ChoixMenus.setValue(menus.get(0));
 		ChoixMenus.getItems().addAll(menus);
 		ChoixMenus.setOnAction(this::getMenus);
 
         
-        ChoixEnfant.setValue("Sélectionner l'enfant");
+        /*ChoixEnfant.setValue("Sélectionner l'enfant");
+		ChoixEnfant.getItems().addAll(compte.enfantListString()); // compte.getEnfantCompte().enfantListString();*/
+        
+        ChoixEnfant.setValue(enfants.get(0));
 		ChoixEnfant.getItems().addAll(enfants);
+        enfantSelect = ChoixEnfant.getValue();
+        ChoixEnfant.setOnAction(this::getEnfantSelect);
+       
     
 
 
 	}
-	
+
+    public void getEnfantSelect(ActionEvent event) {
+
+		enfantSelect = ChoixEnfant.getValue();
+        reservationRepasController.setEnfantSelect(enfantSelect);
+        lblEnfantSelect.setText(enfantSelect+" est selectionné");
+
+	}
+
 	public void getMenus(ActionEvent event) {
 
-		String monMenus = ChoixMenus.getValue();
-		lblMenus.setText("Vous avez choisis le " + monMenus);
+		Menu monMenus = ChoixMenus.getValue();
+		//reservationRepasController.setMenuSelect(MenuSelect);
+        lblMenus.setText("Vous avez choisis le " + monMenus);
 
 	}
 
@@ -129,13 +150,19 @@ public class reservationRepasController implements Initializable {
         String string ="";
         Date date = new Date(dpDate.getValue(), string);
         //String myFormattedDate = date.getDateL().format(DateTimeFormatter.ofPattern("dd-MMM-yyyy"));
+        
         String myFormattedDate = date.getDateL().format(DateTimeFormatter.ofPattern("dd-MM-uuuu", Locale.FRANCE).withResolverStyle(ResolverStyle.STRICT));
-        date.setDateString(myFormattedDate);
+        date.setDateString(myFormattedDate);        
         
         ObservableList<Date> dates = tableDate.getItems();
         dates.add(date);
-        //System.out.println(date.getDate());
-        System.out.println(myFormattedDate);
+        Menu menu = ChoixMenus.getValue();
+        menu.setDateMenu(date);
+        MenuSelectList.add(ChoixMenus.getValue());
+
+        System.out.println(menu.getNomMenu()+menu.getTypeMenu()+menu.getDateMenu());
+        //System.out.println(myFormattedDate);
+        System.out.println(enfantSelect);
         
     }
 
@@ -145,6 +172,14 @@ public class reservationRepasController implements Initializable {
         int selectedID = tableDate.getSelectionModel().getSelectedIndex();
         tableDate.getItems().remove(selectedID);
         
+    }
+
+    public static void setEnfantSelect(Enfant enfant){
+        enfantSelect = enfant;
+    }
+
+    public static void setMenuSelect(ArrayList<Menu> menu){
+        MenuSelectList = menu;
     }
 
 
