@@ -61,8 +61,8 @@ public class connexionController {
     int num;
     private Button btnInscription;
 
-    static String url = "jdbe:mysql://localhost:3306/macantine";
-    static String user = "root";
+    static String url = "jdbe:mysql://localhost:3306/bddCantine";
+    static String user = "mysqluser";
     static String password = "projetjaval3";
     static String sql1 = "SELECT * FROM compte where email= ? ";
     static int parameterIndex;
@@ -97,8 +97,9 @@ public class connexionController {
             window.show();
         
 
-    try { 
-        Class.forName("com.mysql.jdbc.driver");
+   
+        Class.forName("com.mysql.jdbc.Driver");
+        System.out.println("DRIVER OK ! ");
         connexion = DriverManager.getConnection(url, user, password);
          String sql2 = "INSERT INTO compte.macantine VALUES ( "+Tfnom.getText()+","+Tfprenom.getText()+ ","+ Tfnum.getText()+","+ Tfadresse.getText()+","+ Tfmail.getText()+","+ Tfmdp.getText()+")";
 
@@ -116,18 +117,10 @@ public class connexionController {
             System.out.println("compte ajouté");
             psInsert = connexion.prepareStatement(sql2);
         }
-    }
-            
     
+            
 
-    finally {  if (resultat !=null) { 
-        try { 
-            resultat.close();
-        } catch (SQLException e) { 
-            e.printStackTrace();
-        }
-    }
-} 
+
      }
 
 
