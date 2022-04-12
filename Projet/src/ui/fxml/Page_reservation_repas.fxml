@@ -76,7 +76,7 @@
             <Button layoutX="289.0" layoutY="336.0" mnemonicParsing="false" onMouseClicked="#GoMenus" style="-fx-background-color: #EEEDFF;" text="Menu de la semaine" />
             <Button layoutX="29.0" layoutY="28.0" mnemonicParsing="false" onMouseClicked="#BackReservation" style="-fx-background-color: #EEEDFF;" text="Retour" />
             <Label fx:id="lblMenus" alignment="TOP_CENTER" layoutX="226.0" layoutY="249.0" prefHeight="18.0" prefWidth="249.0" />
-            <TableView fx:id="tableDate" layoutX="504.0" layoutY="213.0" prefHeight="188.0" prefWidth="271.0">
+            <TableView fx:id="tableMenu" layoutX="504.0" layoutY="213.0" prefHeight="188.0" prefWidth="271.0">
               <columns>
                 <TableColumn fx:id="dateColonne" prefWidth="125.5999755859375" text="Date ajouté" />
                   <TableColumn fx:id="menusColonne" prefWidth="144.7999755859375" text="Menus" />
