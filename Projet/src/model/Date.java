@@ -1,6 +1,9 @@
 package model;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.ResolverStyle;
+import java.util.Locale;
 
 public class Date {
     
@@ -22,14 +25,19 @@ public class Date {
 
     }
 
-    public String getDate(){
-        return this.date.toString();
+    public Date(LocalDate value) {
+        this.date = value;
+        this.dateString = value.format(DateTimeFormatter.ofPattern("dd-MM-uuuu", Locale.FRANCE).withResolverStyle(ResolverStyle.STRICT));
     }
 
     public LocalDate getDateL(){
         return this.date;
     }
 
+    public String getDateString(){
+        return dateString;
+    }
+   
     public void setDateString(String dateString){
         this.dateString = dateString;
     }

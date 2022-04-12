@@ -31,6 +31,7 @@ public class accueilController {
         System.out.println("You clicked me!");
     }
     @FXML
+
     public Menu menuInit = new Menu();
 
     @FXML
@@ -90,6 +91,46 @@ public class accueilController {
         window.setScene(Para);
         window.show();
 
+    }
+
+    @FXML
+    void GoSynthese(MouseEvent event) throws IOException {
+        Parent synth = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_SyntheseReservation.fxml"));
+
+        Scene synthScene = new Scene(synth);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(synthScene);
+        window.show();
+    }
+
+    
+    @FXML
+    void GoPageInfoEnfant(MouseEvent event) throws IOException {
+
+        //tfQuotient.setEditable(false);
+
+        Parent synth = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_Information.fxml"));
+
+        Scene synthScene = new Scene(synth);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(synthScene);
+        window.show();
+
+    }
+
+    @FXML
+    void deconnexion(MouseEvent event) throws IOException {
+
+
+        Parent deco = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/main.fxml"));
+
+        Scene MainScene = new Scene(deco);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(MainScene);
+        window.show();
     }
 
     @FXML

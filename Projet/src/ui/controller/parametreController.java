@@ -33,6 +33,9 @@ public class parametreController {
     private TextField tfModifTel;
 
     @FXML
+    private TextField tfModifQuotient;
+
+    @FXML
     void Valider(MouseEvent event) {
 
     }

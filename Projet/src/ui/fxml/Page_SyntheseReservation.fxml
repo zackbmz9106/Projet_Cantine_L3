@@ -34,32 +34,29 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="402.0" prefWidth="474.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controller.parametreController">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controller.syntheseReservController">
   <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="329.0" prefWidth="546.0" style="-fx-background-color: #B6CDE8;" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: #B6CDE8;" VBox.vgrow="ALWAYS">
          <children>
-            <Label layoutX="41.0" layoutY="24.0" text="Modification des informations" textFill="#556c96">
+            <Label layoutX="154.0" layoutY="28.0" text="Synthèse des réservations" textFill="#556c96">
                <font>
                   <Font name="Arial Black" size="24.0" />
                </font>
             </Label>
-            <Button layoutX="211.0" layoutY="354.0" mnemonicParsing="false" onMouseClicked="#Valider" style="-fx-background-color: #EEEDFF;" text="Valider" />
-            <Label layoutX="40.0" layoutY="94.0" text="Adressse :" />
-            <Label layoutX="36.0" layoutY="149.0" text="Téléphone :" />
-            <Label layoutX="38.0" layoutY="197.0" text="E-mail :" />
-            <Label layoutX="38.0" layoutY="296.0" text="Mot de passe :" />
-            <TextField fx:id="tfModifAdresse" layoutX="145.0" layoutY="90.0" prefHeight="26.0" prefWidth="309.0" />
-            <TextField fx:id="tfModifTel" layoutX="145.0" layoutY="145.0" prefHeight="26.0" prefWidth="309.0" />
-            <TextField fx:id="tfModifMail" layoutX="145.0" layoutY="193.0" prefHeight="26.0" prefWidth="309.0" />
-            <TextField fx:id="tfModifMdp" layoutX="145.0" layoutY="292.0" prefHeight="26.0" prefWidth="309.0" />
-            <Button layoutX="15.0" layoutY="354.0" mnemonicParsing="false" onMouseClicked="#BackAccueil" style="-fx-background-color: #EEEDFF;" text="Retour" />
-            <TextField fx:id="tfModifQuotient" layoutX="145.0" layoutY="243.0" prefHeight="26.0" prefWidth="310.0" />
-            <Label layoutX="36.0" layoutY="247.0" text="Quotient familiale :" />
+            <TableView fx:id="TableSytnthese" layoutX="51.0" layoutY="96.0" prefHeight="234.0" prefWidth="538.0">
+              <columns>
+                <TableColumn fx:id="EnfantSynthColonne" prefWidth="181.5999755859375" text="Enfant" />
+                <TableColumn fx:id="MenuSynthColonne" prefWidth="183.99993896484375" text="Menus" />
+                  <TableColumn fx:id="DateSynthColonne" prefWidth="174.40008544921875" text="Date" />
+              </columns>
+            </TableView>
+            <Button layoutX="294.0" layoutY="351.0" mnemonicParsing="false" onMouseClicked="#BackAccueil" style="-fx-background-color: #EEEDFF;" text="Retour" />
          </children>
     </AnchorPane>
   </children>

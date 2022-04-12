@@ -78,9 +78,7 @@ public class informationEnfantController implements Initializable {
     
     //@FXML
     //private connexionController cc;
-    
-    public informationEnfantController() {
-    }
+
 
     /*public informationEnfantController(connexionController cc, Compte compte) {
         this.cc = cc;
@@ -163,6 +161,7 @@ public class informationEnfantController implements Initializable {
 
     @FXML
     void GoAccueil(MouseEvent event) throws IOException {
+
 
         Parent go = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/accueil.fxml"));
 
