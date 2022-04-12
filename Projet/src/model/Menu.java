@@ -98,9 +98,9 @@ public class Menu{
   }
 
   // Initialise plusieurs Menu et retourne une liste de tous les menus instancier
-  public ArrayList<Menu> menuInit(){
+  public ArrayList<String> menuInit(){
     ArrayList<Menu> ListedesMenu = new ArrayList<>();
-    
+    ArrayList<String> ListeString = new ArrayList<>();
     Ingredients salade = new Ingredients("salade", "legume");
     Ingredients tomate = new Ingredients("tomate", "legume");
     Ingredients celeri = new Ingredients("celeri", "legume");
@@ -155,10 +155,13 @@ public class Menu{
       System.out.println(" "+menu3.getNomMenu()+" initialise");
       //System.out.println("   "+platListVegetarien);
       System.out.println(menu3);
-      System.out.println(menu3.afficheEntree());
+      //System.out.println(menu3.afficheEntree());
+      for(Menu menu : ListedesMenu){
+        ListeString.add(menu.toString());
+          //list[]
+    }
     
-    
-    return ListedesMenu;
+    return ListeString;
   }
 
   public String toString(){
