@@ -11,7 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-import com.mysql.cj.xdevapi.PreparableStatement;
+//import com.mysql.cj.xdevapi.PreparableStatement;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -20,6 +20,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -42,19 +43,21 @@ public class connexionController {
     private URL location;
     
     @FXML
-    static TextField Tfnom;
+    private TextField Tfnom;
     @FXML
-    static private TextField Tfprenom;
+    private TextField Tfprenom;
     @FXML
-    static private TextField Tfnum;
+    private TextField Tfnum;
     @FXML
-    static private TextField Tfadresse;
+    private TextField Tfadresse;
     @FXML
-    static private TextField Tfmail;
+    private TextField Tfmail;
     @FXML
-    static private TextField Tfmdp;
+    private TextField Tfmdp;
     @FXML
-    static private Label LBLerreurnum;
+    private Label LBLerreurnum;
+    @FXML
+    private static Compte newCompte;
 
     String nom;
     int num;
@@ -125,9 +128,7 @@ public class connexionController {
      }
 
 
-    
-        
-    
+
 
     @FXML
     public void seConnecter(ActionEvent event) throws IOException{
@@ -161,8 +162,5 @@ public class connexionController {
         return connexion;
     }*/
 
-    public Button getbtnInscription() {
-		return btnInscription;
-	}
-    
+
 }
