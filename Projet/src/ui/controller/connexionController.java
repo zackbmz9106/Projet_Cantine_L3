@@ -60,15 +60,15 @@ public class connexionController {
     int num;
     private Button btnInscription;
 
-    static String url = "jdbe:mysql://localhost:3306/bddCantine";
-    static String user = "mysqluser";
+    static String url = "jdbc:mysql://127.0.0.1:3306/macantine";
+    static String user = "root";
     static String password = "projetjaval3";
-    static String sql1 = "SELECT * FROM compte where email= ? ";
+    static String sql1 = "SELECT * FROM compte where nom = ? ";
     static int parameterIndex;
     static String email;
     private static Compte newCompte;
 
-
+    
     @FXML
      void inscription(MouseEvent event) throws IOException, SQLException, ClassNotFoundException {
         Connection connexion  ; 
