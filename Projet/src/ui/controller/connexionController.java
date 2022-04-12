@@ -10,7 +10,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
-
 //import com.mysql.cj.xdevapi.PreparableStatement;
 
 import javafx.event.ActionEvent;
@@ -72,7 +71,7 @@ public class connexionController {
 
     @FXML
      void inscription(MouseEvent event) throws IOException, SQLException, ClassNotFoundException {
-        Connection connexion = null ; 
+        Connection connexion  ; 
         PreparedStatement psInsert = null; 
         PreparedStatement psCheckExcistance = null;
         ResultSet resultat =null;
@@ -95,12 +94,13 @@ public class connexionController {
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
             window.setScene(accueilScene);
             window.show();
+            connexion = DriverManager.getConnection(url, user, password);
         
 
-   
+   try { 
         Class.forName("com.mysql.jdbc.Driver");
         System.out.println("DRIVER OK ! ");
-        connexion = DriverManager.getConnection(url, user, password);
+        
          String sql2 = "INSERT INTO compte.macantine VALUES ( "+Tfnom.getText()+","+Tfprenom.getText()+ ","+ Tfnum.getText()+","+ Tfadresse.getText()+","+ Tfmail.getText()+","+ Tfmdp.getText()+")";
 
         psCheckExcistance= connexion.prepareStatement(sql1);
@@ -113,15 +113,22 @@ public class connexionController {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.show(); 
         }
+   
         else { 
             System.out.println("compte ajouté");
             psInsert = connexion.prepareStatement(sql2);
         }
+    }
     
-            
-
-
+        catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            connexion.close(); 
+        }//Can potentially throw exception.
      }
+   
+
+    
 
 
 
