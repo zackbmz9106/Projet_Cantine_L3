@@ -96,25 +96,27 @@ public class Compte {
   }
 
 
-  public int PrendreUneReservation(Date date, Menu menu, Enfant enfant, Moyendepaiement mp){
+  public Reservation PrendreUneReservation(Date date, ArrayList<Menu> menus, Enfant enfant, Moyendepaiement mp){
    
       //if(mp.payerParCarte()){} // Si paiement valide
       
-        Reservation reservation = new Reservation(menu,date);
+        Reservation reservation = new Reservation(menus,date); // creation de la reservation
       
         Facture facture = new Facture(reservation);// creation de la facture 
         facture.consulterFacture();
-
+       
         reservation.changementStatut(reservation.getStatus(),reservation.getnumReservation());// mise a jour du statut de la reservation 
         //reservation.setStatus(statut);
-      
-        menu.affecter(enfant, menu, reservation);
-      
-        System.out.println("Rerservation "+reservation.getStatus()+" du "+reservation.getNomMenu()+" pour "+reservation.getEnfant().getPrenom()+": votre numéro de réservation est le "+reservation.getnumReservation());
-        System.out.println("Le "+ menu.getNomMenu()+" a ete reserve par "+ menu.getListDesReservation());
+        for(Menu menu : menus){
+          menu.affecter(enfant, menu, reservation); // Synchronisation de la reservation dans les differentes classes
+          //menu.setPrix(calculPrix());// Determine le prix du menu en fonction du quotient de la famille
+        }
+  
+        System.out.println("Rerservation "+reservation.getStatus()+" du "+reservation.getNomMenus()+" pour "+reservation.getEnfant().getPrenom()+": votre numéro de réservation est le "+reservation.getnumReservation());
+        //System.out.println("Le "+ menus.getNomMenus()+" a ete reserve par "+ menus.getListDesReservation());
         System.out.println(enfant.getListReservation());
       
-        return reservation.getnumReservation();
+        return reservation;
       
     
     //System.out.println("Reservation non valide");

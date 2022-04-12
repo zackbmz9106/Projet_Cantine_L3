@@ -42,7 +42,7 @@
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="400.0" prefWidth="554.0" style="-fx-background-color: #B6CDE8;" VBox.vgrow="ALWAYS">
          <children>
-            <Label alignment="TOP_CENTER" layoutY="29.0" prefHeight="38.0" prefWidth="450.0" text="Récapitulatif de la réservation" textFill="#556c96">
+            <Label alignment="TOP_CENTER" layoutY="30.0" prefHeight="38.0" prefWidth="380.0" text="Récapitulatif de la réservation" textFill="#556c96">
                <font>
                   <Font name="Arial Black" size="24.0" />
                </font>
@@ -83,13 +83,18 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="lblPrixRecap" layoutX="127.0" layoutY="259.0" prefHeight="18.0" prefWidth="323.0" text="Label" textFill="#b91212">
+            <Label fx:id="lblPrixRecap" layoutX="127.0" layoutY="255.0" prefHeight="27.0" prefWidth="82.0" textFill="#b91212">
                <font>
-                  <Font name="System Bold" size="14.0" />
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Label>
             <Button fx:id="btnPaiementRecap" layoutX="202.0" layoutY="312.0" mnemonicParsing="false" onMouseClicked="#Paiement" style="-fx-background-color: #EEEDFF;" text="Payer" />
             <Button layoutX="19.0" layoutY="312.0" mnemonicParsing="false" onMouseClicked="#BackInfoPaiement" style="-fx-background-color: #EEEDFF;" text="Retour" />
+            <Label fx:id="lblnumR" layoutX="356.0" layoutY="33.0" prefHeight="17.0" prefWidth="60.0" text="n°" textFill="#0551f5" underline="true">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
          </children>
     </AnchorPane>
   </children>

@@ -1,10 +1,13 @@
 package model;
 
+import java.util.ArrayList;
+
 //import java.util.Date;
 
 public class Reservation{
-  private String nomMenu;
-  private String datea;
+  //private String nomMenu;
+  private ArrayList<Menu> nomMenu;
+ // private String datea;
   private Date date;
   private int numReservation;
   enum Statuts { Confirmee, Annulee }
@@ -13,21 +16,22 @@ public class Reservation{
   boolean reservation;
   private int prix;
   private Enfant enfant;// rajouter enfant comme attribut ----un enfant est rattache a une reservation ?
+  private Facture facture;
 
   /*public Reservation(String nomMenu, String date){
     this.nomMenu = nomMenu;
     this.date = date;
   }*/
 
-  public Reservation(Menu menu, Date date){
-    this.nomMenu = menu.getNomMenu();
+  public Reservation(ArrayList<Menu> menus, Date date){
+    this.nomMenu = menus;//.getNomMenu();
     this.date = date;
     this.numReservation = genNumR();
-    this.prix = menu.getPrix();
+    //this.prix = menu.getPrix();
   }
   
   public Reservation(String nomMenu, Date date, int numR, Statuts statut, int penalites){
-    this.nomMenu = nomMenu;
+    //this.nomMenu = nomMenu;
     this.date = date;
     this.numReservation = numR;
     this.statut = statut;
@@ -38,12 +42,28 @@ public class Reservation{
     return this.reservation;
   }
 
-  public String getNomMenu(){
-    return this.nomMenu;
+  public ArrayList<String> getNomMenus(){
+    ArrayList<String> nomMenus = new ArrayList<>();
+    for(Menu menu : this.nomMenu){
+        nomMenus.add(menu.getNomMenu());
+    }
+    return nomMenus;
   }
 
-  public void setNomMenu(String nomMenu){
-     this.nomMenu = nomMenu;
+ /* public void setNomMenu(ArrayList<Menu> nomMenus){
+     this.nomMenu.add(nomMenus);
+  }*/
+
+  public void setPrixReservation(int prixR){
+    this.prix = prixR;
+  }
+
+  public Facture getFactureReservation(){
+    return this.facture;
+  }
+
+  public void setFactureReservation(Facture facture){
+    this.facture = facture;
   }
 
   public Date getDateReservation(){
@@ -81,8 +101,6 @@ public class Reservation{
   public int getPrixReservation(){
     return this.prix;
   }
-
-  
   
   void annulerReservation(int numR){
      reservation = false;
