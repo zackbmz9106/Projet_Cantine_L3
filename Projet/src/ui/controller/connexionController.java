@@ -56,6 +56,9 @@ public class connexionController {
     @FXML
      private Label LBLerreurnum;
 
+     @FXML
+     private Label erreurVide;
+
     String nom;
     int num;
     private Button btnInscription;
@@ -77,12 +80,15 @@ public class connexionController {
         ResultSet resultat =null;
 
 
+        if  (Tfnom.getText().isEmpty() || Tfprenom.getText().isEmpty() || Tfnum.getText().isEmpty() ||  Tfadresse.getText().isEmpty() || Tfadresse.getText().isEmpty() || Tfmail.getText().isEmpty()  || Tfmdp.getText().isEmpty() ) { 
+            erreurVide.setText("Entrez vos données svp");
+        }
         
-        /*
-        if(Math.floor(Math.log10(Long.parseLong(Tfnum.getText())) + 1) != 11){
+       else if(Math.floor(Math.log10(Long.parseLong(Tfnum.getText())) + 1) != 11){
             LBLerreurnum.setText("Numéro de téléphone incorrecte");
-          
-        }else{} */
+        } 
+        
+        else{
             Parent accueilS = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_information.fxml"));
             Scene accueilScene = new Scene(accueilS);
             Compte compte = new Compte(Tfnom.getText(),Tfprenom.getText(),Long.parseLong(Tfnum.getText()),Tfadresse.getText(),Tfmail.getText(),Tfmdp.getText());
@@ -99,7 +105,7 @@ public class connexionController {
 
    try { 
         Class.forName("com.mysql.jdbc.Driver");
-        System.out.println("DRIVER OK ! ");
+        System.out.println("DRIVER MYSQL OK ! ");
         
          String sql2 = "INSERT INTO compte.macantine VALUES ( "+Tfnom.getText()+","+Tfprenom.getText()+ ","+ Tfnum.getText()+","+ Tfadresse.getText()+","+ Tfmail.getText()+","+ Tfmdp.getText()+")";
 
@@ -124,10 +130,10 @@ public class connexionController {
             e.printStackTrace();
         } finally {
             connexion.close(); 
-        }//Can potentially throw exception.
+        }
+    }
      }
-   
-
+    
     
 
 
