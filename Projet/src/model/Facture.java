@@ -1,10 +1,10 @@
 package model;
-import java.util.Date;
+//import java.util.Date;
 
 public class Facture{
   private int num;
   private int montant;
-  private String dateF;
+  private Date dateF;
   private Reservation reservation;
 
   
@@ -28,7 +28,7 @@ public class Facture{
     return this.montant;
   }
 
-  public String getDateF(){
+  public Date getDateF(){
     return this.dateF;
   }
 
@@ -42,7 +42,7 @@ public class Facture{
      this.montant = montant;
   }
 
-  public void setDateF(String dateF){
+  public void setDateF(Date dateF){
      this.dateF = dateF;
   }
 

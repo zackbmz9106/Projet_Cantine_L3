@@ -74,19 +74,19 @@ public class Moyendepaiement{
 
 
   // parametre constructeur
-  public boolean payerParCarte(){
+  public int payerParCarte(){
     /*numCarte = this.numCarte;
     dateExpiration = this.dateExpiration;
     cryptogramme = this.cryptogramme;*/
     
     if(Math.floor(Math.log10(numCarte) + 1) < 16){
-      System.out.println("numéro de carte incorrecte");
-      return false;
+      System.out.println("numéro de carte incorrecte loo");
+      return 1;
     }
     
     if(Math.floor(Math.log10(numCarte + 1)) > 16){
       System.out.println("numéro de carte incorrecte");
-      return false;
+      return 1;
     }
     
     if(Math.floor(Math.log10(numCarte) + 1) == 16){
@@ -96,7 +96,7 @@ public class Moyendepaiement{
     if(dateIsValid(dateExpiration)){
     }
     else{
-      return false;
+      return 2;
     }
      /*if(){
         verifier si ma date est expire
@@ -104,14 +104,14 @@ public class Moyendepaiement{
      
     if(Math.floor(Math.log10(cryptogramme) + 1) < 3){
       System.out.println("cryptogramme incorrecte");
-      return false;
+      return 3;
     }
     if(Math.floor(Math.log10(cryptogramme) + 1) > 3){
       System.out.println("cryptogramme incorrecte");
-      return false;
+      return 3;
     }
    
-    return true;
+    return 0;
   }  
   
   void payerParCheque(){
