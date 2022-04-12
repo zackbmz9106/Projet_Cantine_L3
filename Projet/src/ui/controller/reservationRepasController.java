@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.time.format.DateTimeFormatter;
 import java.time.format.ResolverStyle;
+import java.util.ArrayList;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
@@ -24,7 +25,9 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import model.Compte;
 import model.Date;
+import model.Enfant;
 
 
 public class reservationRepasController implements Initializable {
@@ -54,9 +57,13 @@ public class reservationRepasController implements Initializable {
     private DatePicker dpDate;
 
     @FXML
+    private Compte compte = informationEnfantController.getCompte(); // Recuperer le compte cree 
+    
+    @FXML
     private ChoiceBox <String> ChoixEnfant;
-    //private String[] enfants = {"test1", "test2", "test3"};
-
+    //private String[] enfants;
+    private ArrayList<String> enfants = compte.enfantListString();
+    
     @FXML
     private ChoiceBox <String> ChoixMenus;
     private String[] menus = {"Menus viande","Menus poisson", "Menus végétarien"}; 
@@ -66,14 +73,15 @@ public class reservationRepasController implements Initializable {
 	public void initialize(URL arg0, ResourceBundle arg1) {
         dateColonne.setCellValueFactory(new PropertyValueFactory<Date, String>("date"));
 
+
         ChoixMenus.setValue("Sélectionner le menus");
 		ChoixMenus.getItems().addAll(menus);
 		ChoixMenus.setOnAction(this::getMenus);
     
-        /*
+        
         ChoixEnfant.setValue("Sélectionner l'enfant");
 		ChoixEnfant.getItems().addAll(enfants);
-        */
+    
 
 
 	}
