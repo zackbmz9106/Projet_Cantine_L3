@@ -10,7 +10,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
-
 //import com.mysql.cj.xdevapi.PreparableStatement;
 
 import javafx.event.ActionEvent;
@@ -57,33 +56,39 @@ public class connexionController {
     @FXML
      private Label LBLerreurnum;
 
+     @FXML
+     private Label erreurVide;
+
     String nom;
     int num;
     private Button btnInscription;
 
-    static String url = "jdbe:mysql://localhost:3306/bddCantine";
-    static String user = "mysqluser";
+    static String url = "jdbc:mysql://127.0.0.1:3306/macantine";
+    static String user = "root";
     static String password = "projetjaval3";
-    static String sql1 = "SELECT * FROM compte where email= ? ";
+    static String sql1 = "SELECT * FROM compte where nom = ? ";
     static int parameterIndex;
     static String email;
     private static Compte newCompte;
 
-
+    
     @FXML
      void inscription(MouseEvent event) throws IOException, SQLException, ClassNotFoundException {
-        Connection connexion = null ; 
+        Connection connexion  ; 
         PreparedStatement psInsert = null; 
         PreparedStatement psCheckExcistance = null;
         ResultSet resultat =null;
 
 
+        if  (Tfnom.getText().isEmpty() || Tfprenom.getText().isEmpty() || Tfnum.getText().isEmpty() ||  Tfadresse.getText().isEmpty() || Tfadresse.getText().isEmpty() || Tfmail.getText().isEmpty()  || Tfmdp.getText().isEmpty() ) { 
+            erreurVide.setText("Entrez vos données svp");
+        }
         
-        /*
-        if(Math.floor(Math.log10(Long.parseLong(Tfnum.getText())) + 1) != 11){
+       else if(Math.floor(Math.log10(Long.parseLong(Tfnum.getText())) + 1) != 11){
             LBLerreurnum.setText("Numéro de téléphone incorrecte");
-          
-        }else{} */
+        } 
+        
+        else{
             Parent accueilS = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_information.fxml"));
             Scene accueilScene = new Scene(accueilS);
             Compte compte = new Compte(Tfnom.getText(),Tfprenom.getText(),Long.parseLong(Tfnum.getText()),Tfadresse.getText(),Tfmail.getText(),Tfmdp.getText());
@@ -95,12 +100,13 @@ public class connexionController {
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
             window.setScene(accueilScene);
             window.show();
+            connexion = DriverManager.getConnection(url, user, password);
         
 
-   
+   try { 
         Class.forName("com.mysql.jdbc.Driver");
-        System.out.println("DRIVER OK ! ");
-        connexion = DriverManager.getConnection(url, user, password);
+        System.out.println("DRIVER MYSQL OK ! ");
+        
          String sql2 = "INSERT INTO compte.macantine VALUES ( "+Tfnom.getText()+","+Tfprenom.getText()+ ","+ Tfnum.getText()+","+ Tfadresse.getText()+","+ Tfmail.getText()+","+ Tfmdp.getText()+")";
 
         psCheckExcistance= connexion.prepareStatement(sql1);
@@ -113,15 +119,22 @@ public class connexionController {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.show(); 
         }
+   
         else { 
             System.out.println("compte ajouté");
             psInsert = connexion.prepareStatement(sql2);
         }
+    }
     
-            
-
-
+        catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            connexion.close(); 
+        }
+    }
      }
+    
+    
 
 
 
