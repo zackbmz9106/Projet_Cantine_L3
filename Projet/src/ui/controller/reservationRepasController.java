@@ -28,6 +28,7 @@ import javafx.stage.Stage;
 import model.Compte;
 import model.Date;
 import model.Enfant;
+import model.Menu;
 
 
 public class reservationRepasController implements Initializable {
@@ -56,18 +57,25 @@ public class reservationRepasController implements Initializable {
     @FXML
     private DatePicker dpDate;
 
+    
+    @FXML
+    private TableColumn<?, String> menusColonne;
+
     @FXML
     private Compte compte = informationEnfantController.getCompte(); // Recuperer le compte cree 
     
     @FXML
+    private ArrayList<String> menuList = accueilController.getMenuList(); // recupere la liste des menus initilise 
+
+    @FXML
     private ChoiceBox <String> ChoixEnfant;
     //private String[] enfants;
-    private ArrayList<String> enfants = compte.enfantListString();
+    private ArrayList<String> enfants = compte.enfantListString(); // Récuperer les enfants du compte inscrit
     
     @FXML
     private ChoiceBox <String> ChoixMenus;
-    private String[] menus = {"Menus viande","Menus poisson", "Menus végétarien"}; 
-
+    //private String[] menus = {"Menus viande","Menus poisson", "Menus végétarien"}; 
+    private ArrayList<String> menus = menuList;
 
     @Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -77,7 +85,7 @@ public class reservationRepasController implements Initializable {
         ChoixMenus.setValue("Sélectionner le menus");
 		ChoixMenus.getItems().addAll(menus);
 		ChoixMenus.setOnAction(this::getMenus);
-    
+
         
         ChoixEnfant.setValue("Sélectionner l'enfant");
 		ChoixEnfant.getItems().addAll(enfants);
@@ -141,6 +149,19 @@ public class reservationRepasController implements Initializable {
         int selectedID = tableDate.getSelectionModel().getSelectedIndex();
         tableDate.getItems().remove(selectedID);
         
+    }
+
+    @FXML
+    void GoMenus(MouseEvent event)throws IOException {
+
+        Parent reservation = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_menus.fxml"));
+
+        Scene menu = new Scene(reservation);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(menu);
+        window.show();
+
     }
 
 

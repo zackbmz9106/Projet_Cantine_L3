@@ -11,7 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-import com.mysql.cj.xdevapi.PreparableStatement;
+//import com.mysql.cj.xdevapi.PreparableStatement;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -131,9 +131,7 @@ public class connexionController {
      }
 
 
-    
-        
-    
+
 
     @FXML
     public void seConnecter(ActionEvent event) throws IOException{
@@ -167,8 +165,5 @@ public class connexionController {
         return connexion;
     }*/
 
-    public Button getbtnInscription() {
-		return btnInscription;
-	}
-    
+
 }

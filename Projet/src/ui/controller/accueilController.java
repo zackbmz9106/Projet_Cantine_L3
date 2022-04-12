@@ -1,13 +1,16 @@
 package ui.controller;
 
+import model.Menu;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent; 
 import javafx.scene.Scene;
+//import javafx.scene.control.Menu;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.scene.Node;
@@ -27,6 +30,12 @@ public class accueilController {
     public void handleButtonAction(MouseEvent event) {
         System.out.println("You clicked me!");
     }
+    @FXML
+    public Menu menuInit = new Menu();
+
+    @FXML
+    private static ArrayList<String> menuList;
+   
 
 
     @FXML
@@ -72,8 +81,23 @@ public class accueilController {
     }
 
     @FXML
-    public void initialize() {
+    void GoParametre(MouseEvent event) {
 
+    }
+
+    @FXML
+    public void initialize() {
+        //Menu menuinit = new Menu();
+        accueilController.setMenuList(menuInit.menuInit());
+        //menuInit.menuInit();
+    }
+
+    public static ArrayList<String> getMenuList(){
+        return menuList;
+    }
+
+    public static void setMenuList(ArrayList<String> menuL){
+         menuList = menuL;
     }
 
 }

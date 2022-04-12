@@ -38,8 +38,8 @@ public class man extends Application {
 
         launch(args);    
     
-        Menu menuInit = new Menu();
-        menuInit.menuInit();
+        /*Menu menuInit = new Menu();
+        menuInit.menuInit();*/
         
         //connexionController connexionController = new connexionController();
         
