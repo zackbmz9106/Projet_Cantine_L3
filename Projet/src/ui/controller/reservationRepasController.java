@@ -114,7 +114,7 @@ public class reservationRepasController implements Initializable {
     public void getEnfantSelect(ActionEvent event) {
 
 		enfantSelect = ChoixEnfant.getValue();
-        reservationRepasController.setEnfantSelect(enfantSelect);
+        reservationRepasController.setEnfantSelect(enfantSelect); // associe l'enfant selectionne
         lblEnfantSelect.setText(enfantSelect+" est selectionné");
 
 	}

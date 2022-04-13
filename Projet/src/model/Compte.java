@@ -13,6 +13,7 @@ public class Compte {
   private int quotientF;
   private Long numTel;
   private ArrayList<Enfant> listEnfant = new ArrayList<>(); // Liste des enfants rattacher a un compte 
+  private ArrayList<Facture> listFacture = new ArrayList<>();// liste des factures 
 
   public Compte(int id,String nom, int quotientF,Long numTel){
     this.id = id;
@@ -95,7 +96,15 @@ public class Compte {
     this.listEnfant.remove(enfant);
   }
 
+  public ArrayList<Facture> getListFacture(){
+    return listFacture;
+  }
 
+  public void setListFacture(Facture facture){
+    this.listFacture.add(facture);
+  }
+
+  // Methodes
   public Reservation PrendreUneReservation(Date date, ArrayList<Menu> menus, Enfant enfant, Moyendepaiement mp){
    
       //if(mp.payerParCarte()){} // Si paiement valide
@@ -104,12 +113,13 @@ public class Compte {
       
         Facture facture = new Facture(reservation);// creation de la facture 
         facture.consulterFacture();
-       
+        reservation.setFactureReservation(facture);
         reservation.changementStatut(reservation.getStatus(),reservation.getnumReservation());// mise a jour du statut de la reservation 
         //reservation.setStatus(statut);
-        for(Menu menu : menus){
+        for(Menu menu : reservation.getMenus()){
           menu.affecter(enfant, menu, reservation); // Synchronisation de la reservation dans les differentes classes
-          //menu.setPrix(calculPrix());// Determine le prix du menu en fonction du quotient de la famille
+          menu.setPrix(calculPrix());// Determine le prix du menu en fonction du quotient de la famille
+          System.out.println(menu.getPrix()+" prendre reserv");
         }
   
         System.out.println("Rerservation "+reservation.getStatus()+" du "+reservation.getNomMenus()+" pour "+reservation.getEnfant().getPrenom()+": votre numéro de réservation est le "+reservation.getnumReservation());
