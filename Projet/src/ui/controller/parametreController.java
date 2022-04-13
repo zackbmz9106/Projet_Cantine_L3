@@ -44,13 +44,28 @@ public class parametreController {
         compte.setMail(tfModifMail.getText());
         compte.setQuotientF(Integer.parseInt(tfModifQuotient.getText()));
 
+        alertbox.afficher("Modification", " Modification prise en compte !");
 
+        Parent Back = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/accueil.fxml"));
+
+        Scene Para = new Scene(Back);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(Para);
+        window.setResizable(false);
+        window.show();
+    }
 
         
 
     }
 
+
     
+
+
+
+        
     @FXML
     void BackAccueil(MouseEvent event) throws IOException {
 
