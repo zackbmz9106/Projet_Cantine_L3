@@ -2,6 +2,7 @@ package ui.controller;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -16,9 +17,11 @@ import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import model.Compte;
+import model.Date;
 import model.Enfant;
 import model.Menu;
 import model.Moyendepaiement;
+import model.Reservation;
 
 
 
@@ -60,12 +63,15 @@ public class infoCarteController {
 
     @FXML
     private TextField tfPrenomPaiement;
+    private static  int prixReservation;
 
     @FXML
-    private Enfant enfantSelect = reservationRepasController.getEnfantSelect(); // recuperation de l'enfant de la reservation 
-    private ArrayList<Menu> MenuSelect = reservationRepasController.getMenuSelect(); // recuperation de la liste des menus selectionne
-    private Compte compte = reservationRepasController.getCompte(); // recuperation du compte 
+    private static Enfant enfantSelect = reservationRepasController.getEnfantSelect(); // recuperation de l'enfant de la reservation 
+    private ArrayList<Menu> MenuSelect = reservationRepasController.getMenuSelect(); // recuperation de la liste des menus reserve
+    private static Compte compte = reservationRepasController.getCompte(); // recuperation du compte 
+    private static Reservation reservation;
 
+    
     @FXML
     
     void BackReservationRepas(MouseEvent event) throws IOException{
@@ -85,24 +91,27 @@ public class infoCarteController {
     @FXML
     void VerifInfoCarte(MouseEvent event) throws IOException{
 
-        /*if((Math.floor(Math.log10(Long.parseLong(tfCryptPaiement.getText())) + 1) != 3 )&&( Math.floor(Math.log10(Long.parseLong(tfNumCartePaiement.getText())) + 1) != 16 ) ){ 
-        }
-        else {*/
             Moyendepaiement mp = new Moyendepaiement(compte.getNom(),compte.getPrenom(),compte.getAdresse(),Long.parseLong(tfNumCartePaiement.getText()),tfDateExpPaiement.getText(), Integer.parseInt(tfCryptPaiement.getText()));
             
             if(mp.payerParCarte() == 0){ // si paiement valide
-
-            for(Menu menu : MenuSelect){
+            LocalDate today = LocalDate.now();
+            Date date = new Date(today);
+            alertbox.afficher("Paiement ", " Paiement réussi ! ");
+                for(Menu menu : MenuSelect){
+                int prix = compte.calculPrix();
                 menu.setPrix(compte.calculPrix()); // Determine le prix du menu en fonction du quotient de la famille
-                compte.PrendreUneReservation(menu.getDateMenu(), menu, enfantSelect, mp); 
-            }
+                prixReservation+=prix;
+                }
+            reservation = compte.PrendreUneReservation(date, MenuSelect, enfantSelect, mp);
+            reservation.setPrixReservation(prixReservation);// On set le prix total du couts de tous les menus reserve
+            //System.out.println(reservation.getPrixReservation());
+            
             Parent carte = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_recap_reservation.fxml"));
             Scene recap = new Scene(carte);
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
             window.setScene(recap);
             window.setResizable(false);
             window.show(); 
-    
 
             }
             
@@ -114,9 +123,13 @@ public class infoCarteController {
                 }
                 if(mp.payerParCarte()==2){
                     lblErreurDateExp.setText("Date non valide ");
+                }else{
+                    lblErreurDateExp.setText("");
                 }
                 if(mp.payerParCarte()==3){
                     lblErreurCrypt.setText("Cryptogramme incorrecte");
+                }else{
+                    lblErreurCrypt.setText("");
                 }
 
             }
@@ -125,11 +138,21 @@ public class infoCarteController {
     
     }
         
+    public static Enfant getEnfant(){
+        return enfantSelect;
+    }
 
+    public static Compte getCompte(){
+        return compte;
+    }
 
-    
-    //}
+    public static int getPrixReservation(){
+        return prixReservation;
+    }
 
+    public static Reservation getReservation(){
+        return reservation;
+    }
 
 
     @FXML

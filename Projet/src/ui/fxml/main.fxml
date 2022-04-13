@@ -38,7 +38,6 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Bloom?>
-<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -66,23 +65,15 @@
                               <Font name="Microsoft Sans Serif" size="18.0" />
                            </font>
                         </Label>
-                        <TextField layoutX="95.0" layoutY="117.0" prefHeight="36.0" prefWidth="174.0" />
+                        <TextField fx:id="TfEmailCo" layoutX="95.0" layoutY="117.0" prefHeight="36.0" prefWidth="174.0" />
                         <Label layoutX="35.0" layoutY="123.0" prefHeight="25.0" prefWidth="47.0" text="E-mail" />
-                        <PasswordField layoutX="95.0" layoutY="183.0" prefHeight="36.0" prefWidth="174.0" />
+                        <PasswordField fx:id="TfmdpCo" layoutX="95.0" layoutY="183.0" prefHeight="36.0" prefWidth="174.0" />
                         <Label layoutX="15.0" layoutY="188.0" prefHeight="25.0" prefWidth="80.0" text="Mot de passe" />
                         <Button layoutX="144.0" layoutY="229.0" mnemonicParsing="false" onAction="#seConnecter" style="-fx-background-color: #EEEDFF;" text="CONNEXION">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
-                        <ImageView fitHeight="106.0" fitWidth="315.0" layoutY="278.0" opacity="0.78" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../../enfants-a-la-cantine.jpg" />
-                           </image>
-                           <effect>
-                              <Reflection />
-                           </effect>
-                        </ImageView>
                         <ImageView fitHeight="94.0" fitWidth="186.0" layoutX="2.0" layoutY="304.0" opacity="0.49" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../controller/img/enfants-a-la-cantine.jpg" />
@@ -140,11 +131,12 @@
                               </LinearGradient>
                            </textFill>
                         </Label>
+                        <Label fx:id="erreurVide" layoutX="85.0" layoutY="363.0" prefHeight="17.0" prefWidth="161.0" textFill="RED" />
                      </children>
                   </AnchorPane>
               </items>
             </SplitPane>
-            <ImageView fitHeight="52.0" fitWidth="101.0" layoutX="455.0" opacity="0.56" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="TfmdpCo" fitHeight="52.0" fitWidth="101.0" layoutX="455.0" opacity="0.56" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../restaurationscolaire-1200x630.jpg" />
                </image>

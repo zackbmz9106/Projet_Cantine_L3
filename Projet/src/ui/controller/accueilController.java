@@ -128,7 +128,7 @@ public class accueilController {
     @FXML
     void deconnexion(MouseEvent event) throws IOException {
 
-
+        alertbox.afficher("Deconnexion", " Vous etes maintenant déconnecté !");
         Parent deco = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/main.fxml"));
 
         Scene MainScene = new Scene(deco);
