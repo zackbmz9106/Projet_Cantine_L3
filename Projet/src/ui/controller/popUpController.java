@@ -64,7 +64,7 @@ public class popUpController {
     void initialize() {
         lblNumFacture.setText(""+factureSelect);
         lblDate.setText(""+factureSelect.getDateF());
-        lblMontant.setText(factureSelect.getMontant()+"");
+        lblMontant.setText(factureSelect.getMontant()+" Euros");
         lblNom.setText(compte.getNom());
         lblPrenom.setText(compte.getPrenom());
 
