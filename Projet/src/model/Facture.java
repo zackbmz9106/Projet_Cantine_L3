@@ -24,6 +24,10 @@ public class Facture{
     return this.num;
   }
 
+  public String getNumStringF(){
+    return this.num+"";
+  }
+
   public int getMontant(){
     return this.montant;
   }
@@ -61,5 +65,10 @@ public class Facture{
     System.out.println("Montant: "+getMontant()+" euros");
     System.out.println("Date de la facture: "+getDateF());
   }
+
+  public String toString(){
+    return "Facture "+num+"";
+  }
+
 
 }

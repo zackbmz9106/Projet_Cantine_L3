@@ -38,11 +38,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="314.0" prefWidth="380.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controller.popUpController">
+<VBox prefHeight="314.0" prefWidth="380.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controller.popUpController">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="214.0" prefWidth="362.0" style="-fx-background-color: #B6CDE8;" VBox.vgrow="ALWAYS">
          <children>
-            <Label layoutX="127.0" layoutY="28.0" text="Facture n°0" textFill="#3b6e8c">
+            <Label fx:id="lblNumFacture" layoutX="127.0" layoutY="28.0" text="Facture n°0" textFill="#3b6e8c">
                <font>
                   <Font name="Arial Black" size="24.0" />
                </font>
@@ -51,10 +51,10 @@
             <Label layoutX="21.0" layoutY="118.0" text="Prénom :" />
             <Label layoutX="21.0" layoutY="148.0" text="Date :" />
             <Label layoutX="19.0" layoutY="177.0" text="Montant :" />
-            <Label fx:id="Label_Prenom" layoutX="78.0" layoutY="117.0" prefHeight="18.0" prefWidth="285.0" text="Label" />
-            <Label fx:id="Label_Date" layoutX="78.0" layoutY="147.0" prefHeight="18.0" prefWidth="285.0" text="Label" />
-            <Label fx:id="Label_Montant" layoutX="78.0" layoutY="176.0" prefHeight="18.0" prefWidth="285.0" text="Label" />
-            <Label fx:id="Label_Nom" layoutX="78.0" layoutY="86.0" prefHeight="18.0" prefWidth="285.0" text="Label" />
+            <Label fx:id="lblPrenom" layoutX="78.0" layoutY="117.0" prefHeight="18.0" prefWidth="285.0" />
+            <Label fx:id="lblDate" layoutX="78.0" layoutY="147.0" prefHeight="18.0" prefWidth="285.0" />
+            <Label fx:id="lblMontant" layoutX="78.0" layoutY="176.0" prefHeight="18.0" prefWidth="285.0" />
+            <Label fx:id="lblNom" layoutX="78.0" layoutY="86.0" prefHeight="18.0" prefWidth="285.0" />
             <Button layoutX="170.0" layoutY="247.0" mnemonicParsing="false" onMouseClicked="#backFacture" style="-fx-background-color: #EEEDFF;" text="OK" />
          </children>
     </AnchorPane>

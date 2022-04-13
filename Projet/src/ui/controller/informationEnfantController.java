@@ -11,6 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -64,6 +65,8 @@ public class informationEnfantController implements Initializable {
 
     @FXML
     private TextField tfQuotient;
+    @FXML
+    private Label erreurQuotient;
 
     @FXML
     private String sexe;
@@ -120,6 +123,12 @@ public class informationEnfantController implements Initializable {
     public void AjouterEnfant(MouseEvent event) {
         Enfant enfant = new Enfant(tfNomInfo.getText(),(tfPrenomInfo.getText()), getSexe());
         enfantajt = enfant;
+
+        if ( tfQuotient.getText().isEmpty() ) {
+        erreurQuotient.setText(" Veuillsez entrer votre quotient !"); }
+
+        else{
+
         ObservableList<Enfant> enfants = tableInfo.getItems();
 
         enfants.add(enfant);
@@ -137,6 +146,7 @@ public class informationEnfantController implements Initializable {
         //System.out.println(enfant);
         //System.out.println(enfants);
     }
+}
 
     @FXML
     public void RetirerEnfant(MouseEvent event) {

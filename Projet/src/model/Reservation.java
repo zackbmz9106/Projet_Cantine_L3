@@ -42,15 +42,19 @@ public class Reservation{
     return this.reservation;
   }
 
-  public ArrayList<String> getNomMenus(){
+  public ArrayList<String> getNomMenus(){ // retourne la liste des menus associe a la reservation en Liste de String
     ArrayList<String> nomMenus = new ArrayList<>();
     for(Menu menu : this.nomMenu){
         nomMenus.add(menu.getNomMenu());
     }
     return nomMenus;
   }
-
- /* public void setNomMenu(ArrayList<Menu> nomMenus){
+  
+  public ArrayList<Menu> getMenus(){
+    return nomMenu;
+  }
+ 
+  /* public void setNomMenu(ArrayList<Menu> nomMenus){
      this.nomMenu.add(nomMenus);
   }*/
 
