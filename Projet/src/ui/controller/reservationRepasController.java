@@ -62,9 +62,6 @@ public class reservationRepasController implements Initializable {
     private DatePicker dpDate;
 
     @FXML
-    private TableColumn<Enfant, String> enfantColonne;
-
-    @FXML
     private static Enfant enfantSelect;
     private static ArrayList<Menu> MenuSelectList = new ArrayList<>(); // Liste des Menus sélectionner
 

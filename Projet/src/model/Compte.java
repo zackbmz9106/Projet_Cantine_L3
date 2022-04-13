@@ -114,16 +114,11 @@ public class Compte {
         facture.consulterFacture();
         reservation.setFactureReservation(facture);
         reservation.changementStatut(reservation.getStatus(),reservation.getnumReservation());// mise a jour du statut de la reservation 
-<<<<<<< HEAD
-        for(Menu menu : menus){
-          menu.affecter(enfant, menu, reservation); // Synchronisation de la reservation dans les differentes classes
-=======
         //reservation.setStatus(statut);
         for(Menu menu : reservation.getMenus()){
           menu.affecter(enfant, menu, reservation); // Synchronisation de la reservation dans les differentes classes
           menu.setPrix(calculPrix());// Determine le prix du menu en fonction du quotient de la famille
           System.out.println(menu.getPrix()+" prendre reserv");
->>>>>>> 4ad2492451ac7cbf4572d4df50007b858b38a1c9
         }
   
         System.out.println("Rerservation "+reservation.getStatus()+" du "+reservation.getNomMenus()+" pour "+reservation.getEnfant().getPrenom()+": votre numéro de réservation est le "+reservation.getnumReservation());
