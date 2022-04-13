@@ -197,7 +197,7 @@ public class reservationRepasController implements Initializable {
     @FXML
     void GoMenus(MouseEvent event)throws IOException {
 
-        Parent reservation = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_menus.fxml"));
+        Parent reservation = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_MenuReservation.fxml"));
 
         Scene menu = new Scene(reservation);
 
