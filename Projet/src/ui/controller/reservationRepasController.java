@@ -62,9 +62,6 @@ public class reservationRepasController implements Initializable {
     private DatePicker dpDate;
 
     @FXML
-    private TableColumn<Enfant, String> enfantColonne;
-
-    @FXML
     private static Enfant enfantSelect;
     private static ArrayList<Menu> MenuSelectList = new ArrayList<>(); // Liste des Menus sélectionner
 
@@ -89,35 +86,28 @@ public class reservationRepasController implements Initializable {
         dateColonne.setCellValueFactory(new PropertyValueFactory<Menu, Date>("dateMenu"));
         menusColonne.setCellValueFactory(new PropertyValueFactory<Menu, String>("nomMenu"));
         
-        //System.out.println(tableMenu.getItems());
-        //ObservableList<Menu> menutab = MenuSelectList;
-        //tableMenu.setItems(MenuSelectList);
+
 
         ChoixMenus.setValue(menus.get(0));
 		ChoixMenus.getItems().addAll(menus);
 		ChoixMenus.setOnAction(this::getMenus);
 
-        
-        /*ChoixEnfant.setValue("Sélectionner l'enfant");
-		ChoixEnfant.getItems().addAll(compte.enfantListString()); // compte.getEnfantCompte().enfantListString();*/
-        
+    
         ChoixEnfant.setValue(enfants.get(0));
 		ChoixEnfant.getItems().addAll(enfants);
         enfantSelect = ChoixEnfant.getValue();
         ChoixEnfant.setOnAction(this::getEnfantSelect);
        
-    
-
-
 	}
 
     public void getEnfantSelect(ActionEvent event) {
 
-		enfantSelect = ChoixEnfant.getValue();
-        reservationRepasController.setEnfantSelect(enfantSelect); // associe l'enfant selectionne
+		enfantSelect = ChoixEnfant.getValue(); // Selection de l'enfant pour la réservation
+        reservationRepasController.setEnfantSelect(enfantSelect);
         lblEnfantSelect.setText(enfantSelect+" est selectionné");
 
 	}
+
 
 	public void getMenus(ActionEvent event) {
 
@@ -158,18 +148,8 @@ public class reservationRepasController implements Initializable {
     @FXML
     void ajoutDate(MouseEvent event) {
         
-        //String string ="";
         Date date = new Date(dpDate.getValue());
-        //String myFormattedDate = date.getDateL().format(DateTimeFormatter.ofPattern("dd-MMM-yyyy"));
-        
-        //String myFormattedDate = date.getDateL().format(DateTimeFormatter.ofPattern("dd-MM-uuuu", Locale.FRANCE).withResolverStyle(ResolverStyle.STRICT));
-        //date.setDateString(myFormattedDate);        
-        
-        /*ObservableList<Date> dates = tableDate.getItems();
-        dates.add(date);*/
-        
-        Menu menu = ChoixMenus.getValue();
-        //menu.setDateMenu(date);// ajout de la date au menu
+        Menu menu = ChoixMenus.getValue(); // Selection du menu
         menu.setDateMenu(date);// ajout de la date au menu
         
         MenuSelectList.add(menu); // ajout du menu dans la liste des menus selectionne

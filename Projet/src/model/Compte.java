@@ -107,8 +107,7 @@ public class Compte {
   // Methodes
   public Reservation PrendreUneReservation(Date date, ArrayList<Menu> menus, Enfant enfant, Moyendepaiement mp){
    
-      //if(mp.payerParCarte()){} // Si paiement valide
-      
+
         Reservation reservation = new Reservation(menus,date); // creation de la reservation
       
         Facture facture = new Facture(reservation);// creation de la facture 
@@ -123,14 +122,10 @@ public class Compte {
         }
   
         System.out.println("Rerservation "+reservation.getStatus()+" du "+reservation.getNomMenus()+" pour "+reservation.getEnfant().getPrenom()+": votre numéro de réservation est le "+reservation.getnumReservation());
-        //System.out.println("Le "+ menus.getNomMenus()+" a ete reserve par "+ menus.getListDesReservation());
         System.out.println(enfant.getListReservation());
       
         return reservation;
       
-    
-    //System.out.println("Reservation non valide");
-    //return 0;
   }
     
 
