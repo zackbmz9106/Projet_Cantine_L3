@@ -53,6 +53,7 @@ public class parametreController {
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(Para);
+        window.setResizable(false);
         window.show();
     }
 

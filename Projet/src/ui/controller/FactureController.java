@@ -32,6 +32,7 @@ public class FactureController {
         
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(retour);
+        window.setResizable(false);
         window.show();
     
     } 
@@ -39,8 +40,6 @@ public class FactureController {
 
     @FXML
     void goFacture(MouseEvent event) throws IOException {
-        
-        
 
         
         System.out.println("Visualisaiton de la dernière facture");
@@ -50,6 +49,7 @@ public class FactureController {
         
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(retour);
+        window.setResizable(false);
         window.show();
     
     } 

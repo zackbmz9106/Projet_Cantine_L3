@@ -25,6 +25,7 @@ public class man extends Application {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/main.fxml"));
         
         primaryStage.setScene(new Scene(root)); 
+        primaryStage.setResizable(false);
         primaryStage.show();
         } catch (Exception e) { 
             e.printStackTrace();

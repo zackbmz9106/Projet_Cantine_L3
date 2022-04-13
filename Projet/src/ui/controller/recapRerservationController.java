@@ -56,6 +56,7 @@ public class recapRerservationController {
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(paiement);
+        window.setResizable(false);
         window.show();
     
     }

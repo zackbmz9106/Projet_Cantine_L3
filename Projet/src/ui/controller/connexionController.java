@@ -108,7 +108,7 @@ public class connexionController {
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
             window.setScene(accueilScene);
             window.show();
-
+            window.setResizable(false);
             connexion = DriverManager.getConnection(url, user, password);
         
 
@@ -165,7 +165,13 @@ public class connexionController {
         Scene accueilScene = new Scene(accueilS);
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+<<<<<<< HEAD
             window.setScene(accueilScene);
+=======
+        window.setScene(accueilScene);
+        window.setScene(accueilScene);
+        window.setResizable(false);
+>>>>>>> f4d88c99aaf3556f0ab437b9678e13c36a9d3b0d
         window.show();
 
         }

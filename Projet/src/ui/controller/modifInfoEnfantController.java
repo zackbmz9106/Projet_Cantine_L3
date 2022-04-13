@@ -96,6 +96,7 @@ public class modifInfoEnfantController implements Initializable {
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(Menu);
+        window.setResizable(false);
         window.show();
     }
 
@@ -123,6 +124,7 @@ public class modifInfoEnfantController implements Initializable {
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(Menu);
+        window.setResizable(false);
         window.show();
     }
 
