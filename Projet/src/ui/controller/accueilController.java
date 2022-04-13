@@ -105,12 +105,13 @@ public class accueilController {
     }
 
     
+    
     @FXML
     void GoPageInfoEnfant(MouseEvent event) throws IOException {
 
         //tfQuotient.setEditable(false);
 
-        Parent synth = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_ModifEnfantInfo.fxml"));
+        Parent synth = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_Information.fxml"));
 
         Scene synthScene = new Scene(synth);
 
@@ -120,11 +121,10 @@ public class accueilController {
 
     }
 
-
     @FXML
     void deconnexion(MouseEvent event) throws IOException {
 
-
+        alertbox.afficher("Deconnexion", " Vous etes maintenant déconnecté !");
         Parent deco = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/main.fxml"));
 
         Scene MainScene = new Scene(deco);

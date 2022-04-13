@@ -87,7 +87,7 @@ public class connexionController {
         } 
         
         else{
-            alertbox.afficher("Titre de la fenetre", " Inscription réussie !");
+            alertbox.afficher("Inscription", " Inscription réussie !");
             Parent accueilS = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_information.fxml"));
             Scene accueilScene = new Scene(accueilS);
             Compte compte = new Compte(Tfnom.getText(),Tfprenom.getText(),Long.parseLong(Tfnum.getText()),Tfadresse.getText(),Tfmail.getText(),Tfmdp.getText());
@@ -99,7 +99,7 @@ public class connexionController {
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
             window.setScene(accueilScene);
             window.show();
-            
+
             connexion = DriverManager.getConnection(url, user, password);
         
 
@@ -143,6 +143,10 @@ public class connexionController {
 
     @FXML
     public void seConnecter(ActionEvent event) throws IOException{
+
+        if  (Tfnom.getText().isEmpty() || Tfprenom.getText().isEmpty() || Tfnum.getText().isEmpty() ||  Tfadresse.getText().isEmpty() || Tfadresse.getText().isEmpty() || Tfmail.getText().isEmpty()  || Tfmdp.getText().isEmpty() ) { 
+            erreurVide.setText("Entrez vos données svp");
+        }
 
         Parent accueilS = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/accueil.fxml"));
 

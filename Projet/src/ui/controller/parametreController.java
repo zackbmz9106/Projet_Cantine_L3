@@ -38,6 +38,9 @@ public class parametreController {
     @FXML
     void Valider(MouseEvent event) {
 
+
+        
+
     }
 
     

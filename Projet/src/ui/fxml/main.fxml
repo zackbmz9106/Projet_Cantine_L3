@@ -38,7 +38,6 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Bloom?>
-<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -48,7 +47,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controller.connexionController">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.controller.connexionController">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" style="-fx-background-color: #B6CDE8;" VBox.vgrow="ALWAYS">
       <children>
@@ -66,23 +65,15 @@
                               <Font name="Microsoft Sans Serif" size="18.0" />
                            </font>
                         </Label>
-                        <TextField layoutX="95.0" layoutY="117.0" prefHeight="36.0" prefWidth="174.0" />
+                        <TextField fx:id="TfEmailCo" layoutX="95.0" layoutY="117.0" prefHeight="36.0" prefWidth="174.0" />
                         <Label layoutX="35.0" layoutY="123.0" prefHeight="25.0" prefWidth="47.0" text="E-mail" />
-                        <PasswordField layoutX="95.0" layoutY="183.0" prefHeight="36.0" prefWidth="174.0" />
+                        <PasswordField fx:id="TfmdpCo" layoutX="95.0" layoutY="183.0" prefHeight="36.0" prefWidth="174.0" />
                         <Label layoutX="15.0" layoutY="188.0" prefHeight="25.0" prefWidth="80.0" text="Mot de passe" />
                         <Button layoutX="144.0" layoutY="229.0" mnemonicParsing="false" onAction="#seConnecter" style="-fx-background-color: #EEEDFF;" text="CONNEXION">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
-                        <ImageView fitHeight="106.0" fitWidth="315.0" layoutY="278.0" opacity="0.78" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../../enfants-a-la-cantine.jpg" />
-                           </image>
-                           <effect>
-                              <Reflection />
-                           </effect>
-                        </ImageView>
                         <ImageView fitHeight="94.0" fitWidth="186.0" layoutX="2.0" layoutY="304.0" opacity="0.49" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../controller/img/enfants-a-la-cantine.jpg" />
