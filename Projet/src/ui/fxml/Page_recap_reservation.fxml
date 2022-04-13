@@ -88,7 +88,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Button fx:id="btnPaiementRecap" layoutX="202.0" layoutY="312.0" mnemonicParsing="false" onMouseClicked="#Paiement" style="-fx-background-color: #EEEDFF;" text="Payer" />
+            <Button fx:id="btnPaiementRecap" layoutX="202.0" layoutY="312.0" mnemonicParsing="false" onMouseClicked="#Paiement" style="-fx-background-color: #EEEDFF;" text="Valider" />
             <Button layoutX="19.0" layoutY="312.0" mnemonicParsing="false" onMouseClicked="#BackInfoPaiement" style="-fx-background-color: #EEEDFF;" text="Retour" />
             <Label fx:id="lblnumR" layoutX="356.0" layoutY="33.0" prefHeight="17.0" prefWidth="60.0" text="n°" textFill="#0551f5" underline="true">
                <font>
