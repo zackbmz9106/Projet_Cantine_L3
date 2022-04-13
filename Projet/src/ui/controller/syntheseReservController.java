@@ -44,6 +44,7 @@ public class syntheseReservController {
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(accueilScene);
+        window.setResizable(false);
         window.show();
     }
 

@@ -87,6 +87,7 @@ public class connexionController {
         } 
         
         else{
+            
             Parent accueilS = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_information.fxml"));
             Scene accueilScene = new Scene(accueilS);
             Compte compte = new Compte(Tfnom.getText(),Tfprenom.getText(),Long.parseLong(Tfnum.getText()),Tfadresse.getText(),Tfmail.getText(),Tfmdp.getText());
@@ -98,6 +99,7 @@ public class connexionController {
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
             window.setScene(accueilScene);
             window.show();
+            window.setResizable(false);
             connexion = DriverManager.getConnection(url, user, password);
         
 
@@ -146,6 +148,8 @@ public class connexionController {
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(accueilScene);
+        window.setScene(accueilScene);
+        window.setResizable(false);
         window.show();
     
     }

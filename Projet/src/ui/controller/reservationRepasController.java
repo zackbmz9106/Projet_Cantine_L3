@@ -136,6 +136,7 @@ public class reservationRepasController implements Initializable {
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(accueilScene);
+        window.setResizable(false);
         window.show();
     
     }
@@ -149,6 +150,7 @@ public class reservationRepasController implements Initializable {
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(paiement);
+        window.setResizable(false);
         window.show();
     
     }
@@ -201,6 +203,7 @@ public class reservationRepasController implements Initializable {
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(menu);
+        window.setResizable(false);
         window.show();
 
     }

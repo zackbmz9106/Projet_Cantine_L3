@@ -76,6 +76,7 @@ public class infoCarteController {
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(reservation);
+        window.setResizable(false);
         window.show();
     
     }
@@ -99,6 +100,7 @@ public class infoCarteController {
             Scene recap = new Scene(carte);
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
             window.setScene(recap);
+            window.setResizable(false);
             window.show(); 
     
 

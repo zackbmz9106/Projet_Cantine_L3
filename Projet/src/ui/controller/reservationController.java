@@ -34,6 +34,7 @@ public class reservationController {
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(accueilScene);
+        window.setResizable(false);
         window.show();
     
     }
@@ -49,6 +50,7 @@ public class reservationController {
 
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
             window.setScene(retour);
+            window.setResizable(false);
             window.show();
 
         }

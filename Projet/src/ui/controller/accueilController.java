@@ -42,7 +42,6 @@ public class accueilController {
     @FXML
     public void reserver(MouseEvent event) throws IOException {
         
-        
         System.out.println("Reservation");
         Parent reservation = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/page_Reservation.fxml"));
         
@@ -50,6 +49,7 @@ public class accueilController {
         
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(reserve);
+        window.setResizable(false);
         window.show();
     
     } 
@@ -64,6 +64,7 @@ public class accueilController {
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(FactureScene);
+        window.setResizable(false);
         window.show();
     }
 
@@ -78,6 +79,7 @@ public class accueilController {
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(Menu);
+        window.setResizable(false);
         window.show();
     }
 
@@ -89,6 +91,7 @@ public class accueilController {
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(Para);
+        window.setResizable(false);
         window.show();
 
     }
@@ -101,6 +104,7 @@ public class accueilController {
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(synthScene);
+        window.setResizable(false);
         window.show();
     }
 
@@ -116,21 +120,7 @@ public class accueilController {
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(synthScene);
-        window.show();
-
-    }
-
-    @FXML
-    void GoPageInfoEnfant(MouseEvent event) throws IOException {
-
-        //tfQuotient.setEditable(false);
-
-        Parent synth = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_Information.fxml"));
-
-        Scene synthScene = new Scene(synth);
-
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(synthScene);
+        window.setResizable(false);
         window.show();
 
     }
@@ -145,6 +135,7 @@ public class accueilController {
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(MainScene);
+        window.setResizable(false);
         window.show();
     }
 
@@ -164,3 +155,4 @@ public class accueilController {
     }
 
 }
+

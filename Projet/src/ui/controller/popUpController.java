@@ -25,8 +25,6 @@ public class popUpController {
     void backFacture(MouseEvent event) throws IOException {
         
         
-
-        
         System.out.println(" ");
         Parent menu = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_Facture.fxml"));
         
@@ -34,6 +32,7 @@ public class popUpController {
         
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(retour);
+        window.setResizable(false);
         window.show();
     
     } 
