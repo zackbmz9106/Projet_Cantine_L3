@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import model.Compte;
 import javafx.scene.Node;
 
 public class parametreController {
@@ -36,7 +37,13 @@ public class parametreController {
     private TextField tfModifQuotient;
 
     @FXML
+    private Compte compte = infoCarteController.getCompte();
     void Valider(MouseEvent event) {
+        compte.setAdresse(tfModifAdresse.getText());
+        compte.setNumTel(Long.parseLong(tfModifTel.getText()));
+        compte.setMail(tfModifMail.getText());
+        compte.setQuotientF(Integer.parseInt(tfModifQuotient.getText()));
+
 
 
         

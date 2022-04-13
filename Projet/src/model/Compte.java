@@ -180,5 +180,13 @@ public class Compte {
     return "Nom: "+nom+n+"  Prénom: "+prenom+n+"    NumTel: "+numTel+n+"      Adresse: "+adresse+n+"        Mail: "+mail+n+"          Mdp: "+mdp+n+"            Enfants: "+listEnfant;
   }
 
+public void setMail(String mail) {
+  this.mail = mail;
+}
+
+public void setAdresse(String adresse) {
+  this.adresse = adresse;
+}
+
 
 }
