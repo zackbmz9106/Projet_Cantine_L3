@@ -60,7 +60,7 @@
                   <TableColumn fx:id="dessertColonne" prefWidth="122.40004882812502" text="Dessert" />
                </columns>
             </TableView>
-            <Button layoutX="386.0" layoutY="478.0" mnemonicParsing="false" onMouseClicked="#backReserv" style="-fx-background-color: #EEEDFF;" text="Retour" />
+            <Button layoutX="386.0" layoutY="478.0" mnemonicParsing="false" onMouseClicked="#goMenus" style="-fx-background-color: #EEEDFF;" text="Retour" />
          </children>
       </AnchorPane>
   </children>

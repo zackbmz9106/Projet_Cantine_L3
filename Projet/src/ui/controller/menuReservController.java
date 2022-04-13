@@ -71,7 +71,7 @@ public class menuReservController implements Initializable {
 
 
     @FXML
-    void backRerv(MouseEvent event)throws IOException {
+    void goMenus(MouseEvent event)throws IOException {
         
         System.out.println("Retour Accueil");
         Parent menu = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_reservation_repas.fxml"));
