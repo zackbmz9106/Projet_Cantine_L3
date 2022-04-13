@@ -188,5 +188,9 @@ public void setAdresse(String adresse) {
   this.adresse = adresse;
 }
 
+public void setMdp(String mdp) {
+  this.mdp = mdp;
+}
+
 
 }

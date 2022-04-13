@@ -43,6 +43,7 @@ public class parametreController {
         compte.setNumTel(Long.parseLong(tfModifTel.getText()));
         compte.setMail(tfModifMail.getText());
         compte.setQuotientF(Integer.parseInt(tfModifQuotient.getText()));
+        compte.setMdp(tfModifMdp.getText());
 
 
 
