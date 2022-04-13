@@ -64,7 +64,7 @@ public class recapRerservationController {
     @FXML
     void Paiement(MouseEvent event) throws IOException {
 
-        alertbox.afficher("Confirmation", " Votre reservation N° "+ reservation.getnumReservation() + " a bien été prise en compte !");
+        alertbox.afficherRecap("Confirmation", " Votre reservation N° "+ reservation.getnumReservation() + " a bien été prise en compte !");
 
         Parent recap = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/accueil.fxml"));
 
