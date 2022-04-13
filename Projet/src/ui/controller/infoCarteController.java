@@ -100,11 +100,14 @@ public class infoCarteController {
                 for(Menu menu : MenuSelect){
                 int prix = compte.calculPrix();
                 menu.setPrix(compte.calculPrix()); // Determine le prix du menu en fonction du quotient de la famille
+                System.out.println(menu.getPrix()+" controller infoCarte");
                 prixReservation+=prix;
                 }
             reservation = compte.PrendreUneReservation(date, MenuSelect, enfantSelect, mp);
             reservation.setPrixReservation(prixReservation);// On set le prix total du couts de tous les menus reserve
-            //System.out.println(reservation.getPrixReservation());
+            reservation.getFactureReservation().setMontant(prixReservation); // ajout du prix total a la facture de la reservation 
+            compte.setListFacture(reservation.getFactureReservation()); // ajout de la facture dans la liste de facture associés au compte
+            System.out.println(reservation.getFactureReservation());
             
             Parent carte = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_recap_reservation.fxml"));
             Scene recap = new Scene(carte);

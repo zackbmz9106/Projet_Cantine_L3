@@ -44,7 +44,7 @@ public class recapRerservationController {
 
     @FXML
     private Enfant enfant = infoCarteController.getEnfant();
-    private Reservation reservation = infoCarteController.getReservation();
+    private static Reservation reservation = infoCarteController.getReservation();
 
     
     @FXML
@@ -94,5 +94,10 @@ public class recapRerservationController {
         assert lblPrixRecap != null : "fx:id=\"lblPrixRecap\" was not injected: check your FXML file 'Page_recap_reservation.fxml'.";
 
     }
+
+    public static Reservation getReservation(){
+        return reservation;
+    }
+
 
 }

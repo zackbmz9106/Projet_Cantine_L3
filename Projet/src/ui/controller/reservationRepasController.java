@@ -114,7 +114,7 @@ public class reservationRepasController implements Initializable {
     public void getEnfantSelect(ActionEvent event) {
 
 		enfantSelect = ChoixEnfant.getValue();
-        reservationRepasController.setEnfantSelect(enfantSelect);
+        reservationRepasController.setEnfantSelect(enfantSelect); // associe l'enfant selectionne
         lblEnfantSelect.setText(enfantSelect+" est selectionné");
 
 	}
@@ -197,7 +197,7 @@ public class reservationRepasController implements Initializable {
     @FXML
     void GoMenus(MouseEvent event)throws IOException {
 
-        Parent reservation = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_menus.fxml"));
+        Parent reservation = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_MenuReservation.fxml"));
 
         Scene menu = new Scene(reservation);
 
