@@ -55,7 +55,16 @@ public class connexionController {
      private Label LBLerreurnum;
 
      @FXML
+     private TextField TfEmailCo;
+
+     @FXML
+     private TextField TfmdpCo;
+
+     @FXML
      private Label erreurVide;
+
+     @FXML
+     private Label erreurVideCo;
 
     String nom;
     int num;
@@ -144,18 +153,22 @@ public class connexionController {
     @FXML
     public void seConnecter(ActionEvent event) throws IOException{
 
-        if  (Tfnom.getText().isEmpty() || Tfprenom.getText().isEmpty() || Tfnum.getText().isEmpty() ||  Tfadresse.getText().isEmpty() || Tfadresse.getText().isEmpty() || Tfmail.getText().isEmpty()  || Tfmdp.getText().isEmpty() ) { 
-            erreurVide.setText("Entrez vos données svp");
+        if  (TfEmailCo.getText().isEmpty()  || TfmdpCo.getText().isEmpty() ) { 
+            erreurVideCo.setText("Entrez vos données svp");
         }
+        else {         
+
+      
 
         Parent accueilS = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/accueil.fxml"));
 
         Scene accueilScene = new Scene(accueilS);
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(accueilScene);
+            window.setScene(accueilScene);
         window.show();
-    
+
+        }
     }
 
     @FXML

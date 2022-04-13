@@ -79,6 +79,7 @@
                               <Image url="@../controller/img/enfants-a-la-cantine.jpg" />
                            </image>
                         </ImageView>
+                        <Label fx:id="erreurVideCo" layoutX="117.0" layoutY="265.0" prefHeight="25.0" prefWidth="130.0" textFill="RED" />
                      </children>
                   </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #B6CDE8;">
@@ -131,16 +132,11 @@
                               </LinearGradient>
                            </textFill>
                         </Label>
-                        <Label fx:id="erreurVide" layoutX="85.0" layoutY="363.0" prefHeight="17.0" prefWidth="161.0" textFill="RED" />
+                        <Label fx:id="erreurVide" layoutX="93.0" layoutY="357.0" prefHeight="25.0" prefWidth="148.0" textFill="RED" />
                      </children>
                   </AnchorPane>
               </items>
             </SplitPane>
-            <ImageView fx:id="TfmdpCo" fitHeight="52.0" fitWidth="101.0" layoutX="455.0" opacity="0.56" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../restaurationscolaire-1200x630.jpg" />
-               </image>
-            </ImageView>
             <ImageView fitHeight="52.0" fitWidth="123.0" layoutX="541.0" opacity="0.36" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../controller/img/restaurationscolaire-1200x630.jpg" />
