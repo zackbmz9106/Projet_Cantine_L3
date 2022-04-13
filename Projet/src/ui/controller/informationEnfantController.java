@@ -160,6 +160,7 @@ public class informationEnfantController implements Initializable {
         newCompte.setQuotientF(Integer.parseInt(tfQuotient.getText()));
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(Menu);
+        window.setResizable(false);
         window.show();
     }
 

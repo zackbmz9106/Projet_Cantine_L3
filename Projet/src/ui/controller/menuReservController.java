@@ -24,7 +24,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import model.Ingredients;
 
 
-public class menuController implements Initializable {
+public class menuReservController implements Initializable {
 
     @FXML
     private TableView<Menu> tableMenus;
@@ -71,10 +71,10 @@ public class menuController implements Initializable {
 
 
     @FXML
-    void backAccueil(MouseEvent event)throws IOException {
+    void goMenus(MouseEvent event)throws IOException {
         
         System.out.println("Retour Accueil");
-        Parent menu = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/accueil.fxml"));
+        Parent menu = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_reservation_repas.fxml"));
         
         Scene retour = new Scene(menu);
         

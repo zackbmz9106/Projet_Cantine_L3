@@ -136,6 +136,7 @@ public class reservationRepasController implements Initializable {
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(accueilScene);
+        window.setResizable(false);
         window.show();
     
     }
@@ -149,6 +150,7 @@ public class reservationRepasController implements Initializable {
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(paiement);
+        window.setResizable(false);
         window.show();
     
     }
@@ -195,12 +197,13 @@ public class reservationRepasController implements Initializable {
     @FXML
     void GoMenus(MouseEvent event)throws IOException {
 
-        Parent reservation = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_menus.fxml"));
+        Parent reservation = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/Page_MenuReservation.fxml"));
 
         Scene menu = new Scene(reservation);
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(menu);
+        window.setResizable(false);
         window.show();
 
     }

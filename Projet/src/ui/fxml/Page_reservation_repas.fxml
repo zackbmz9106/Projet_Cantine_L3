@@ -75,7 +75,7 @@
             <Button layoutX="17.0" layoutY="457.0" mnemonicParsing="false" onMouseClicked="#GoInfoPaiement" prefHeight="26.0" prefWidth="128.0" style="-fx-background-color: #EEEDFF;" text="Payer" />
             <Button layoutX="239.0" layoutY="327.0" mnemonicParsing="false" onMouseClicked="#GoMenus" style="-fx-background-color: #EEEDFF;" text="Menu de la semaine" />
             <Button layoutX="29.0" layoutY="28.0" mnemonicParsing="false" onMouseClicked="#BackReservation" style="-fx-background-color: #EEEDFF;" text="Retour" />
-            <Label fx:id="lblMenus" alignment="TOP_CENTER" layoutX="226.0" layoutY="249.0" prefHeight="18.0" prefWidth="150.0" />
+            <Label fx:id="lblMenus" alignment="TOP_CENTER" layoutX="214.0" layoutY="240.0" prefHeight="59.0" prefWidth="194.0" textAlignment="CENTER" />
             <TableView fx:id="tableMenu" layoutX="432.0" layoutY="200.0" prefHeight="200.0" prefWidth="348.0">
               <columns>
                 <TableColumn fx:id="dateColonne" prefWidth="118.4000244140625" text="Date ajouté" />
@@ -85,7 +85,7 @@
             </TableView>
             <Button fx:id="addDate" layoutX="487.0" layoutY="413.0" mnemonicParsing="false" onMouseClicked="#ajoutDate" style="-fx-background-color: #EEEDFF;" text="Ajouter une date" />
             <Button fx:id="removeDate" layoutX="617.0" layoutY="413.0" mnemonicParsing="false" onMouseClicked="#supprDate" style="-fx-background-color: #EEEDFF;" text="Supprimer une date" />
-            <Label fx:id="lblEnfantSelect" layoutX="8.0" layoutY="200.0" prefHeight="17.0" prefWidth="223.0" />
+            <Label fx:id="lblEnfantSelect" layoutX="9.0" layoutY="240.0" prefHeight="59.0" prefWidth="184.0" textAlignment="CENTER" />
          </children>
     </AnchorPane>
   </children>

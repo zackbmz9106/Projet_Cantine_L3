@@ -56,17 +56,23 @@ public class recapRerservationController {
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(paiement);
+        window.setResizable(false);
         window.show();
     
     }
 
     @FXML
     void Paiement(MouseEvent event) throws IOException {
-        Parent go = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/accueil.fxml"));
 
-        Scene Menu = new Scene(go);
+        alertbox.afficherRecap("Confirmation", " Votre reservation N° "+ reservation.getnumReservation() + " a bien été prise en compte !");
+
+        Parent recap = FXMLLoader.load(getClass().getClassLoader().getResource("ui/fxml/accueil.fxml"));
+
+        Scene paiement = new Scene(recap);
+
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(Menu);
+        window.setScene(paiement);
+        window.setResizable(false);
         window.show();
 
     }

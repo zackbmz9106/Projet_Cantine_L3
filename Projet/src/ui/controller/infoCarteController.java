@@ -82,6 +82,7 @@ public class infoCarteController {
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(reservation);
+        window.setResizable(false);
         window.show();
     
     }
@@ -95,7 +96,7 @@ public class infoCarteController {
             if(mp.payerParCarte() == 0){ // si paiement valide
             LocalDate today = LocalDate.now();
             Date date = new Date(today);
-            
+            alertbox.afficher("Paiement ", " Paiement réussi ! ");
                 for(Menu menu : MenuSelect){
                 int prix = compte.calculPrix();
                 menu.setPrix(compte.calculPrix()); // Determine le prix du menu en fonction du quotient de la famille
@@ -112,6 +113,7 @@ public class infoCarteController {
             Scene recap = new Scene(carte);
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
             window.setScene(recap);
+            window.setResizable(false);
             window.show(); 
 
             }
