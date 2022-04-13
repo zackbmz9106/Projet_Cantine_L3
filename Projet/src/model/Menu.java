@@ -1,5 +1,6 @@
 package model;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Menu{
@@ -83,6 +84,18 @@ public class Menu{
   public void setDateMenu(Date date){
      this.dateMenu = date;
   }
+  
+  public ArrayList<Ingredients> getentreeList(){
+    return this.entreeList;
+  }
+  
+  public ArrayList<Ingredients> getplatList(){
+    return this.platList;
+  }
+
+  public ArrayList<Ingredients> getdessertList(){
+    return this.dessertList;
+  }
   /*
   public String getDateMenuStr(){
     return this.dateStrMenu;
@@ -160,17 +173,27 @@ public class Menu{
     platListVegetarien.add(printaniere);
     platListVegetarien.add(steakSoja);
    
+    LocalDate date = LocalDate.now();
+    Date dateM1 = new Date(date);
+    LocalDate date2 = LocalDate.of(2022, 04, 14);
+    Date dateM2 = new Date(date2);
+    LocalDate date3 = LocalDate.of(2022, 04,15);
+    Date dateM3 = new Date(date3);
+
       Menu  menu1 = new Menu("Viande", "Menu viande", entreeList, platListViande, dessertList);
+      menu1.setDateMenu(dateM1);
       ListedesMenu.add(menu1);
       System.out.println(" "+menu1.getNomMenu()+" initialise");
       //System.out.println("   "+platListViande);
       System.out.println(menu1);
       Menu menu2 = new Menu("Poisson", "Menu poisson", entreeList, platListPoisson, dessertList);
+      menu1.setDateMenu(dateM2);
       ListedesMenu.add(menu2);
       System.out.println(" "+menu2.getNomMenu()+" initialise");
       //System.out.println("   "+platListPoisson);
       System.out.println(menu2);
       Menu menu3 = new Menu("Végetarien", "Menu végetarien", entreeList, platListVegetarien, dessertList);
+      menu1.setDateMenu(dateM3);
       ListedesMenu.add(menu3);
       System.out.println(" "+menu3.getNomMenu()+" initialise");
       //System.out.println("   "+platListVegetarien);

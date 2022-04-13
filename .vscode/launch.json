@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch DBconnect",
+            "request": "launch",
+            "mainClass": "database.DBconnect",
+            "projectName": "Projet_Cantine_L3-3_440a2c89"
+        },
+        {
+            "type": "java",
             "name": "Launch man",
             "request": "launch",
             "mainClass": "man",

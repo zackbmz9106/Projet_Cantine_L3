@@ -169,19 +169,7 @@ public class Compte {
   /*public verifCompte(){
 
   }*/
-  public ArrayList<Enfant> afficheList(ArrayList<Enfant> enfantList){
-    String nom="";
-    String prenom="";
-    String sexe="";
-    /*for(Enfant e :enfantList){
-       //nom = e.getNom();
-       //prenom = e.getPrenom();
-       //sexe = e.getSexe();
-    }*/
-  return enfantList;//nom+" "+prenom+" "+sexe;
-  }
-
-
+ 
   public ArrayList<String> enfantListString(){
         
         ArrayList<String> list = new ArrayList<>();

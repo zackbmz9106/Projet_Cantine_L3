@@ -32,7 +32,7 @@ public class accueilController {
     }
     @FXML
 
-    public Menu menuInit = new Menu();
+    public Menu menuInit = new Menu(); // Pour initialiser des menus
 
     @FXML
     private static ArrayList<Menu> menuList;
@@ -142,7 +142,7 @@ public class accueilController {
     @FXML
     public void initialize() {
         //Menu menuinit = new Menu();
-        accueilController.setMenuList(menuInit.menuInit());
+        accueilController.setMenuList(menuInit.menuInit()); // initialisation des menus et ajout dans une liste
         //menuInit.menuInit();
     }
 

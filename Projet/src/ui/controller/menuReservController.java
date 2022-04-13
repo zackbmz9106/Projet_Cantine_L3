@@ -21,6 +21,7 @@ import javafx.scene.Node;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import model.Date;
 import model.Ingredients;
 
 
@@ -30,22 +31,23 @@ public class menuReservController implements Initializable {
     private TableView<Menu> tableMenus;
 
     @FXML
-    private TableColumn<Menu, String> joursColonne;
+    private TableColumn<Menu, Date> joursColonne;
 
     @FXML
-    private TableColumn<Menu, String> entreeColonne;
+    private TableColumn<Menu, ArrayList<Ingredients>> entreeColonne;
 
     @FXML
-    private TableColumn<Menu, String> platViandeColonne;
+    private TableColumn<Menu, ArrayList<Ingredients>> platViandeColonne;
 
     @FXML
-    private TableColumn<Menu, String> platPoissonColonne;
+    private TableColumn<Menu, ArrayList<Ingredients>> platPoissonColonne;
 
     @FXML
-    private TableColumn<Menu, String> platVegetarienColonne;
+    private TableColumn<Menu, ArrayList<Ingredients>> platVegetarienColonne;
 
     @FXML
-    private TableColumn<Menu, String> dessertColonne;
+    private TableColumn<Menu, ArrayList<Ingredients>> dessertColonne;
+    private  ArrayList<Menu> menuSemaine = accueilController.getMenuList(); // recuperation des menus initialiser
   /*  
     @FXML
     private ArrayList<Ingredients> entree;
@@ -58,15 +60,38 @@ public class menuReservController implements Initializable {
 */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        joursColonne.setCellValueFactory(new PropertyValueFactory <Menu, String>("jours"));
-        entreeColonne.setCellValueFactory(new PropertyValueFactory <Menu, String>("entree"));
-        platViandeColonne.setCellValueFactory(new PropertyValueFactory <Menu, String>("plat viande"));
-        platPoissonColonne.setCellValueFactory(new PropertyValueFactory <Menu, String>("plat poisson"));
-        platVegetarienColonne.setCellValueFactory(new PropertyValueFactory <Menu, String>("plat vegetarien"));
-        dessertColonne.setCellValueFactory(new PropertyValueFactory <Menu, String>("dessert"));
+        joursColonne.setCellValueFactory(new PropertyValueFactory <Menu, Date>("dateMenu"));
+        entreeColonne.setCellValueFactory(new PropertyValueFactory <Menu, ArrayList<Ingredients>>("entreeList"));
+        //platViandeColonne.setCellValueFactory(new PropertyValueFactory <Menu, ArrayList<Ingredients>>("platList"));
+        //platPoissonColonne.setCellValueFactory(new PropertyValueFactory <Menu, ArrayList<Ingredients>>("platList"));
+        //platVegetarienColonne.setCellValueFactory(new PropertyValueFactory <Menu, ArrayList<Ingredients>>("platList"));
+        //dessertColonne.setCellValueFactory(new PropertyValueFactory <Menu, ArrayList<Ingredients>>("dessertList"));
 
-       // tableMenus.setItems(list);
-    } 
+        System.out.println(menuSemaine);
+       /*ObservableList<Menu> menus = tableMenus.getItems();
+       for(Menu menu : menuSemaine){
+        menus.add(menu);
+        tableMenus.setItems(menus);
+      }*/
+      for(int i =0; i<menuSemaine.size();i++){
+      ObservableList<Menu> menus = tableMenus.getItems();
+        for(Menu menu : menuSemaine){
+          menus.add(menu);
+          System.out.println(menu);
+          tableMenus.setItems(menus);
+        }
+      }
+      //ObservableList<Menu> menus = tableMenus.getItems();
+      /*
+      for(Menu menu : menuSemaine){
+        ObservableList<Menu> menus = tableMenus.getItems();
+            menus.add(menu);
+            System.out.println(menu);
+            tableMenus.setItems(menus);
+        } 
+        */
+    
+      } 
 
 
 
